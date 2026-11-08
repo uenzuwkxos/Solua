@@ -640,8 +640,8 @@ msgstr "Exécuter en arrière-plan"
 msgid "Default"
 msgstr "Par défaut"
 
-msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
-msgstr "Un contrôleur de moniteurs DDC/CI écrit en Rust pur (interface Slint). Extrêmement léger et rapide."
+msgid "A DDC/CI monitor controller built with Rust and Slint. Extremely light and fast."
+msgstr "Un contrôleur de moniteurs DDC/CI développé avec Rust et Slint. Extrêmement léger et rapide."
 
 msgid "Add to the applications menu"
 msgstr "Ajouter au menu des applications"

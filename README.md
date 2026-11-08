@@ -4,7 +4,7 @@
 
 # Solua
 
-**A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast.**
+**A DDC/CI monitor controller built with Rust and Slint. Extremely light and fast.**
 
 Windows · Linux (Wayland)
 

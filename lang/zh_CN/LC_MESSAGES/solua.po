@@ -640,8 +640,8 @@ msgstr "在后台运行"
 msgid "Default"
 msgstr "默认"
 
-msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
-msgstr "使用纯 Rust 编写的 DDC/CI 显示器控制器（Slint 界面）。极其轻量、快速。"
+msgid "A DDC/CI monitor controller built with Rust and Slint. Extremely light and fast."
+msgstr "使用 Rust 和 Slint 构建的 DDC/CI 显示器控制器。极其轻量、快速。"
 
 msgid "Add to the applications menu"
 msgstr "添加到应用程序菜单"

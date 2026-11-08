@@ -640,8 +640,8 @@ msgstr "백그라운드에서 실행"
 msgid "Default"
 msgstr "기본값"
 
-msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
-msgstr "순수 Rust로 작성된 DDC/CI 모니터 컨트롤러(Slint GUI). 매우 가볍고 빠릅니다."
+msgid "A DDC/CI monitor controller built with Rust and Slint. Extremely light and fast."
+msgstr "Rust와 Slint로 만든 DDC/CI 모니터 컨트롤러. 매우 가볍고 빠릅니다."
 
 msgid "Add to the applications menu"
 msgstr "애플리케이션 메뉴에 추가"

@@ -640,8 +640,8 @@ msgstr "Работать в фоновом режиме"
 msgid "Default"
 msgstr "По умолчанию"
 
-msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
-msgstr "Управление мониторами по DDC/CI, написанное на чистом Rust (интерфейс Slint). Очень лёгкое и быстрое."
+msgid "A DDC/CI monitor controller built with Rust and Slint. Extremely light and fast."
+msgstr "Управление мониторами по DDC/CI, созданное на Rust и Slint. Очень лёгкое и быстрое."
 
 msgid "Add to the applications menu"
 msgstr "Добавить в меню приложений"
