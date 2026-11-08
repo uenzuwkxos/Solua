@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Solua
+GenericName=Monitor control
+Comment=Control brightness, contrast and color of your monitors via DDC/CI
+Exec=solua
+Icon=solua
+Terminal=false
+Categories=Utility;Settings;HardwareSettings;
+Keywords=monitor;brightness;contrast;ddc;display;
+StartupWMClass=solua

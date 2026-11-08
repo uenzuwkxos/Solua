@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh-CN\n"
+
+msgid "Open Solua"
+msgstr "打开 Solua"
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "Profiles"
+msgstr "配置文件"
+
+msgid "Brightness"
+msgstr "亮度"
+
+msgid "Solua — monitor control"
+msgstr "Solua — 显示器控制"
+
+msgid "Ready"
+msgstr "就绪"
+
+msgid "No DDC/CI monitors found"
+msgstr "未找到支持 DDC/CI 的显示器"
+
+msgid "Monitors found: %1"
+msgstr "找到的显示器：%1"
+
+msgid "Profile “%1” applied"
+msgstr "已应用配置文件“%1”"
+
+msgid "Profile “%1” saved"
+msgstr "已保存配置文件“%1”"
+
+msgid "Profile “%1” was updated"
+msgstr "配置文件“%1”已更新"
+
+msgid "Reset command sent"
+msgstr "已发送重置命令"
+
+msgid "Could not change: %1"
+msgstr "无法更改：%1"
+
+msgid "Could not read: %1"
+msgstr "无法读取：%1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "计划：已应用配置文件“%1”"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "快捷键不可用（是否已被占用？）：%1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "时间无效。请使用 HH:MM（例如 22:30）"
+
+msgid "Create a profile first"
+msgstr "请先创建配置文件"
+
+msgid "Give the profile a name"
+msgstr "请为配置文件命名"
+
+msgid "This monitor did not report its capabilities"
+msgstr "此显示器未报告其功能"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "演示模式：模拟显示器，不会向硬件发送任何内容"
+
+msgid "Power command sent"
+msgstr "已发送电源命令"
+
+msgid "Value written"
+msgstr "已写入值"
+
+msgid "Invalid code or value"
+msgstr "代码或值无效"
+
+msgid "Reading monitor…"
+msgstr "正在读取显示器…"
+
+msgid "unknown"
+msgstr "未知"
+
+msgid "Press the keys…"
+msgstr "请按下按键…"
+
+msgid "Not set"
+msgstr "未设置"
+
+msgid "Brightness up"
+msgstr "增加亮度"
+
+msgid "Brightness down"
+msgstr "降低亮度"
+
+msgid "Contrast up"
+msgstr "增加对比度"
+
+msgid "Contrast down"
+msgstr "降低对比度"
+
+msgid "Show / hide Solua"
+msgstr "显示 / 隐藏 Solua"
+
+msgid "Profile: %1"
+msgstr "配置文件：%1"
+
+msgid "Contrast"
+msgstr "对比度"
+
+msgid "Volume"
+msgstr "音量"
+
+msgid "Muted"
+msgstr "已静音"
+
+msgid "System default"
+msgstr "系统默认"
+
+msgid "System"
+msgstr "系统"
+
+msgid "Light"
+msgstr "浅色"
+
+msgid "Dark"
+msgstr "深色"
+
+msgid "Built-in display"
+msgstr "内置显示器"
+
+msgid "External display"
+msgstr "外接显示器"
+
+msgid "%1 monitor(s)"
+msgstr "%1 台显示器"
+
+msgid "Red"
+msgstr "红"
+
+msgid "Green"
+msgstr "绿"
+
+msgid "Blue"
+msgstr "蓝"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "未找到支持 DDC/CI 的显示器"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "请在显示器的屏幕菜单中启用 DDC/CI，使用直连线缆（避免使用扩展坞和转接器），然后重试。"
+
+msgid "Search again"
+msgstr "重新搜索"
+
+msgid "MONITORS"
+msgstr "显示器"
+
+msgid "DEMO MODE"
+msgstr "演示模式"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Controls"
+msgstr "控制"
+
+msgid "Color"
+msgstr "颜色"
+
+msgid "Schedule"
+msgstr "计划"
+
+msgid "Advanced"
+msgstr "高级"
+
+msgid "Not supported"
+msgstr "不支持"
+
+msgid "Control all monitors together"
+msgstr "同时控制所有显示器"
+
+msgid "COLOR TEMPERATURE"
+msgstr "色温"
+
+msgid "Click again to confirm"
+msgstr "再次点击以确认"
+
+msgid "INPUT SOURCE"
+msgstr "输入源"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "如果切换到没有信号的输入，屏幕将变黑。请使用显示器自身的按钮返回。"
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "将当前设置保存为配置文件"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "配置文件名称（例如 夜间、影院、工作）"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "还没有配置文件。调整显示器后，在上方保存第一个。"
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Apply the most recent entry at startup"
+msgstr "启动时应用最近的一条"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "适用于计划时间电脑处于关机状态的情况。"
+
+msgid "WRITE A VCP CODE"
+msgstr "写入 VCP 代码"
+
+msgid "Code (hex)"
+msgstr "代码（十六进制）"
+
+msgid "Value"
+msgstr "值"
+
+msgid "Write"
+msgstr "写入"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "功能 (VCP)"
+
+msgid "Read all values"
+msgstr "读取所有值"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "没有功能数据。请点击“读取所有值”。"
+
+msgid "Code"
+msgstr "代码"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Current"
+msgstr "当前"
+
+msgid "Max"
+msgstr "最大"
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "原始功能字符串"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "语言和外观"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Theme"
+msgstr "主题"
+
+msgid "BEHAVIOR"
+msgstr "行为"
+
+msgid "Start minimized to the tray"
+msgstr "启动时最小化到托盘"
+
+msgid "Keep running in the tray when closed"
+msgstr "关闭时继续在托盘中运行"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "为快捷键显示屏幕指示器"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "全局快捷键"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "点击字段并按下按键。退格键清除，Esc 取消。"
+
+msgid "Usage time: %1"
+msgstr "使用时间：%1"
+
+msgid "%1 year"
+msgstr "%1 年"
+
+msgid "%1 years"
+msgstr "%1 年"
+
+msgid "%1 day"
+msgstr "%1 天"
+
+msgid "%1 days"
+msgstr "%1 天"
+
+msgid "%1 hour"
+msgstr "%1 小时"
+
+msgid "%1 hours"
+msgstr "%1 小时"
+
+msgid "The monitor ignored this change: %1"
+msgstr "显示器忽略了此更改：%1"
+
+msgid "Could not import: %1"
+msgstr "无法导入：%1"
+
+msgid "Normal"
+msgstr "正常"
+
+msgid "Grayscale"
+msgstr "灰度"
+
+msgid "Redscale"
+msgstr "红色调"
+
+msgid "Greenscale"
+msgstr "绿色调"
+
+msgid "Bluescale"
+msgstr "蓝色调"
+
+msgid "Sepia"
+msgstr "棕褐色"
+
+msgid "Inverted"
+msgstr "反色"
+
+msgid "Saturation"
+msgstr "饱和度"
+
+msgid "The color filter is not available on this system"
+msgstr "此系统不支持颜色滤镜"
+
+msgid "Saturation up"
+msgstr "增加饱和度"
+
+msgid "Saturation down"
+msgstr "降低饱和度"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "显示器预设。变暗的项目未被显示器报告；如果没有变化，说明您的显示器忽略此命令。"
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "变暗的输入未被显示器报告，但许多显示器仍会接受它们（HDMI 和 DisplayPort 常常不在列表中）。"
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "将任意 MCCS 命令直接发送到显示器。代码是十六进制 VCP 编号。对未知代码使用错误的值可能导致异常，请谨慎使用。"
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "显示器声明其支持的内容。“读取所有值”会向显示器询问每个列出代码的当前值和最大值；需要几秒钟。"
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "显示器报告的未处理文本。在寻求支持或报告问题时很有用。"
+
+msgid "Open the mini panel"
+msgstr "打开迷你面板"
+
+msgid "Restore"
+msgstr "恢复"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "颜色滤镜（软件）"
+
+msgid "Temperature"
+msgstr "色温"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "配置 RGB（硬件）"
+
+msgid "SCHEDULED CHANGE"
+msgstr "计划更改"
+
+msgid "Mon"
+msgstr "周一"
+
+msgid "Tue"
+msgstr "周二"
+
+msgid "Wed"
+msgstr "周三"
+
+msgid "Thu"
+msgstr "周四"
+
+msgid "Fri"
+msgstr "周五"
+
+msgid "Sat"
+msgstr "周六"
+
+msgid "Sun"
+msgstr "周日"
+
+msgid "About"
+msgstr "关于"
+
+msgid "Privacy policy"
+msgstr "隐私政策"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Solua 不会收集、存储或发送任何个人数据。它没有账户、没有数据分析，也不建立任何网络连接。您的设置保存在这台电脑上的本地文件中，唯一的通信发生在应用与您的显示器之间，通过标准的 DDC/CI 协议进行。"
+
+msgid "Open source licenses"
+msgstr "开源许可证"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "All monitors"
+msgstr "所有显示器"
+
+msgid "No profiles yet."
+msgstr "还没有配置文件。"
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "已启用保存的配置文件。请切换到“自由”以调整设置。"
+
+msgid "Allow modifying saved profiles"
+msgstr "允许修改已保存的配置文件"
+
+msgid "BACKUP"
+msgstr "备份"
+
+msgid "Backup saved"
+msgstr "备份已保存"
+
+msgid "Black"
+msgstr "黑色"
+
+msgid "Bottom"
+msgstr "底部"
+
+msgid "Bottom left"
+msgstr "左下"
+
+msgid "Bottom right"
+msgstr "右下"
+
+msgid "Center"
+msgstr "居中"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "自由配置所有内容。已保存的配置文件会锁定设置。"
+
+msgid "Could not save the backup: %1"
+msgstr "无法保存备份：%1"
+
+msgid "Default shortcuts restored"
+msgstr "已恢复默认快捷键"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "依据 GPL-3.0 或更高版本许可证分发"
+
+msgid "Down"
+msgstr "向下"
+
+msgid "Export all settings"
+msgstr "导出所有设置"
+
+msgid "Free"
+msgstr "自由"
+
+msgid "Gray"
+msgstr "灰色"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "指示器和迷你面板"
+
+msgid "Import settings"
+msgstr "导入设置"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "已导入：%1 个配置文件，%2 项计划更改"
+
+msgid "Indicator position"
+msgstr "指示器位置"
+
+msgid "Indicator size"
+msgstr "指示器大小"
+
+msgid "Left"
+msgstr "左"
+
+msgid "No scheduled changes."
+msgstr "没有计划更改。"
+
+msgid "Restore defaults"
+msgstr "恢复默认值"
+
+msgid "Right"
+msgstr "右"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "滑块和快捷键"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "将所有设置、配置文件、计划和快捷键保存到文件，或从文件加载。"
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "滑块按固定步长移动，以圆点标记。适用于窗口和迷你面板。"
+
+msgid "Step (sliders and shortcuts)"
+msgstr "步长（滑块和快捷键）"
+
+msgid "Stepped sliders"
+msgstr "步进滑块"
+
+msgid "Top"
+msgstr "顶部"
+
+msgid "Top left"
+msgstr "左上"
+
+msgid "Top right"
+msgstr "右上"
+
+msgid "Up"
+msgstr "向上"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "配置文件处于活动状态时，您所做的每项更改都会自动保存到其中。"
+
+msgid "Yellow"
+msgstr "黄色"
+
+msgid "Yellowscale"
+msgstr "黄色调"
+
+msgid "Temperature down"
+msgstr "降低色温"
+
+msgid "Temperature up"
+msgstr "提高色温"
+
+msgid "Black level (blacks)"
+msgstr "黑电平（暗部）"
+
+msgid "Display controller"
+msgstr "显示控制器"
+
+msgid "Firmware version"
+msgstr "固件版本"
+
+msgid "Gain (whites)"
+msgstr "增益（亮部）"
+
+msgid "Horizontal frequency"
+msgstr "水平频率"
+
+msgid "IMAGE"
+msgstr "图像"
+
+msgid "MONITOR AUDIO"
+msgstr "显示器音频"
+
+msgid "MONITOR INFORMATION"
+msgstr "显示器信息"
+
+msgid "Monitor volume"
+msgstr "显示器音量"
+
+msgid "Mute the monitor audio"
+msgstr "将显示器音频静音"
+
+msgid "Not reported"
+msgstr "未报告"
+
+msgid "Panel technology"
+msgstr "面板技术"
+
+msgid "Restore factory defaults"
+msgstr "恢复出厂默认值"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "缩放每个颜色通道。主要影响图像的明亮区域。"
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "设置每个颜色通道最暗区域的电平。主要影响阴影，而非白色。"
+
+msgid "Show in the mini panel"
+msgstr "在迷你面板中显示"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "这是显示器自身的音频（其扬声器或耳机插孔），适用于带有此功能的显示器。不是系统音量。"
+
+msgid "VCP version"
+msgstr "VCP 版本"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "垂直频率（刷新率）"
+
+msgid "Color filter"
+msgstr "颜色滤镜"
+
+msgid "Software filter applied to the whole system."
+msgstr "应用于整个系统的软件滤镜。"
+
+msgid "Monitor volume up"
+msgstr "增大显示器音量"
+
+msgid "Monitor volume down"
+msgstr "减小显示器音量"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "显示器音频静音/取消静音"
+
+msgid "Input"
+msgstr "输入"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "快捷键由您的桌面环境分配。您可以在“系统设置 → 快捷键”中更改。"
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "滑块按固定步长移动，以圆点标记。"
+
+msgid "Adjust all together"
+msgstr "一起调整全部"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "“控制”和“颜色”中的更改将应用于所有显示器。"
+
+msgid "Violet"
+msgstr "紫罗兰"
+
+msgid "Set an end time"
+msgstr "设置结束时间"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "结束时将恢复之前的配置文件。"
+
+msgid "Transparency"
+msgstr "透明度"
+
+msgid "Run in the background"
+msgstr "在后台运行"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "使用纯 Rust 编写的 DDC/CI 显示器控制器（Slint 界面）。极其轻量、快速。"
+
+msgid "Add to the applications menu"
+msgstr "添加到应用程序菜单"
+
+msgid "Could not enable monitor access."
+msgstr "无法启用显示器访问权限。"
+
+msgid "Creates a launcher for this AppImage."
+msgstr "为此 AppImage 创建启动器。"
+
+msgid "Enable monitor access"
+msgstr "启用显示器访问权限"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "关闭窗口后 Solua 仍会继续运行，让快捷键保持可用。"
+
+msgid "Monitor access enabled."
+msgstr "已启用显示器访问权限。"
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "Solua 目前无法访问您的显示器。启用访问权限将设置一条小型系统规则，并要求输入密码。"
+
+msgid "Start with the system"
+msgstr "随系统启动"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "登录时以隐藏方式启动 Solua。"
+
+msgid "12-hour clock (AM/PM)"
+msgstr "12 小时制 (AM/PM)"

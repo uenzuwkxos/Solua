@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+
+msgid "Open Solua"
+msgstr "فتح Solua"
+
+msgid "Quit"
+msgstr "خروج"
+
+msgid "Profiles"
+msgstr "الملفات الشخصية"
+
+msgid "Brightness"
+msgstr "السطوع"
+
+msgid "Solua — monitor control"
+msgstr "Solua — التحكم في الشاشات"
+
+msgid "Ready"
+msgstr "جاهز"
+
+msgid "No DDC/CI monitors found"
+msgstr "لم يتم العثور على شاشات DDC/CI"
+
+msgid "Monitors found: %1"
+msgstr "الشاشات التي تم العثور عليها: %1"
+
+msgid "Profile “%1” applied"
+msgstr "تم تطبيق الملف الشخصي «%1»"
+
+msgid "Profile “%1” saved"
+msgstr "تم حفظ الملف الشخصي «%1»"
+
+msgid "Profile “%1” was updated"
+msgstr "تم تحديث الملف الشخصي «%1»"
+
+msgid "Reset command sent"
+msgstr "تم إرسال أمر إعادة الضبط"
+
+msgid "Could not change: %1"
+msgstr "تعذّر التغيير: %1"
+
+msgid "Could not read: %1"
+msgstr "تعذّرت القراءة: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "الجدولة: تم تطبيق الملف الشخصي «%1»"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "الاختصار غير متاح (هل هو مستخدم بالفعل؟): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "وقت غير صالح. استخدم HH:MM (مثل 22:30)"
+
+msgid "Create a profile first"
+msgstr "أنشئ ملفًا شخصيًا أولاً"
+
+msgid "Give the profile a name"
+msgstr "أعطِ الملف الشخصي اسمًا"
+
+msgid "This monitor did not report its capabilities"
+msgstr "لم تُبلغ هذه الشاشة عن إمكاناتها"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "وضع تجريبي: شاشات محاكاة، ولا يُرسل شيء إلى الأجهزة"
+
+msgid "Power command sent"
+msgstr "تم إرسال أمر الطاقة"
+
+msgid "Value written"
+msgstr "تمت كتابة القيمة"
+
+msgid "Invalid code or value"
+msgstr "رمز أو قيمة غير صالحة"
+
+msgid "Reading monitor…"
+msgstr "جارٍ قراءة الشاشة…"
+
+msgid "unknown"
+msgstr "غير معروف"
+
+msgid "Press the keys…"
+msgstr "اضغط على المفاتيح…"
+
+msgid "Not set"
+msgstr "غير محدد"
+
+msgid "Brightness up"
+msgstr "زيادة السطوع"
+
+msgid "Brightness down"
+msgstr "خفض السطوع"
+
+msgid "Contrast up"
+msgstr "زيادة التباين"
+
+msgid "Contrast down"
+msgstr "خفض التباين"
+
+msgid "Show / hide Solua"
+msgstr "إظهار / إخفاء Solua"
+
+msgid "Profile: %1"
+msgstr "الملف الشخصي: %1"
+
+msgid "Contrast"
+msgstr "التباين"
+
+msgid "Volume"
+msgstr "مستوى الصوت"
+
+msgid "Muted"
+msgstr "مكتوم"
+
+msgid "System default"
+msgstr "افتراضي النظام"
+
+msgid "System"
+msgstr "النظام"
+
+msgid "Light"
+msgstr "فاتح"
+
+msgid "Dark"
+msgstr "داكن"
+
+msgid "Built-in display"
+msgstr "شاشة مدمجة"
+
+msgid "External display"
+msgstr "شاشة خارجية"
+
+msgid "%1 monitor(s)"
+msgstr "%1 شاشة"
+
+msgid "Red"
+msgstr "أحمر"
+
+msgid "Green"
+msgstr "أخضر"
+
+msgid "Blue"
+msgstr "أزرق"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "لم يتم العثور على شاشات تدعم DDC/CI"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "فعّل DDC/CI في قائمة الشاشة على العرض، واستخدم كبلًا مباشرًا (تجنّب القواعد والمحوّلات) ثم حاول مرة أخرى."
+
+msgid "Search again"
+msgstr "بحث مجددًا"
+
+msgid "MONITORS"
+msgstr "الشاشات"
+
+msgid "DEMO MODE"
+msgstr "الوضع التجريبي"
+
+msgid "Settings"
+msgstr "الإعدادات"
+
+msgid "Controls"
+msgstr "عناصر التحكم"
+
+msgid "Color"
+msgstr "اللون"
+
+msgid "Schedule"
+msgstr "الجدولة"
+
+msgid "Advanced"
+msgstr "متقدم"
+
+msgid "Not supported"
+msgstr "غير مدعوم"
+
+msgid "Control all monitors together"
+msgstr "التحكم في جميع الشاشات معًا"
+
+msgid "COLOR TEMPERATURE"
+msgstr "درجة حرارة اللون"
+
+msgid "Click again to confirm"
+msgstr "انقر مرة أخرى للتأكيد"
+
+msgid "INPUT SOURCE"
+msgstr "مصدر الإدخال"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "إذا بدّلت إلى إدخال بلا إشارة فستصبح الشاشة سوداء. استخدم أزرار الشاشة نفسها للعودة."
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "حفظ الإعدادات الحالية كملف شخصي"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "اسم الملف الشخصي (مثل ليل، سينما، عمل)"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "لا توجد ملفات شخصية بعد. اضبط شاشاتك واحفظ الأول أعلاه."
+
+msgid "Add"
+msgstr "إضافة"
+
+msgid "Apply the most recent entry at startup"
+msgstr "تطبيق أحدث إدخال عند بدء التشغيل"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "مفيد إذا كان الحاسوب مغلقًا في الوقت المجدول."
+
+msgid "WRITE A VCP CODE"
+msgstr "كتابة رمز VCP"
+
+msgid "Code (hex)"
+msgstr "الرمز (ست عشري)"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "Write"
+msgstr "كتابة"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "الإمكانات (VCP)"
+
+msgid "Read all values"
+msgstr "قراءة جميع القيم"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "لا توجد بيانات إمكانات. اضغط «قراءة جميع القيم»."
+
+msgid "Code"
+msgstr "الرمز"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Current"
+msgstr "الحالي"
+
+msgid "Max"
+msgstr "الأقصى"
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "سلسلة الإمكانات الخام"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "اللغة والمظهر"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Theme"
+msgstr "السمة"
+
+msgid "BEHAVIOR"
+msgstr "السلوك"
+
+msgid "Start minimized to the tray"
+msgstr "البدء مصغّرًا في منطقة الإعلام"
+
+msgid "Keep running in the tray when closed"
+msgstr "الاستمرار في العمل في منطقة الإعلام عند الإغلاق"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "إظهار المؤشر على الشاشة للاختصارات"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "الاختصارات العامة"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "انقر على حقل ثم اضغط المفاتيح. Backspace يمسحه وEsc يلغي."
+
+msgid "Usage time: %1"
+msgstr "مدة الاستخدام: %1"
+
+msgid "%1 year"
+msgstr "%1 سنة"
+
+msgid "%1 years"
+msgstr "%1 سنوات"
+
+msgid "%1 day"
+msgstr "%1 يوم"
+
+msgid "%1 days"
+msgstr "%1 أيام"
+
+msgid "%1 hour"
+msgstr "%1 ساعة"
+
+msgid "%1 hours"
+msgstr "%1 ساعات"
+
+msgid "The monitor ignored this change: %1"
+msgstr "تجاهلت الشاشة هذا التغيير: %1"
+
+msgid "Could not import: %1"
+msgstr "تعذّر الاستيراد: %1"
+
+msgid "Normal"
+msgstr "عادي"
+
+msgid "Grayscale"
+msgstr "تدرّج الرمادي"
+
+msgid "Redscale"
+msgstr "تدرّج الأحمر"
+
+msgid "Greenscale"
+msgstr "تدرّج الأخضر"
+
+msgid "Bluescale"
+msgstr "تدرّج الأزرق"
+
+msgid "Sepia"
+msgstr "بني داكن (سيبيا)"
+
+msgid "Inverted"
+msgstr "معكوس"
+
+msgid "Saturation"
+msgstr "التشبّع"
+
+msgid "The color filter is not available on this system"
+msgstr "مرشّح الألوان غير متاح على هذا النظام"
+
+msgid "Saturation up"
+msgstr "زيادة التشبّع"
+
+msgid "Saturation down"
+msgstr "خفض التشبّع"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "إعدادات الشاشة المسبقة. الباهتة لم تُبلغ عنها الشاشة؛ وإن لم يتغير شيء فشاشتك تتجاهل هذا الأمر."
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "المدخلات الباهتة لم تُبلغ عنها الشاشة، لكن كثيرًا من الشاشات تقبلها مع ذلك (غالبًا ما تغيب HDMI وDisplayPort عن القائمة)."
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "يرسل أي أمر MCCS مباشرة إلى الشاشة. الرمز هو رقم VCP بالنظام الست عشري. قد تسبب القيم الخاطئة على رموز غير معروفة سلوكًا غير سليم، فاستخدمه بحذر."
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "ما تذكر الشاشة أنه مدعوم. «قراءة جميع القيم» تسأل الشاشة عن القيمة الحالية والقصوى لكل رمز مدرج؛ وتستغرق بضع ثوانٍ."
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "النص الخام الذي أبلغت عنه الشاشة. مفيد عند طلب الدعم أو الإبلاغ عن مشكلة."
+
+msgid "Open the mini panel"
+msgstr "فتح اللوحة المصغّرة"
+
+msgid "Restore"
+msgstr "استعادة"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "مرشّح الألوان (برمجي)"
+
+msgid "Temperature"
+msgstr "درجة الحرارة"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "ضبط RGB (عتاد)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "تغيير مجدول"
+
+msgid "Mon"
+msgstr "الإثنين"
+
+msgid "Tue"
+msgstr "الثلاثاء"
+
+msgid "Wed"
+msgstr "الأربعاء"
+
+msgid "Thu"
+msgstr "الخميس"
+
+msgid "Fri"
+msgstr "الجمعة"
+
+msgid "Sat"
+msgstr "السبت"
+
+msgid "Sun"
+msgstr "الأحد"
+
+msgid "About"
+msgstr "حول"
+
+msgid "Privacy policy"
+msgstr "سياسة الخصوصية"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "لا يجمع Solua أي بيانات شخصية ولا يخزّنها ولا يرسلها. لا حسابات ولا تحليلات ولا اتصالات شبكية. تبقى إعداداتك في ملف محلي على هذا الحاسوب، والتواصل الوحيد يتم بين التطبيق وشاشاتك عبر بروتوكول DDC/CI القياسي."
+
+msgid "Open source licenses"
+msgstr "تراخيص المصدر المفتوح"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "All monitors"
+msgstr "جميع الشاشات"
+
+msgid "No profiles yet."
+msgstr "لا توجد ملفات شخصية بعد."
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "هناك ملف شخصي محفوظ نشط. انتقل إلى «حر» لتعديل الإعدادات."
+
+msgid "Allow modifying saved profiles"
+msgstr "السماح بتعديل الملفات الشخصية المحفوظة"
+
+msgid "BACKUP"
+msgstr "نسخة احتياطية"
+
+msgid "Backup saved"
+msgstr "تم حفظ النسخة الاحتياطية"
+
+msgid "Black"
+msgstr "أسود"
+
+msgid "Bottom"
+msgstr "أسفل"
+
+msgid "Bottom left"
+msgstr "أسفل اليسار"
+
+msgid "Bottom right"
+msgstr "أسفل اليمين"
+
+msgid "Center"
+msgstr "الوسط"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "اضبط كل شيء بحرية. تقفل الملفات الشخصية المحفوظة الإعدادات."
+
+msgid "Could not save the backup: %1"
+msgstr "تعذّر حفظ النسخة الاحتياطية: %1"
+
+msgid "Default shortcuts restored"
+msgstr "تمت استعادة الاختصارات الافتراضية"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "موزّع بموجب ترخيص GPL-3.0 أو أحدث"
+
+msgid "Down"
+msgstr "لأسفل"
+
+msgid "Export all settings"
+msgstr "تصدير جميع الإعدادات"
+
+msgid "Free"
+msgstr "حر"
+
+msgid "Gray"
+msgstr "رمادي"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "المؤشر واللوحة المصغّرة"
+
+msgid "Import settings"
+msgstr "استيراد الإعدادات"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "تم الاستيراد: %1 ملفات شخصية، %2 تغييرات مجدولة"
+
+msgid "Indicator position"
+msgstr "موضع المؤشر"
+
+msgid "Indicator size"
+msgstr "حجم المؤشر"
+
+msgid "Left"
+msgstr "يسار"
+
+msgid "No scheduled changes."
+msgstr "لا توجد تغييرات مجدولة."
+
+msgid "Restore defaults"
+msgstr "استعادة الافتراضيات"
+
+msgid "Right"
+msgstr "يمين"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "المنزلقات والاختصارات"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "احفظ جميع إعداداتك وملفاتك الشخصية وجدولتك واختصاراتك في ملف، أو حمّلها من ملف."
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "تتحرك المنزلقات بخطوات ثابتة تُعلَّم بنقاط. ينطبق على النافذة واللوحة المصغّرة."
+
+msgid "Step (sliders and shortcuts)"
+msgstr "الخطوة (المنزلقات والاختصارات)"
+
+msgid "Stepped sliders"
+msgstr "منزلقات بخطوات"
+
+msgid "Top"
+msgstr "أعلى"
+
+msgid "Top left"
+msgstr "أعلى اليسار"
+
+msgid "Top right"
+msgstr "أعلى اليمين"
+
+msgid "Up"
+msgstr "لأعلى"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "أثناء نشاط ملف شخصي، يُحفظ كل تغيير تجريه فيه تلقائيًا."
+
+msgid "Yellow"
+msgstr "أصفر"
+
+msgid "Yellowscale"
+msgstr "تدرّج الأصفر"
+
+msgid "Temperature down"
+msgstr "خفض درجة الحرارة"
+
+msgid "Temperature up"
+msgstr "رفع درجة الحرارة"
+
+msgid "Black level (blacks)"
+msgstr "مستوى الأسود (الظلال)"
+
+msgid "Display controller"
+msgstr "وحدة التحكم بالعرض"
+
+msgid "Firmware version"
+msgstr "إصدار البرنامج الثابت"
+
+msgid "Gain (whites)"
+msgstr "الكسب (البياض)"
+
+msgid "Horizontal frequency"
+msgstr "التردد الأفقي"
+
+msgid "IMAGE"
+msgstr "الصورة"
+
+msgid "MONITOR AUDIO"
+msgstr "صوت الشاشة"
+
+msgid "MONITOR INFORMATION"
+msgstr "معلومات الشاشة"
+
+msgid "Monitor volume"
+msgstr "مستوى صوت الشاشة"
+
+msgid "Mute the monitor audio"
+msgstr "كتم صوت الشاشة"
+
+msgid "Not reported"
+msgstr "غير مُبلَّغ"
+
+msgid "Panel technology"
+msgstr "تقنية اللوحة"
+
+msgid "Restore factory defaults"
+msgstr "استعادة إعدادات المصنع"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "يضبط مقياس كل قناة لونية. يؤثر في الغالب على المناطق الساطعة من الصورة."
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "يضبط مستوى أغمق مناطق كل قناة لونية. يؤثر في الغالب على الظلال لا على البياض."
+
+msgid "Show in the mini panel"
+msgstr "إظهار في اللوحة المصغّرة"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "هذا هو صوت الشاشة نفسها (سماعاتها أو منفذ سماعة الرأس)، للشاشات التي تملكه. وليس مستوى صوت النظام."
+
+msgid "VCP version"
+msgstr "إصدار VCP"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "التردد العمودي (معدل التحديث)"
+
+msgid "Color filter"
+msgstr "مرشّح الألوان"
+
+msgid "Software filter applied to the whole system."
+msgstr "مرشّح برمجي يُطبَّق على النظام بأكمله."
+
+msgid "Monitor volume up"
+msgstr "رفع مستوى صوت الشاشة"
+
+msgid "Monitor volume down"
+msgstr "خفض مستوى صوت الشاشة"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "كتم/إلغاء كتم صوت الشاشة"
+
+msgid "Input"
+msgstr "الإدخال"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "تُعيَّن الاختصارات بواسطة سطح المكتب لديك. يمكنك تغييرها من إعدادات النظام ← الاختصارات."
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "تتحرك المنزلقات بخطوات ثابتة تُعلَّم بنقاط."
+
+msgid "Adjust all together"
+msgstr "ضبط الكل معًا"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "تُطبَّق التغييرات في التحكم واللون على كل الشاشات."
+
+msgid "Violet"
+msgstr "بنفسجي"
+
+msgid "Set an end time"
+msgstr "تحديد وقت الانتهاء"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "عند الانتهاء، يُستعاد الملف الشخصي السابق."
+
+msgid "Transparency"
+msgstr "الشفافية"
+
+msgid "Run in the background"
+msgstr "التشغيل في الخلفية"
+
+msgid "Default"
+msgstr "افتراضي"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "وحدة تحكم بشاشات DDC/CI مكتوبة بلغة Rust الخالصة (واجهة Slint). خفيفة وسريعة للغاية."
+
+msgid "Add to the applications menu"
+msgstr "إضافة إلى قائمة التطبيقات"
+
+msgid "Could not enable monitor access."
+msgstr "تعذّر تمكين الوصول إلى الشاشات."
+
+msgid "Creates a launcher for this AppImage."
+msgstr "ينشئ مشغّلًا لهذا AppImage."
+
+msgid "Enable monitor access"
+msgstr "تمكين الوصول إلى الشاشات"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "يُبقي Solua قيد التشغيل عند إغلاق النافذة، لتظل الاختصارات تعمل."
+
+msgid "Monitor access enabled."
+msgstr "تم تمكين الوصول إلى الشاشات."
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "لا يستطيع Solua الوصول إلى شاشاتك بعد. يؤدي تمكين الوصول إلى إعداد قاعدة نظام صغيرة ويطلب كلمة المرور."
+
+msgid "Start with the system"
+msgstr "البدء مع النظام"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "يبدأ Solua مخفيًا عند تسجيل الدخول."
+
+msgid "12-hour clock (AM/PM)"
+msgstr "ساعة بنظام 12 ساعة (ص/م)"

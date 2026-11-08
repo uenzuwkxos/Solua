@@ -1,0 +1,71 @@
+[package]
+name = "Solua"
+version = "1.0.0"
+edition = "2021"
+description = "Solua — control brightness, contrast, color and inputs of monitors via DDC/CI"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/uenzuwkxos/Solua"
+build = "build.rs"
+
+[dependencies]
+slint = { version = "1.18", default-features = false, features = ["std", "backend-winit", "renderer-femtovg", "renderer-software", "compat-1-2", "raw-window-handle-06", "unstable-winit-030"] }
+raw-window-handle = "0.6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+
+[build-dependencies]
+slint-build = "1.18"
+
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[features]
+default = []
+# Only to type-check (cargo check) the Windows-specific code from Linux.
+wincheck = []
+
+[target.'cfg(target_os = "linux")'.dependencies]
+# D-Bus: global shortcuts (GlobalShortcuts portal)
+zbus = "5"
+
+# ---- Linux packages (built in CI; see .github/workflows/release.yml and packaging/linux/build.sh) ----
+
+[package.metadata.deb]
+name = "solua"
+maintainer = "Solua maintainers <noreply@github.com>"
+copyright = "Solua contributors"
+license-file = ["LICENSE", "0"]
+extended-description = """\
+Solua adjusts the brightness, contrast, color temperature, input source and power \
+of your monitors over DDC/CI, with profiles, schedules and global shortcuts."""
+section = "utils"
+priority = "optional"
+depends = "libc6, libfontconfig1, libfreetype6, libxkbcommon0, libwayland-client0"
+recommends = "brightnessctl, xdg-desktop-portal, policykit-1"
+conflicts = "soluna"
+replaces = "soluna"
+maintainer-scripts = "packaging/linux/deb"
+assets = [
+  ["target/release/Solua", "usr/bin/solua", "755"],
+  ["packaging/linux/solua.desktop", "usr/share/applications/solua.desktop", "644"],
+  ["packaging/linux/60-solua-i2c.rules", "usr/lib/udev/rules.d/60-solua-i2c.rules", "644"],
+  ["packaging/linux/solua-i2c.conf", "usr/lib/modules-load.d/solua-i2c.conf", "644"],
+  ["packaging/linux/icons/hicolor/16x16/apps/solua.png", "usr/share/icons/hicolor/16x16/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/22x22/apps/solua.png", "usr/share/icons/hicolor/22x22/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/24x24/apps/solua.png", "usr/share/icons/hicolor/24x24/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/32x32/apps/solua.png", "usr/share/icons/hicolor/32x32/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/48x48/apps/solua.png", "usr/share/icons/hicolor/48x48/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/64x64/apps/solua.png", "usr/share/icons/hicolor/64x64/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/128x128/apps/solua.png", "usr/share/icons/hicolor/128x128/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/256x256/apps/solua.png", "usr/share/icons/hicolor/256x256/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/512x512/apps/solua.png", "usr/share/icons/hicolor/512x512/apps/solua.png", "644"],
+  ["packaging/linux/icons/hicolor/scalable/apps/solua.svg", "usr/share/icons/hicolor/scalable/apps/solua.svg", "644"],
+]

@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+
+msgid "Open Solua"
+msgstr "Solua 열기"
+
+msgid "Quit"
+msgstr "종료"
+
+msgid "Profiles"
+msgstr "프로필"
+
+msgid "Brightness"
+msgstr "밝기"
+
+msgid "Solua — monitor control"
+msgstr "Solua — 모니터 제어"
+
+msgid "Ready"
+msgstr "준비됨"
+
+msgid "No DDC/CI monitors found"
+msgstr "DDC/CI 모니터를 찾을 수 없습니다"
+
+msgid "Monitors found: %1"
+msgstr "찾은 모니터: %1"
+
+msgid "Profile “%1” applied"
+msgstr "프로필 “%1”을(를) 적용했습니다"
+
+msgid "Profile “%1” saved"
+msgstr "프로필 “%1”을(를) 저장했습니다"
+
+msgid "Profile “%1” was updated"
+msgstr "프로필 “%1”이(가) 업데이트되었습니다"
+
+msgid "Reset command sent"
+msgstr "초기화 명령을 보냈습니다"
+
+msgid "Could not change: %1"
+msgstr "변경할 수 없습니다: %1"
+
+msgid "Could not read: %1"
+msgstr "읽을 수 없습니다: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "일정: 프로필 “%1”을(를) 적용했습니다"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "단축키를 사용할 수 없습니다(이미 사용 중?): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "시간이 올바르지 않습니다. HH:MM 형식으로 입력하세요(예: 22:30)"
+
+msgid "Create a profile first"
+msgstr "먼저 프로필을 만드세요"
+
+msgid "Give the profile a name"
+msgstr "프로필 이름을 입력하세요"
+
+msgid "This monitor did not report its capabilities"
+msgstr "이 모니터가 기능 정보를 보고하지 않았습니다"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "데모 모드: 가상 모니터이며 하드웨어로 아무것도 전송되지 않습니다"
+
+msgid "Power command sent"
+msgstr "전원 명령을 보냈습니다"
+
+msgid "Value written"
+msgstr "값을 기록했습니다"
+
+msgid "Invalid code or value"
+msgstr "잘못된 코드 또는 값입니다"
+
+msgid "Reading monitor…"
+msgstr "모니터 읽는 중…"
+
+msgid "unknown"
+msgstr "알 수 없음"
+
+msgid "Press the keys…"
+msgstr "키를 누르세요…"
+
+msgid "Not set"
+msgstr "설정 안 됨"
+
+msgid "Brightness up"
+msgstr "밝기 높이기"
+
+msgid "Brightness down"
+msgstr "밝기 낮추기"
+
+msgid "Contrast up"
+msgstr "대비 높이기"
+
+msgid "Contrast down"
+msgstr "대비 낮추기"
+
+msgid "Show / hide Solua"
+msgstr "Solua 표시 / 숨기기"
+
+msgid "Profile: %1"
+msgstr "프로필: %1"
+
+msgid "Contrast"
+msgstr "대비"
+
+msgid "Volume"
+msgstr "볼륨"
+
+msgid "Muted"
+msgstr "음소거됨"
+
+msgid "System default"
+msgstr "시스템 기본값"
+
+msgid "System"
+msgstr "시스템"
+
+msgid "Light"
+msgstr "밝게"
+
+msgid "Dark"
+msgstr "어둡게"
+
+msgid "Built-in display"
+msgstr "내장 디스플레이"
+
+msgid "External display"
+msgstr "외부 디스플레이"
+
+msgid "%1 monitor(s)"
+msgstr "모니터 %1대"
+
+msgid "Red"
+msgstr "빨강"
+
+msgid "Green"
+msgstr "초록"
+
+msgid "Blue"
+msgstr "파랑"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "DDC/CI를 지원하는 모니터를 찾을 수 없습니다"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "모니터의 화면 메뉴에서 DDC/CI를 켜고, 직접 연결 케이블을 사용한 뒤(독이나 어댑터는 피하세요) 다시 시도하세요."
+
+msgid "Search again"
+msgstr "다시 검색"
+
+msgid "MONITORS"
+msgstr "모니터"
+
+msgid "DEMO MODE"
+msgstr "데모 모드"
+
+msgid "Settings"
+msgstr "설정"
+
+msgid "Controls"
+msgstr "컨트롤"
+
+msgid "Color"
+msgstr "색상"
+
+msgid "Schedule"
+msgstr "일정"
+
+msgid "Advanced"
+msgstr "고급"
+
+msgid "Not supported"
+msgstr "지원되지 않음"
+
+msgid "Control all monitors together"
+msgstr "모든 모니터 함께 제어"
+
+msgid "COLOR TEMPERATURE"
+msgstr "색온도"
+
+msgid "Click again to confirm"
+msgstr "확인하려면 다시 클릭하세요"
+
+msgid "INPUT SOURCE"
+msgstr "입력 소스"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "신호가 없는 입력으로 전환하면 화면이 꺼집니다. 돌아오려면 모니터의 버튼을 사용하세요."
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "현재 설정을 프로필로 저장"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "프로필 이름(예: 야간, 영화, 업무)"
+
+msgid "Save"
+msgstr "저장"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "아직 프로필이 없습니다. 모니터를 조정한 뒤 위에서 첫 프로필을 저장하세요."
+
+msgid "Add"
+msgstr "추가"
+
+msgid "Apply the most recent entry at startup"
+msgstr "시작 시 가장 최근 항목 적용"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "예약된 시간에 컴퓨터가 꺼져 있었던 경우에 유용합니다."
+
+msgid "WRITE A VCP CODE"
+msgstr "VCP 코드 쓰기"
+
+msgid "Code (hex)"
+msgstr "코드(16진수)"
+
+msgid "Value"
+msgstr "값"
+
+msgid "Write"
+msgstr "쓰기"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "기능(VCP)"
+
+msgid "Read all values"
+msgstr "모든 값 읽기"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "기능 데이터가 없습니다. “모든 값 읽기”를 누르세요."
+
+msgid "Code"
+msgstr "코드"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Current"
+msgstr "현재"
+
+msgid "Max"
+msgstr "최대"
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "원시 기능 문자열"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "언어 및 모양"
+
+msgid "Language"
+msgstr "언어"
+
+msgid "Theme"
+msgstr "테마"
+
+msgid "BEHAVIOR"
+msgstr "동작"
+
+msgid "Start minimized to the tray"
+msgstr "트레이에 최소화하여 시작"
+
+msgid "Keep running in the tray when closed"
+msgstr "닫아도 트레이에서 계속 실행"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "단축키용 화면 표시기 표시"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "전역 단축키"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "필드를 클릭하고 키를 누르세요. Backspace는 지우기, Esc는 취소입니다."
+
+msgid "Usage time: %1"
+msgstr "사용 시간: %1"
+
+msgid "%1 year"
+msgstr "%1년"
+
+msgid "%1 years"
+msgstr "%1년"
+
+msgid "%1 day"
+msgstr "%1일"
+
+msgid "%1 days"
+msgstr "%1일"
+
+msgid "%1 hour"
+msgstr "%1시간"
+
+msgid "%1 hours"
+msgstr "%1시간"
+
+msgid "The monitor ignored this change: %1"
+msgstr "모니터가 이 변경을 무시했습니다: %1"
+
+msgid "Could not import: %1"
+msgstr "가져올 수 없습니다: %1"
+
+msgid "Normal"
+msgstr "보통"
+
+msgid "Grayscale"
+msgstr "회색조"
+
+msgid "Redscale"
+msgstr "빨간색조"
+
+msgid "Greenscale"
+msgstr "초록색조"
+
+msgid "Bluescale"
+msgstr "파란색조"
+
+msgid "Sepia"
+msgstr "세피아"
+
+msgid "Inverted"
+msgstr "반전"
+
+msgid "Saturation"
+msgstr "채도"
+
+msgid "The color filter is not available on this system"
+msgstr "이 시스템에서는 색상 필터를 사용할 수 없습니다"
+
+msgid "Saturation up"
+msgstr "채도 높이기"
+
+msgid "Saturation down"
+msgstr "채도 낮추기"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "모니터 프리셋입니다. 흐리게 표시된 항목은 모니터가 보고하지 않았으며, 아무 변화가 없다면 모니터가 이 명령을 무시하는 것입니다."
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "흐리게 표시된 입력은 모니터가 보고하지 않았지만 많은 모니터가 그래도 받아들입니다(HDMI와 DisplayPort가 목록에 없는 경우가 많습니다)."
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "임의의 MCCS 명령을 모니터로 직접 보냅니다. 코드는 16진수 VCP 번호입니다. 알 수 없는 코드에 잘못된 값을 보내면 오작동할 수 있으니 주의하세요."
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "모니터가 지원한다고 알려 주는 항목입니다. “모든 값 읽기”는 나열된 각 코드의 현재 값과 최댓값을 모니터에 요청하며 몇 초가 걸립니다."
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "모니터가 보고한 가공되지 않은 텍스트입니다. 지원을 요청하거나 문제를 보고할 때 유용합니다."
+
+msgid "Open the mini panel"
+msgstr "미니 패널 열기"
+
+msgid "Restore"
+msgstr "복원"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "색상 필터(소프트웨어)"
+
+msgid "Temperature"
+msgstr "색온도"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "RGB 설정(하드웨어)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "예약 변경"
+
+msgid "Mon"
+msgstr "월"
+
+msgid "Tue"
+msgstr "화"
+
+msgid "Wed"
+msgstr "수"
+
+msgid "Thu"
+msgstr "목"
+
+msgid "Fri"
+msgstr "금"
+
+msgid "Sat"
+msgstr "토"
+
+msgid "Sun"
+msgstr "일"
+
+msgid "About"
+msgstr "정보"
+
+msgid "Privacy policy"
+msgstr "개인정보 처리방침"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Solua는 개인 데이터를 수집, 저장, 전송하지 않습니다. 계정도, 분석도 없으며 네트워크 연결도 하지 않습니다. 설정은 이 컴퓨터의 로컬 파일에 저장되며, 통신은 표준 DDC/CI 프로토콜을 통한 앱과 모니터 사이에서만 이루어집니다."
+
+msgid "Open source licenses"
+msgstr "오픈 소스 라이선스"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "All monitors"
+msgstr "모든 모니터"
+
+msgid "No profiles yet."
+msgstr "아직 프로필이 없습니다."
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "저장된 프로필이 활성 상태입니다. 설정을 조정하려면 “자유”로 전환하세요."
+
+msgid "Allow modifying saved profiles"
+msgstr "저장된 프로필 수정 허용"
+
+msgid "BACKUP"
+msgstr "백업"
+
+msgid "Backup saved"
+msgstr "백업을 저장했습니다"
+
+msgid "Black"
+msgstr "검정"
+
+msgid "Bottom"
+msgstr "아래"
+
+msgid "Bottom left"
+msgstr "왼쪽 아래"
+
+msgid "Bottom right"
+msgstr "오른쪽 아래"
+
+msgid "Center"
+msgstr "가운데"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "모든 것을 자유롭게 설정하세요. 저장된 프로필은 설정을 잠급니다."
+
+msgid "Could not save the backup: %1"
+msgstr "백업을 저장할 수 없습니다: %1"
+
+msgid "Default shortcuts restored"
+msgstr "기본 단축키를 복원했습니다"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "GPL-3.0 이상 라이선스로 배포됨"
+
+msgid "Down"
+msgstr "아래로"
+
+msgid "Export all settings"
+msgstr "모든 설정 내보내기"
+
+msgid "Free"
+msgstr "자유"
+
+msgid "Gray"
+msgstr "회색"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "표시기 및 미니 패널"
+
+msgid "Import settings"
+msgstr "설정 가져오기"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "가져옴: 프로필 %1개, 예약 변경 %2개"
+
+msgid "Indicator position"
+msgstr "표시기 위치"
+
+msgid "Indicator size"
+msgstr "표시기 크기"
+
+msgid "Left"
+msgstr "왼쪽"
+
+msgid "No scheduled changes."
+msgstr "예약된 변경이 없습니다."
+
+msgid "Restore defaults"
+msgstr "기본값 복원"
+
+msgid "Right"
+msgstr "오른쪽"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "슬라이더 및 단축키"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "모든 설정, 프로필, 일정, 단축키를 파일로 저장하거나 파일에서 불러옵니다."
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "슬라이더는 점으로 표시된 고정 단계로 움직입니다. 창과 미니 패널에 적용됩니다."
+
+msgid "Step (sliders and shortcuts)"
+msgstr "단계(슬라이더 및 단축키)"
+
+msgid "Stepped sliders"
+msgstr "단계별 슬라이더"
+
+msgid "Top"
+msgstr "위"
+
+msgid "Top left"
+msgstr "왼쪽 위"
+
+msgid "Top right"
+msgstr "오른쪽 위"
+
+msgid "Up"
+msgstr "위로"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "프로필이 활성화된 동안에는 변경 사항이 모두 자동으로 프로필에 저장됩니다."
+
+msgid "Yellow"
+msgstr "노랑"
+
+msgid "Yellowscale"
+msgstr "노란색조"
+
+msgid "Temperature down"
+msgstr "색온도 낮추기"
+
+msgid "Temperature up"
+msgstr "색온도 높이기"
+
+msgid "Black level (blacks)"
+msgstr "블랙 레벨(어두운 영역)"
+
+msgid "Display controller"
+msgstr "디스플레이 컨트롤러"
+
+msgid "Firmware version"
+msgstr "펌웨어 버전"
+
+msgid "Gain (whites)"
+msgstr "게인(밝은 영역)"
+
+msgid "Horizontal frequency"
+msgstr "수평 주파수"
+
+msgid "IMAGE"
+msgstr "이미지"
+
+msgid "MONITOR AUDIO"
+msgstr "모니터 오디오"
+
+msgid "MONITOR INFORMATION"
+msgstr "모니터 정보"
+
+msgid "Monitor volume"
+msgstr "모니터 볼륨"
+
+msgid "Mute the monitor audio"
+msgstr "모니터 오디오 음소거"
+
+msgid "Not reported"
+msgstr "보고되지 않음"
+
+msgid "Panel technology"
+msgstr "패널 기술"
+
+msgid "Restore factory defaults"
+msgstr "공장 기본값 복원"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "각 색상 채널의 크기를 조절합니다. 주로 이미지의 밝은 영역에 영향을 줍니다."
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "각 색상 채널에서 가장 어두운 영역의 레벨을 설정합니다. 주로 그림자에 영향을 주며 흰색에는 영향이 없습니다."
+
+msgid "Show in the mini panel"
+msgstr "미니 패널에 표시"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "모니터 자체의 오디오(스피커 또는 헤드폰 잭)이며, 해당 기능이 있는 모니터에 적용됩니다. 시스템 볼륨이 아닙니다."
+
+msgid "VCP version"
+msgstr "VCP 버전"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "수직 주파수(재생률)"
+
+msgid "Color filter"
+msgstr "색상 필터"
+
+msgid "Software filter applied to the whole system."
+msgstr "시스템 전체에 적용되는 소프트웨어 필터입니다."
+
+msgid "Monitor volume up"
+msgstr "모니터 볼륨 높이기"
+
+msgid "Monitor volume down"
+msgstr "모니터 볼륨 낮추기"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "모니터 오디오 음소거/해제"
+
+msgid "Input"
+msgstr "입력"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "단축키는 데스크톱 환경에서 지정합니다. 시스템 설정 → 단축키에서 변경할 수 있습니다."
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "슬라이더는 점으로 표시된 고정 단계로 움직입니다."
+
+msgid "Adjust all together"
+msgstr "모두 함께 조정"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "제어 및 색상의 변경 사항이 모든 모니터에 적용됩니다."
+
+msgid "Violet"
+msgstr "바이올렛"
+
+msgid "Set an end time"
+msgstr "종료 시간 설정"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "종료되면 이전 프로필이 복원됩니다."
+
+msgid "Transparency"
+msgstr "투명도"
+
+msgid "Run in the background"
+msgstr "백그라운드에서 실행"
+
+msgid "Default"
+msgstr "기본값"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "순수 Rust로 작성된 DDC/CI 모니터 컨트롤러(Slint GUI). 매우 가볍고 빠릅니다."
+
+msgid "Add to the applications menu"
+msgstr "애플리케이션 메뉴에 추가"
+
+msgid "Could not enable monitor access."
+msgstr "모니터 접근을 활성화할 수 없습니다."
+
+msgid "Creates a launcher for this AppImage."
+msgstr "이 AppImage의 실행기를 만듭니다."
+
+msgid "Enable monitor access"
+msgstr "모니터 접근 활성화"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "창을 닫아도 Solua를 계속 실행하므로 단축키가 계속 작동합니다."
+
+msgid "Monitor access enabled."
+msgstr "모니터 접근이 활성화되었습니다."
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "Solua가 아직 모니터에 접근할 수 없습니다. 접근을 활성화하면 작은 시스템 규칙이 설정되며 비밀번호를 묻습니다."
+
+msgid "Start with the system"
+msgstr "시스템과 함께 시작"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "로그인할 때 Solua를 숨긴 상태로 시작합니다."
+
+msgid "12-hour clock (AM/PM)"
+msgstr "12시간제 (AM/PM)"

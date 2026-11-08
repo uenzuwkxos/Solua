@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+
+msgid "Open Solua"
+msgstr "Открыть Solua"
+
+msgid "Quit"
+msgstr "Выход"
+
+msgid "Profiles"
+msgstr "Профили"
+
+msgid "Brightness"
+msgstr "Яркость"
+
+msgid "Solua — monitor control"
+msgstr "Solua — управление мониторами"
+
+msgid "Ready"
+msgstr "Готово"
+
+msgid "No DDC/CI monitors found"
+msgstr "Мониторы с DDC/CI не найдены"
+
+msgid "Monitors found: %1"
+msgstr "Найдено мониторов: %1"
+
+msgid "Profile “%1” applied"
+msgstr "Профиль «%1» применён"
+
+msgid "Profile “%1” saved"
+msgstr "Профиль «%1» сохранён"
+
+msgid "Profile “%1” was updated"
+msgstr "Профиль «%1» обновлён"
+
+msgid "Reset command sent"
+msgstr "Команда сброса отправлена"
+
+msgid "Could not change: %1"
+msgstr "Не удалось изменить: %1"
+
+msgid "Could not read: %1"
+msgstr "Не удалось прочитать: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "Расписание: профиль «%1» применён"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "Сочетание клавиш недоступно (уже используется?): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "Неверное время. Используйте ЧЧ:ММ (напр. 22:30)"
+
+msgid "Create a profile first"
+msgstr "Сначала создайте профиль"
+
+msgid "Give the profile a name"
+msgstr "Дайте профилю имя"
+
+msgid "This monitor did not report its capabilities"
+msgstr "Этот монитор не сообщил о своих возможностях"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "Демо-режим: мониторы имитируются, на оборудование ничего не отправляется"
+
+msgid "Power command sent"
+msgstr "Команда питания отправлена"
+
+msgid "Value written"
+msgstr "Значение записано"
+
+msgid "Invalid code or value"
+msgstr "Неверный код или значение"
+
+msgid "Reading monitor…"
+msgstr "Чтение монитора…"
+
+msgid "unknown"
+msgstr "неизвестно"
+
+msgid "Press the keys…"
+msgstr "Нажмите клавиши…"
+
+msgid "Not set"
+msgstr "Не задано"
+
+msgid "Brightness up"
+msgstr "Увеличить яркость"
+
+msgid "Brightness down"
+msgstr "Уменьшить яркость"
+
+msgid "Contrast up"
+msgstr "Увеличить контрастность"
+
+msgid "Contrast down"
+msgstr "Уменьшить контрастность"
+
+msgid "Show / hide Solua"
+msgstr "Показать / скрыть Solua"
+
+msgid "Profile: %1"
+msgstr "Профиль: %1"
+
+msgid "Contrast"
+msgstr "Контрастность"
+
+msgid "Volume"
+msgstr "Громкость"
+
+msgid "Muted"
+msgstr "Звук выключен"
+
+msgid "System default"
+msgstr "Как в системе"
+
+msgid "System"
+msgstr "Система"
+
+msgid "Light"
+msgstr "Светлая"
+
+msgid "Dark"
+msgstr "Тёмная"
+
+msgid "Built-in display"
+msgstr "Встроенный экран"
+
+msgid "External display"
+msgstr "Внешний экран"
+
+msgid "%1 monitor(s)"
+msgstr "Мониторов: %1"
+
+msgid "Red"
+msgstr "Красный"
+
+msgid "Green"
+msgstr "Зелёный"
+
+msgid "Blue"
+msgstr "Синий"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "Мониторы с поддержкой DDC/CI не найдены"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "Включите DDC/CI в экранном меню монитора, используйте прямой кабель (без док-станций и переходников) и повторите попытку."
+
+msgid "Search again"
+msgstr "Искать снова"
+
+msgid "MONITORS"
+msgstr "МОНИТОРЫ"
+
+msgid "DEMO MODE"
+msgstr "ДЕМО-РЕЖИМ"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Controls"
+msgstr "Управление"
+
+msgid "Color"
+msgstr "Цвет"
+
+msgid "Schedule"
+msgstr "Расписание"
+
+msgid "Advanced"
+msgstr "Дополнительно"
+
+msgid "Not supported"
+msgstr "Не поддерживается"
+
+msgid "Control all monitors together"
+msgstr "Управлять всеми мониторами вместе"
+
+msgid "COLOR TEMPERATURE"
+msgstr "ЦВЕТОВАЯ ТЕМПЕРАТУРА"
+
+msgid "Click again to confirm"
+msgstr "Нажмите ещё раз для подтверждения"
+
+msgid "INPUT SOURCE"
+msgstr "ИСТОЧНИК СИГНАЛА"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "Если переключиться на вход без сигнала, экран погаснет. Для возврата используйте кнопки самого монитора."
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "СОХРАНИТЬ ТЕКУЩИЕ НАСТРОЙКИ КАК ПРОФИЛЬ"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "Название профиля (напр. Ночь, Кино, Работа)"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "Профилей пока нет. Настройте мониторы и сохраните первый профиль выше."
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Apply the most recent entry at startup"
+msgstr "Применять последнюю запись при запуске"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "Полезно, если компьютер был выключен в назначенное время."
+
+msgid "WRITE A VCP CODE"
+msgstr "ЗАПИСАТЬ КОД VCP"
+
+msgid "Code (hex)"
+msgstr "Код (hex)"
+
+msgid "Value"
+msgstr "Значение"
+
+msgid "Write"
+msgstr "Записать"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "ВОЗМОЖНОСТИ (VCP)"
+
+msgid "Read all values"
+msgstr "Прочитать все значения"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "Нет данных о возможностях. Нажмите «Прочитать все значения»."
+
+msgid "Code"
+msgstr "Код"
+
+msgid "Name"
+msgstr "Название"
+
+msgid "Current"
+msgstr "Текущее"
+
+msgid "Max"
+msgstr "Макс."
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "НЕОБРАБОТАННАЯ СТРОКА ВОЗМОЖНОСТЕЙ"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "ЯЗЫК И ВНЕШНИЙ ВИД"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Theme"
+msgstr "Тема"
+
+msgid "BEHAVIOR"
+msgstr "ПОВЕДЕНИЕ"
+
+msgid "Start minimized to the tray"
+msgstr "Запускать свёрнутым в трей"
+
+msgid "Keep running in the tray when closed"
+msgstr "Оставаться в трее при закрытии"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "Показывать экранный индикатор для сочетаний клавиш"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "ГЛОБАЛЬНЫЕ СОЧЕТАНИЯ КЛАВИШ"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "Щёлкните поле и нажмите клавиши. Backspace очищает, Esc отменяет."
+
+msgid "Usage time: %1"
+msgstr "Время работы: %1"
+
+msgid "%1 year"
+msgstr "%1 г."
+
+msgid "%1 years"
+msgstr "%1 г."
+
+msgid "%1 day"
+msgstr "%1 дн."
+
+msgid "%1 days"
+msgstr "%1 дн."
+
+msgid "%1 hour"
+msgstr "%1 ч"
+
+msgid "%1 hours"
+msgstr "%1 ч"
+
+msgid "The monitor ignored this change: %1"
+msgstr "Монитор проигнорировал это изменение: %1"
+
+msgid "Could not import: %1"
+msgstr "Не удалось импортировать: %1"
+
+msgid "Normal"
+msgstr "Обычный"
+
+msgid "Grayscale"
+msgstr "Оттенки серого"
+
+msgid "Redscale"
+msgstr "Оттенки красного"
+
+msgid "Greenscale"
+msgstr "Оттенки зелёного"
+
+msgid "Bluescale"
+msgstr "Оттенки синего"
+
+msgid "Sepia"
+msgstr "Сепия"
+
+msgid "Inverted"
+msgstr "Инверсия"
+
+msgid "Saturation"
+msgstr "Насыщенность"
+
+msgid "The color filter is not available on this system"
+msgstr "Цветной фильтр недоступен в этой системе"
+
+msgid "Saturation up"
+msgstr "Увеличить насыщенность"
+
+msgid "Saturation down"
+msgstr "Уменьшить насыщенность"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "Пресеты монитора. Затемнённые монитор не сообщил; если ничего не меняется, монитор игнорирует эту команду."
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "Затемнённые входы монитор не сообщил, но многие мониторы всё равно их принимают (HDMI и DisplayPort часто отсутствуют в списке)."
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "Отправляет любую команду MCCS прямо на монитор. Код — шестнадцатеричный номер VCP. Неверные значения для неизвестных кодов могут вызвать сбои, будьте осторожны."
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "То, что монитор заявляет как поддерживаемое. «Прочитать все значения» запрашивает у монитора текущее и максимальное значение каждого кода из списка; это занимает несколько секунд."
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "Необработанный текст, сообщённый монитором. Полезен при обращении в поддержку или сообщении о проблеме."
+
+msgid "Open the mini panel"
+msgstr "Открыть мини-панель"
+
+msgid "Restore"
+msgstr "Восстановить"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "ЦВЕТНОЙ ФИЛЬТР (ПРОГРАММНЫЙ)"
+
+msgid "Temperature"
+msgstr "Температура"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "НАСТРОЙКА RGB (АППАРАТНАЯ)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "ЗАПЛАНИРОВАННОЕ ИЗМЕНЕНИЕ"
+
+msgid "Mon"
+msgstr "Пн"
+
+msgid "Tue"
+msgstr "Вт"
+
+msgid "Wed"
+msgstr "Ср"
+
+msgid "Thu"
+msgstr "Чт"
+
+msgid "Fri"
+msgstr "Пт"
+
+msgid "Sat"
+msgstr "Сб"
+
+msgid "Sun"
+msgstr "Вс"
+
+msgid "About"
+msgstr "О программе"
+
+msgid "Privacy policy"
+msgstr "Политика конфиденциальности"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Solua не собирает, не хранит и не отправляет никаких личных данных. Здесь нет учётных записей и аналитики, приложение не устанавливает сетевых соединений. Ваши настройки хранятся в локальном файле на этом компьютере, а единственный обмен данными происходит между приложением и вашими мониторами по стандартному протоколу DDC/CI."
+
+msgid "Open source licenses"
+msgstr "Лицензии открытого ПО"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "All monitors"
+msgstr "Все мониторы"
+
+msgid "No profiles yet."
+msgstr "Профилей пока нет."
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "Активен сохранённый профиль. Переключитесь на «Свободно», чтобы менять настройки."
+
+msgid "Allow modifying saved profiles"
+msgstr "Разрешить изменение сохранённых профилей"
+
+msgid "BACKUP"
+msgstr "РЕЗЕРВНАЯ КОПИЯ"
+
+msgid "Backup saved"
+msgstr "Резервная копия сохранена"
+
+msgid "Black"
+msgstr "Чёрный"
+
+msgid "Bottom"
+msgstr "Снизу"
+
+msgid "Bottom left"
+msgstr "Снизу слева"
+
+msgid "Bottom right"
+msgstr "Снизу справа"
+
+msgid "Center"
+msgstr "По центру"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "Настраивайте всё свободно. Сохранённые профили блокируют настройки."
+
+msgid "Could not save the backup: %1"
+msgstr "Не удалось сохранить резервную копию: %1"
+
+msgid "Default shortcuts restored"
+msgstr "Сочетания клавиш по умолчанию восстановлены"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "Распространяется по лицензии GPL-3.0 или более поздней"
+
+msgid "Down"
+msgstr "Вниз"
+
+msgid "Export all settings"
+msgstr "Экспортировать все настройки"
+
+msgid "Free"
+msgstr "Свободно"
+
+msgid "Gray"
+msgstr "Серый"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "ИНДИКАТОР И МИНИ-ПАНЕЛЬ"
+
+msgid "Import settings"
+msgstr "Импортировать настройки"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "Импортировано: профилей — %1, запланированных изменений — %2"
+
+msgid "Indicator position"
+msgstr "Положение индикатора"
+
+msgid "Indicator size"
+msgstr "Размер индикатора"
+
+msgid "Left"
+msgstr "Слева"
+
+msgid "No scheduled changes."
+msgstr "Нет запланированных изменений."
+
+msgid "Restore defaults"
+msgstr "Восстановить значения по умолчанию"
+
+msgid "Right"
+msgstr "Справа"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "ПОЛЗУНКИ И СОЧЕТАНИЯ КЛАВИШ"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "Сохраните все настройки, профили, расписание и сочетания клавиш в файл или загрузите их из файла."
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "Ползунки двигаются фиксированными шагами, отмеченными точками. Действует для окна и мини-панели."
+
+msgid "Step (sliders and shortcuts)"
+msgstr "Шаг (ползунки и сочетания клавиш)"
+
+msgid "Stepped sliders"
+msgstr "Ползунки с шагом"
+
+msgid "Top"
+msgstr "Сверху"
+
+msgid "Top left"
+msgstr "Сверху слева"
+
+msgid "Top right"
+msgstr "Сверху справа"
+
+msgid "Up"
+msgstr "Вверх"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "Пока профиль активен, каждое ваше изменение автоматически сохраняется в нём."
+
+msgid "Yellow"
+msgstr "Жёлтый"
+
+msgid "Yellowscale"
+msgstr "Оттенки жёлтого"
+
+msgid "Temperature down"
+msgstr "Уменьшить температуру"
+
+msgid "Temperature up"
+msgstr "Увеличить температуру"
+
+msgid "Black level (blacks)"
+msgstr "Уровень чёрного (тени)"
+
+msgid "Display controller"
+msgstr "Контроллер дисплея"
+
+msgid "Firmware version"
+msgstr "Версия прошивки"
+
+msgid "Gain (whites)"
+msgstr "Усиление (светлые тона)"
+
+msgid "Horizontal frequency"
+msgstr "Горизонтальная частота"
+
+msgid "IMAGE"
+msgstr "ИЗОБРАЖЕНИЕ"
+
+msgid "MONITOR AUDIO"
+msgstr "ЗВУК МОНИТОРА"
+
+msgid "MONITOR INFORMATION"
+msgstr "СВЕДЕНИЯ О МОНИТОРЕ"
+
+msgid "Monitor volume"
+msgstr "Громкость монитора"
+
+msgid "Mute the monitor audio"
+msgstr "Отключить звук монитора"
+
+msgid "Not reported"
+msgstr "Не сообщается"
+
+msgid "Panel technology"
+msgstr "Технология матрицы"
+
+msgid "Restore factory defaults"
+msgstr "Восстановить заводские настройки"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "Масштабирует каждый цветовой канал. В основном влияет на светлые области изображения."
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "Задаёт уровень самых тёмных областей каждого цветового канала. В основном влияет на тени, а не на белый цвет."
+
+msgid "Show in the mini panel"
+msgstr "Показывать в мини-панели"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "Это звук самого монитора (его динамики или разъём для наушников) для мониторов, которые им оснащены. Это не системная громкость."
+
+msgid "VCP version"
+msgstr "Версия VCP"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "Вертикальная частота (частота обновления)"
+
+msgid "Color filter"
+msgstr "Цветной фильтр"
+
+msgid "Software filter applied to the whole system."
+msgstr "Программный фильтр для всей системы."
+
+msgid "Monitor volume up"
+msgstr "Увеличить громкость монитора"
+
+msgid "Monitor volume down"
+msgstr "Уменьшить громкость монитора"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "Выкл./вкл. звук монитора"
+
+msgid "Input"
+msgstr "Вход"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "Сочетания клавиш назначает ваша среда рабочего стола. Изменить их можно в Параметрах системы → Горячие клавиши."
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "Ползунки двигаются фиксированными шагами, отмеченными точками."
+
+msgid "Adjust all together"
+msgstr "Настраивать все вместе"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "Изменения на вкладках «Управление» и «Цвет» применяются ко всем мониторам."
+
+msgid "Violet"
+msgstr "Фиолетовая"
+
+msgid "Set an end time"
+msgstr "Задать время окончания"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "По окончании восстанавливается предыдущий профиль."
+
+msgid "Transparency"
+msgstr "Прозрачность"
+
+msgid "Run in the background"
+msgstr "Работать в фоновом режиме"
+
+msgid "Default"
+msgstr "По умолчанию"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "Управление мониторами по DDC/CI, написанное на чистом Rust (интерфейс Slint). Очень лёгкое и быстрое."
+
+msgid "Add to the applications menu"
+msgstr "Добавить в меню приложений"
+
+msgid "Could not enable monitor access."
+msgstr "Не удалось включить доступ к мониторам."
+
+msgid "Creates a launcher for this AppImage."
+msgstr "Создаёт ярлык запуска для этого AppImage."
+
+msgid "Enable monitor access"
+msgstr "Включить доступ к мониторам"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "Оставляет Solua работающим при закрытии окна, чтобы сочетания клавиш продолжали работать."
+
+msgid "Monitor access enabled."
+msgstr "Доступ к мониторам включён."
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "Solua пока не имеет доступа к вашим мониторам. Включение доступа создаёт небольшое системное правило и запрашивает пароль."
+
+msgid "Start with the system"
+msgstr "Запускать вместе с системой"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "Запускает Solua скрытым при входе в систему."
+
+msgid "12-hour clock (AM/PM)"
+msgstr "12-часовой формат (AM/PM)"

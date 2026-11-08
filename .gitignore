@@ -1,0 +1,27 @@
+# build output
+/target/
+
+# packages and archives produced locally
+*.deb
+*.exe
+*.zip
+*.AppImage
+
+# editor / OS files
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# local secrets and environments (none are used today; keeps them out by accident)
+.env
+.env.*
+*.pem
+*.key
+
+# local test data (fake HOME used for screenshots/tests)
+fakehome/
+shots/
+dist/

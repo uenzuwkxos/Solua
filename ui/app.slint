@@ -1,0 +1,1943 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+import { ComboBox, LineEdit, TextEdit, ScrollView } from "std-widgets.slint";
+import { Theme, SliderCfg } from "theme.slint";
+import { Icon, Card, SectionTitle, SliderRow, Pill, Btn, ConfirmBtn, SoSwitch, ToggleRow, Tab, HotkeyField, SoSlider, MiniRow, MiniPill, IconBtn, ConfirmIconBtn, DayChip, DragZone, Reorder, Chip, Accordion } from "components.slint";
+
+export { Theme, SliderCfg }
+
+export struct MonitorItem { name: string, detail: string, internal: bool }
+export struct ChoiceItem { label: string, value: int, dim: bool }
+export struct ChipItem { icon: int, text: string }
+export struct ProfileItem { name: string, active: bool, rows: [[ChipItem]] }
+export struct MiniProfileItem { name: string, active: bool }
+export struct ScheduleItem { time: string, profile: string, enabled: bool, days: [bool], end: string }
+export struct HotkeyItem { id: string, label: string, combo: string }
+export struct InfoItem { label: string, value: string }
+export struct VcpRowItem { code: string, name: string, current: string, max: string, values: string }
+
+// Texts also used by Rust (tray, status messages, OSD).
+// They go through the same translation mechanism (.po) as the interface.
+export global Strings {
+    out property <string> app-name: "Solua";
+    out property <string> tray-open: @tr("Open Solua");
+    out property <string> tray-quit: @tr("Quit");
+    out property <string> tray-profiles: @tr("Profiles");
+    out property <string> tray-brightness: @tr("Brightness");
+    out property <string> tray-tip: @tr("Solua — monitor control");
+    out property <string> st-ready: @tr("Ready");
+    out property <string> st-no-monitors: @tr("No DDC/CI monitors found");
+    out property <string> st-found: @tr("Monitors found: %1");
+    out property <string> st-access-ok: @tr("Monitor access enabled.");
+    out property <string> st-access-failed: @tr("Could not enable monitor access.");
+    out property <string> st-profile-applied: @tr("Profile “%1” applied");
+    out property <string> st-profile-saved: @tr("Profile “%1” saved");
+    out property <string> st-profile-exists: @tr("Profile “%1” was updated");
+    out property <string> st-reset-done: @tr("Reset command sent");
+    out property <string> st-set-failed: @tr("Could not change: %1");
+    out property <string> st-read-failed: @tr("Could not read: %1");
+    out property <string> st-schedule: @tr("Schedule: profile “%1” applied");
+    out property <string> st-hotkey-fail: @tr("Shortcut unavailable (already in use?): %1");
+    out property <string> st-invalid-time: @tr("Invalid time. Use HH:MM (e.g. 22:30)");
+    out property <string> st-need-profile: @tr("Create a profile first");
+    out property <string> st-name-empty: @tr("Give the profile a name");
+    out property <string> st-caps-missing: @tr("This monitor did not report its capabilities");
+    out property <string> st-demo: @tr("Demo mode: simulated monitors, nothing is sent to hardware");
+    out property <string> st-power-sent: @tr("Power command sent");
+    out property <string> st-wrote: @tr("Value written");
+    out property <string> st-bad-value: @tr("Invalid code or value");
+    out property <string> st-reading: @tr("Reading monitor…");
+    out property <string> usage-hours: @tr("Usage time: %1");
+    out property <string> u-year-one: @tr("%1 year");
+    out property <string> u-year-many: @tr("%1 years");
+    out property <string> u-day-one: @tr("%1 day");
+    out property <string> u-day-many: @tr("%1 days");
+    out property <string> u-hour-one: @tr("%1 hour");
+    out property <string> u-hour-many: @tr("%1 hours");
+    out property <string> st-ignored: @tr("The monitor ignored this change: %1");
+    out property <string> st-imported: @tr("Imported: %1 profiles, %2 scheduled changes");
+    out property <string> st-import-failed: @tr("Could not import: %1");
+    out property <string> fx-normal: @tr("Normal");
+    out property <string> fx-gray: @tr("Grayscale");
+    out property <string> fx-red: @tr("Redscale");
+    out property <string> fx-green: @tr("Greenscale");
+    out property <string> fx-blue: @tr("Bluescale");
+    out property <string> fx-yellow: @tr("Yellowscale");
+    out property <string> fx-sepia: @tr("Sepia");
+    out property <string> fs-normal: @tr("Normal");
+    out property <string> fs-gray: @tr("Gray");
+    out property <string> fs-red: @tr("Red");
+    out property <string> fs-green: @tr("Green");
+    out property <string> fs-blue: @tr("Blue");
+    out property <string> fs-yellow: @tr("Yellow");
+    out property <string> fs-sepia: @tr("Sepia");
+    out property <string> fs-invert: @tr("Inverted");
+    out property <string> free-name: @tr("Free");
+    out property <string> theme-black: @tr("Black");
+    out property <string> color-violet: @tr("Violet");
+    out property <string> color-default: @tr("Default");
+    out property <string> st-locked: @tr("A saved profile is active. Switch to “Free” to adjust settings.");
+    out property <string> st-exported: @tr("Backup saved");
+    out property <string> st-export-failed: @tr("Could not save the backup: %1");
+    out property <string> st-restored-hk: @tr("Default shortcuts restored");
+    out property <string> pos-top-left: @tr("Top left");
+    out property <string> pos-above: @tr("Top");
+    out property <string> pos-top-right: @tr("Top right");
+    out property <string> pos-bottom-right: @tr("Bottom right");
+    out property <string> pos-below: @tr("Bottom");
+    out property <string> pos-bottom-left: @tr("Bottom left");
+    out property <string> pos-center: @tr("Center");
+    out property <string> anim-right: @tr("Right");
+    out property <string> anim-down: @tr("Down");
+    out property <string> anim-up: @tr("Up");
+    out property <string> anim-left: @tr("Left");
+    out property <string> fx-invert: @tr("Inverted");
+    out property <string> osd-saturation: @tr("Saturation");
+    out property <string> st-fx-unavailable: @tr("The color filter is not available on this system");
+    out property <string> unknown: @tr("unknown");
+    out property <string> hk-press: @tr("Press the keys…");
+    out property <string> hk-none: @tr("Not set");
+    out property <string> hk-brightness-up: @tr("Brightness up");
+    out property <string> hk-brightness-down: @tr("Brightness down");
+    out property <string> hk-contrast-up: @tr("Contrast up");
+    out property <string> hk-contrast-down: @tr("Contrast down");
+    out property <string> hk-saturation-up: @tr("Saturation up");
+    out property <string> hk-saturation-down: @tr("Saturation down");
+    out property <string> hk-temperature-up: @tr("Temperature up");
+    out property <string> hk-temperature-down: @tr("Temperature down");
+    out property <string> hk-volume-up: @tr("Monitor volume up");
+    out property <string> hk-volume-down: @tr("Monitor volume down");
+    out property <string> hk-volume-mute: @tr("Mute/unmute the monitor audio");
+    out property <string> hk-mini: @tr("Open the mini panel");
+    out property <string> hk-show: @tr("Show / hide Solua");
+    out property <string> hk-profile: @tr("Profile: %1");
+    out property <string> osd-brightness: @tr("Brightness");
+    out property <string> osd-contrast: @tr("Contrast");
+    out property <string> osd-volume: @tr("Volume");
+    out property <string> osd-muted: @tr("Muted");
+    out property <string> lang-system: @tr("System default");
+    out property <string> theme-system: @tr("System");
+    out property <string> theme-light: @tr("Light");
+    out property <string> theme-dark: @tr("Dark");
+    out property <string> kind-internal: @tr("Built-in display");
+    out property <string> kind-external: @tr("External display");
+    out property <string> sum-in-profile: @tr("%1 monitor(s)");
+    out property <string> color-red: @tr("Red");
+    out property <string> color-green: @tr("Green");
+    out property <string> color-blue: @tr("Blue");
+    out property <string> mini-temp: @tr("Temperature");
+    out property <string> color-filter-chip: @tr("Color filter");
+    out property <string> info-hfreq: @tr("Horizontal frequency");
+    out property <string> info-vfreq: @tr("Vertical frequency (refresh rate)");
+    out property <string> info-tech: @tr("Panel technology");
+    out property <string> info-controller: @tr("Display controller");
+    out property <string> info-firmware: @tr("Firmware version");
+    out property <string> info-vcp: @tr("VCP version");
+    out property <string> info-na: @tr("Not reported");
+}
+
+global Icons {
+    // 0 sun, 1 contrast, 2 drop, 3 palette, 4 thermometer, 5 preset filter, 6 monitor,
+    // 7 color filter, 8 color temperature (preset), 9 black level
+    public pure function chip(i: int) -> image {
+        return i == 0 ? @image-url("icons/sun.svg") : i == 1 ? @image-url("icons/contrast.svg") : i == 2 ? @image-url("icons/droplet.svg")
+            : i == 3 ? @image-url("icons/palette.svg") : i == 4 ? @image-url("icons/thermometer.svg") : i == 5 ? @image-url("icons/square-sparkles.svg")
+            : i == 7 ? @image-url("icons/list-filter-plus.svg") : i == 8 ? @image-url("icons/sun-snow.svg") : i == 9 ? @image-url("icons/moon.svg") : @image-url("icons/monitor.svg");
+    }
+}
+
+export component OsdWindow inherits Window {
+    in property <string> heading;
+    in property <string> subtitle;
+    in property <int> value;
+    in property <int> kind;  // 0 brightness, 1 contrast, 2 volume, 3 mute, 4 saturation
+    in property <float> k: 1.0;
+    in property <float> alpha: 0.95;
+    in-out property <int> phase: 0;   // 0 entering, 1 visible, 2 leaving
+    no-frame: true;
+    always-on-top: true;
+    background: transparent;
+    width: 270px * root.k;
+    height: 86px * root.k;
+    Rectangle {
+        // enter: Fade In + Zoom In; exit: Zoom Out + Fade Out
+        opacity: root.phase == 1 ? 1.0 : 0.0;
+        transform-scale: root.phase == 1 ? 1.0 : 0.9;
+        animate opacity { duration: 190ms; easing: root.phase == 1 ? ease-out : ease-in; }
+        animate transform-scale { duration: 210ms; easing: root.phase == 1 ? ease-out : ease-in; }
+        border-radius: 18px * root.k;
+        background: Theme.card.with-alpha(root.alpha);
+        border-width: 1.5px;
+        border-color: Theme.border.with-alpha(max(root.alpha, 0.9));
+        HorizontalLayout {
+            padding: 16px * root.k;
+            spacing: 14px * root.k;
+            Rectangle {
+                width: 43px * root.k;
+                Rectangle {
+                    width: 43px * root.k;
+                    height: 43px * root.k;
+                    border-radius: 22px * root.k;
+                    background: Theme.kind-color(root.kind).with-alpha(0.22);
+                    border-width: 1px;
+                    border-color: Theme.kind-color(root.kind).with-alpha(0.55);
+                    Icon {
+                        source: root.kind == 0 ? @image-url("icons/sun.svg") : root.kind == 1 ? @image-url("icons/contrast.svg") : root.kind == 2 ? @image-url("icons/volume.svg") : root.kind == 3 ? @image-url("icons/mute.svg") : root.kind == 5 ? @image-url("icons/thermometer.svg") : @image-url("icons/droplet.svg");
+                        tint: Theme.kind-color(root.kind);
+                        size: 22px * root.k;
+                    }
+                }
+            }
+            VerticalLayout {
+                alignment: center;
+                spacing: 5px * root.k;
+                HorizontalLayout {
+                    Text { text: root.heading; color: Theme.text; font-size: 15px * root.k; font-weight: 800; }
+                    Text { text: root.value + "%"; color: Theme.text; font-size: 15px * root.k; font-weight: 800; horizontal-alignment: right; }
+                }
+                Rectangle {
+                    height: 7px * root.k;
+                    border-radius: 4px * root.k;
+                    background: Theme.track;
+                    Rectangle {
+                        x: 0;
+                        width: parent.width * Math.clamp(root.value, 0, 100) / 100;
+                        height: parent.height;
+                        border-radius: 4px * root.k;
+                        background: Theme.kind-color(root.kind);
+                    }
+                }
+                Text { text: root.subtitle; color: Theme.text; opacity: 0.75; font-size: 11px * root.k; font-weight: 600; overflow: elide; }
+            }
+        }
+    }
+}
+
+component MonitorCard inherits Rectangle {
+    in property <MonitorItem> item;
+    in property <bool> selected;
+    callback clicked;
+    height: 50px;
+    border-radius: 10px;
+    background: selected ? Theme.side-sel : (ta.has-hover ? Theme.side-hover : transparent);
+    border-width: 1px;
+    border-color: selected ? Theme.accent : transparent;
+    animate background { duration: 120ms; }
+    HorizontalLayout {
+        padding: 10px;
+        spacing: 10px;
+        Rectangle {
+            width: 29px;
+            Icon {
+                source: root.item.internal ? @image-url("icons/laptop.svg") : @image-url("icons/monitor.svg");
+                tint: root.selected ? Theme.accent : Theme.text-dim;
+                size: 20px;
+            }
+        }
+        VerticalLayout {
+            alignment: center;
+            spacing: 2px;
+            Text { text: root.item.name; color: Theme.text; font-size: 11px; font-weight: 700; overflow: elide; }
+            Text { text: root.item.detail; color: Theme.text-dim; font-size: 9px; overflow: elide; }
+        }
+    }
+    ta := TouchArea { mouse-cursor: pointer; clicked => { root.clicked(); } }
+}
+
+component EmptyState inherits Rectangle {
+    callback retry;
+    callback enable-access;
+    in property <bool> access-problem;
+    VerticalLayout {
+        alignment: center;
+        spacing: 12px;
+        Icon { source: @image-url("icons/monitor.svg"); tint: Theme.text-dim; size: 45px; horizontal-stretch: 0; }
+        Text {
+            text: @tr("No monitors with DDC/CI support were found");
+            color: Theme.text; font-size: 14px; font-weight: 700; horizontal-alignment: center;
+        }
+        Text {
+            text: @tr("Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again.");
+            color: Theme.text-dim; font-size: 11px; horizontal-alignment: center; wrap: word-wrap;
+        }
+        if root.access-problem: Text {
+            text: @tr("Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password.");
+            color: Theme.text-dim; font-size: 11px; horizontal-alignment: center; wrap: word-wrap;
+        }
+        HorizontalLayout {
+            alignment: center;
+            spacing: 8px;
+            if root.access-problem: Btn { text: @tr("Enable monitor access"); primary: true; clicked => { root.enable-access(); } }
+            Btn { text: @tr("Search again"); icon: @image-url("icons/refresh.svg"); primary: !root.access-problem; clicked => { root.retry(); } }
+        }
+    }
+}
+
+component LockBanner inherits Rectangle {
+    height: 30px;
+    border-radius: 8px;
+    background: Theme.secondary-soft;
+    HorizontalLayout {
+        padding-left: 12px;
+        padding-right: 12px;
+        spacing: 8px;
+        Icon { source: @image-url("icons/lock.svg"); tint: Theme.secondary; size: 13px; y: (parent.height - self.height) / 2; }
+        Text { text: Strings.st-locked; color: Theme.secondary; font-size: 10px; font-weight: 600; vertical-alignment: center; overflow: elide; }
+    }
+}
+
+component AccessBanner inherits Rectangle {
+    callback enable-access();
+    background: Theme.secondary-soft;
+    border-radius: 8px;
+    HorizontalLayout {
+        padding: 10px;
+        spacing: 10px;
+        Text {
+            text: @tr("Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password.");
+            color: Theme.secondary; font-size: 10px; font-weight: 600; wrap: word-wrap; vertical-alignment: center;
+            horizontal-stretch: 1;
+        }
+        Btn { text: @tr("Enable monitor access"); primary: true; horizontal-stretch: 0; clicked => { root.enable-access(); } }
+    }
+}
+
+component RestoreBtn inherits Btn {
+    text: @tr("Restore");
+    icon: @image-url("icons/rotate-ccw.svg");
+}
+
+component LinkRow inherits ToggleRow {
+    title: @tr("Adjust all together");
+}
+
+export component AppWindow inherits Window {
+    title: "Solua";
+    icon: @image-url("../assets/icon.png");
+    min-width: 729px;
+    min-height: 502px;
+    preferred-width: 875px;
+    preferred-height: 583px;
+    background: Theme.bg-brush;
+    default-font-size: 11px;
+
+    // ---- State ----
+    in-out property <[MonitorItem]> monitors;
+    in-out property <int> selected: 0;
+    in-out property <int> tab: 0;
+
+    in-out property <bool> has-brightness;
+    in-out property <bool> has-contrast;
+    in-out property <bool> has-rgb;
+    in-out property <bool> has-volume;
+    in-out property <bool> has-black;
+    in-out property <int> volume;
+    in-out property <bool> muted;
+    in-out property <int> black-r;
+    in-out property <int> black-g;
+    in-out property <int> black-b;
+    in-out property <[InfoItem]> info-rows;
+    in-out property <bool> opt-mini-audio;
+    // platform-dependent features (on Linux there is no software color filter or mini panel)
+    in property <bool> soft-filter: true;
+    in property <bool> has-hotkeys: true;
+    // true when the user picks the keys inside Solua (Windows, GNOME/XFCE); false when the desktop assigns them
+    in property <bool> hk-editable: true;
+    in-out property <bool> has-presets;
+    in-out property <bool> has-inputs;
+    in property <bool> is-windows: true;
+    in-out property <bool> has-power;
+    in-out property <bool> is-internal;
+    in-out property <int> brightness;
+    in-out property <int> contrast;
+    in-out property <int> saturation: 50;
+    in-out property <int> fx-mode;
+    in-out property <int> fx-r: 100;
+    in-out property <int> fx-g: 100;
+    in-out property <int> fx-b: 100;
+    in-out property <int> fx-temp: 50;
+    in-out property <int> red;
+    in-out property <int> green;
+    in-out property <int> blue;
+    in-out property <[ChoiceItem]> inputs;
+    in-out property <int> input-value: -1;
+    in-out property <[ChoiceItem]> presets;
+    in-out property <int> preset-value: -1;
+    in-out property <string> usage-text;
+    in-out property <string> caps-text;
+    in-out property <[VcpRowItem]> vcp-rows;
+
+    in-out property <[ProfileItem]> profiles;
+    in-out property <bool> free-active: true;
+    in-out property <bool> locked: false;
+    in-out property <[ScheduleItem]> schedule;
+    in-out property <[HotkeyItem]> hotkeys;
+    in-out property <[string]> profile-names;
+
+    in-out property <string> status;
+    in-out property <bool> busy;
+    in-out property <bool> demo;
+
+    // ---- Settings ----
+    in-out property <[string]> language-names;
+    in-out property <int> language-index;
+    in-out property <[string]> theme-names;
+    in-out property <int> theme-index;
+    in-out property <[string]> pos-names;
+    in-out property <bool> opt-autostart;
+    in-out property <bool> opt-background;
+    in-out property <bool> opt-menu-entry;
+    in property <bool> is-appimage: false;
+    in-out property <bool> opt-minimized;
+    in-out property <bool> opt-tray;
+    in-out property <bool> opt-osd;
+    in-out property <bool> opt-sync;
+    in-out property <bool> opt-apply-on-start;
+    in-out property <bool> opt-discrete: true;
+    in-out property <bool> opt-edit-profiles;
+    in-out property <bool> opt-link-fx;
+    in-out property <int> opt-step: 5;
+    in-out property <int> osd-pos: 4;
+    in-out property <int> osd-scale: 100;
+    in-out property <bool> opt-transparent;
+    in-out property <bool> clock-12h;
+    in-out property <string> version: "1.3.0";
+    in-out property <int> capture-idx: -1;
+    in-out property <string> capture-live;
+
+    // ---- Actions ----
+    callback select-monitor(int);
+    callback refresh();
+    callback open-link(string);
+    callback enable-access();
+    in property <bool> access-problem: false;
+    callback set-level(string, int);          // "brightness" | "contrast" | "red" | "green" | "blue"
+    callback set-fx(string, int);             // "saturation" | "r" | "g" | "b" | "temp"
+    callback set-fx-mode(int);
+    callback restore-controls();
+    callback restore-filter();
+    callback restore-rgb();
+    callback restore-black();
+    callback set-mute(bool);
+    callback factory-reset();
+    callback request-info();
+    callback restore-preset();
+    callback toggle-new-day(int);
+    callback toggle-sched-day(int, int);
+    callback set-input(int);
+    callback set-preset(int);
+    callback set-power(int);
+    callback save-profile(string, bool);
+    callback activate-profile(int, bool);     // index (-1 = Free), on
+    callback delete-profile(int);
+    callback reorder-profile(int, int);
+    callback add-schedule(string, int, string);
+    callback toggle-schedule(int, bool);
+    callback delete-schedule(int);
+    callback reorder-schedule(int, int);
+    callback edit-schedule-time(int, string);
+    callback edit-schedule-end(int, string);
+    callback capture-start(int);
+    callback capture-end(int);
+    callback restore-hotkeys();
+    callback hotkey-captured(int, string, bool, bool, bool, bool) -> bool;
+    callback read-vcp-table();
+    callback write-vcp(string, string);
+    callback option-changed(string, bool);
+    callback setting-changed(string, int);
+    callback language-changed(int);
+    callback theme-changed(int);
+    callback theme-color-changed(int);
+    in-out property <int> theme-color-index;
+    callback export-backup();
+    callback import-backup();
+
+    property <bool> in-settings: root.tab == 7;
+    changed tab => { if (root.tab == 5) { root.request-info(); } }
+    changed has-inputs => { if (!root.has-inputs && root.tab == 2) { root.tab = 0; } }
+    property <int> prev-tab: 0;
+    in property <[bool]> new-days;
+    in-out property <bool> about-open: false;
+    in-out property <bool> acc-privacy: false;
+    in-out property <bool> acc-licenses: false;
+    in-out property <string> new-profile-name;
+    property <string> new-time: "22:00";
+    property <string> new-end-time: "23:00";
+    property <bool> new-has-end: false;
+    property <int> new-sched-profile: 0;
+    property <string> raw-code: "10";
+    property <string> raw-value: "50";
+    // drag and drop
+    property <int> pdrag: -1;
+    property <length> pdy: 0px;
+    property <int> sdrag: -1;
+    property <length> sdy: 0px;
+    property <int> editing: -1;
+    property <int> editing-end: -1;
+    property <string> edit-end-text;
+    property <string> edit-text;
+    out property <length> p-pitch: 150px;
+    out property <length> s-pitch: 86px;
+
+    HorizontalLayout {
+        // ===================== Sidebar =====================
+        Rectangle {
+            width: 207px;
+            background: Theme.sidebar;
+            VerticalLayout {
+                padding: 14px;
+                padding-top: 16px;
+                spacing: 12px;
+                HorizontalLayout {
+                    spacing: 4px;
+                    SectionTitle { text: @tr("MONITORS"); vertical-alignment: center; horizontal-stretch: 1; }
+                    IconBtn { icon: @image-url("icons/refresh.svg"); clicked => { root.refresh(); } }
+                    IconBtn {
+                        icon: @image-url("icons/settings.svg");
+                        active: root.in-settings;
+                        clicked => {
+                            if (root.in-settings) {
+                                root.tab = root.prev-tab;
+                            } else {
+                                root.prev-tab = root.tab;
+                                root.tab = 7;
+                            }
+                        }
+                    }
+                }
+                VerticalLayout {
+                    spacing: 5px;
+                    for m[i] in root.monitors: MonitorCard {
+                        item: m;
+                        selected: i == root.selected;
+                        clicked => {
+                            if (root.in-settings) { root.tab = root.prev-tab; }
+                            root.select-monitor(i);
+                        }
+                    }
+                }
+                Rectangle { vertical-stretch: 1; }
+                if root.demo: Rectangle {
+                    height: 24px;
+                    border-radius: 6px;
+                    background: Theme.tertiary-soft;
+                    Text { text: @tr("DEMO MODE"); color: Theme.tertiary; font-size: 9px; font-weight: 800; horizontal-alignment: center; vertical-alignment: center; }
+                }
+            }
+        }
+
+        // ===================== Content =====================
+        VerticalLayout {
+            padding: 20px;
+            padding-bottom: 10px;
+            spacing: 13px;
+
+            if !root.in-settings && root.monitors.length > 0: HorizontalLayout {
+                height: 44px;
+                spacing: 10px;
+                VerticalLayout {
+                    horizontal-stretch: 1;
+                    alignment: center;
+                    spacing: 2px;
+                    Text {
+                        text: root.monitors[root.selected].name;
+                        color: Theme.text; font-size: 20px; font-weight: 800; overflow: elide;
+                    }
+                    Text {
+                        text: root.usage-text == "" ? root.monitors[root.selected].detail : root.monitors[root.selected].detail + "  ·  " + root.usage-text;
+                        color: Theme.text-dim; font-size: 10px; overflow: elide;
+                    }
+                }
+                if root.has-power: VerticalLayout {
+                    alignment: center;
+                    ConfirmIconBtn {
+                        icon: @image-url("icons/power.svg");
+                        box: 32px;
+                        glyph: 16px;
+                        confirmed => { root.set-power(4); }
+                    }
+                }
+            }
+            if root.in-settings: HorizontalLayout {
+                height: 44px;
+                Text { text: @tr("Settings"); color: Theme.text; font-size: 20px; font-weight: 800; vertical-alignment: center; }
+            }
+
+            if !root.in-settings: HorizontalLayout {
+                spacing: 5px;
+                alignment: start;
+                height: 34px;
+                Tab { text: @tr("Controls"); icon: @image-url("icons/sun.svg"); selected: root.tab == 0; clicked => { root.tab = 0; } }
+                Tab { text: @tr("Color"); icon: @image-url("icons/palette.svg"); selected: root.tab == 1; clicked => { root.tab = 1; } }
+                if root.has-inputs: Tab { text: @tr("Input"); icon: @image-url("icons/input.svg"); selected: root.tab == 2; clicked => { root.tab = 2; } }
+                Tab { text: @tr("Profiles"); icon: @image-url("icons/bookmark.svg"); selected: root.tab == 3; clicked => { root.tab = 3; } }
+                Tab { text: @tr("Schedule"); icon: @image-url("icons/calendar.svg"); selected: root.tab == 4; clicked => { root.tab = 4; } }
+                Tab { text: @tr("Advanced"); icon: @image-url("icons/code.svg"); selected: root.tab == 5; clicked => { root.tab = 5; } }
+            }
+
+            // ---------------- pages ----------------
+            Rectangle {
+                vertical-stretch: 1;
+
+                if root.monitors.length == 0 && !root.in-settings && root.tab != 3 && root.tab != 4: EmptyState {
+                    access-problem: root.access-problem;
+                    enable-access => { root.enable-access(); }
+                    retry => { root.refresh(); }
+                }
+
+                // ===== Controls =====
+                if root.monitors.length > 0 && root.tab == 0 && !root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        if root.access-problem: AccessBanner { enable-access => { root.enable-access(); } }
+                        if root.locked: LockBanner { }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 14px;
+                                SectionTitle { text: @tr("IMAGE"); }
+                                SliderRow {
+                                    icon: @image-url("icons/sun.svg");
+                                    title: @tr("Brightness");
+                                    tint: Theme.c-brightness;
+                                    enabled: root.has-brightness && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.brightness;
+                                    moved(v) => { root.set-level("brightness", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/contrast.svg");
+                                    title: @tr("Contrast");
+                                    tint: Theme.c-contrast;
+                                    enabled: root.has-contrast && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.contrast;
+                                    moved(v) => { root.set-level("contrast", v); }
+                                }
+                                if root.soft-filter: SliderRow {
+                                    icon: @image-url("icons/droplet.svg");
+                                    title: Strings.osd-saturation;
+                                    tint: Theme.c-saturation;
+                                    enabled: !root.locked;
+                                    value <=> root.saturation;
+                                    moved(v) => { root.set-fx("saturation", v); }
+                                }
+                                if root.soft-filter: SliderRow {
+                                    icon: @image-url("icons/thermometer.svg");
+                                    title: @tr("Temperature");
+                                    tint: Theme.c-temperature;
+                                    enabled: !root.locked;
+                                    value <=> root.fx-temp;
+                                    moved(v) => { root.set-fx("temp", v); }
+                                }
+                                ToggleRow {
+                                    title: @tr("Control all monitors together");
+                                    subtitle: @tr("Changes in Controls and Color are applied to every monitor.");
+                                    checked <=> root.opt-sync;
+                                    toggled(c) => { root.option-changed("sync", c); }
+                                }
+                                HorizontalLayout {
+                                    alignment: start;
+                                    RestoreBtn { enabled: !root.locked; clicked => { root.restore-controls(); } }
+                                }
+                            }
+                        }
+                        if root.has-volume: Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 12px;
+                                SectionTitle { text: @tr("MONITOR AUDIO"); }
+                                Text {
+                                    text: @tr("This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                SliderRow {
+                                    icon: root.muted ? @image-url("icons/mute.svg") : @image-url("icons/volume.svg");
+                                    title: @tr("Monitor volume");
+                                    tint: Theme.c-volume;
+                                    value <=> root.volume;
+                                    moved(v) => { root.set-level("volume", v); }
+                                }
+                                ToggleRow {
+                                    title: @tr("Mute the monitor audio");
+                                    checked: root.muted;
+                                    toggled(c) => { root.set-mute(c); }
+                                }
+                                if root.is-windows: ToggleRow {
+                                    title: @tr("Show in the mini panel");
+                                    checked <=> root.opt-mini-audio;
+                                    toggled(c) => { root.option-changed("mini_audio", c); }
+                                }
+                            }
+                        }
+                        HorizontalLayout {
+                            alignment: center;
+                            padding-top: 4px;
+                            padding-bottom: 8px;
+                            ConfirmBtn {
+                                text: @tr("Restore factory defaults");
+                                confirm-text: @tr("Click again to confirm");
+                                icon: @image-url("icons/rotate-ccw.svg");
+                                enabled: !root.locked;
+                                confirmed => { root.factory-reset(); }
+                            }
+                        }
+                    }
+                }
+
+                // ===== Color =====
+                if root.monitors.length > 0 && root.tab == 1 && !root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        if root.locked: LockBanner { }
+                        if root.soft-filter: Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 12px;
+                                SectionTitle { text: @tr("COLOR FILTER (SOFTWARE)"); }
+                                Text {
+                                    text: @tr("Software filter applied to the whole system.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/paintbrush.svg");
+                                    title: Strings.color-red;
+                                    tint: Theme.red-ch;
+                                    enabled: !root.locked;
+                                    value <=> root.fx-r;
+                                    moved(v) => { root.set-fx("r", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/paintbrush.svg");
+                                    title: Strings.color-green;
+                                    tint: Theme.green-ch;
+                                    enabled: !root.locked;
+                                    value <=> root.fx-g;
+                                    moved(v) => { root.set-fx("g", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/paintbrush.svg");
+                                    title: Strings.color-blue;
+                                    tint: Theme.blue-ch;
+                                    enabled: !root.locked;
+                                    value <=> root.fx-b;
+                                    moved(v) => { root.set-fx("b", v); }
+                                }
+                                LinkRow { checked <=> root.opt-link-fx; toggled(c) => { root.option-changed("link_fx", c); } }
+                                GridLayout {
+                                    spacing: 6px;
+                                    for m[i] in [0, 6, 1, 7, 2, 3, 4, 5]: Pill {
+                                        row: Math.floor(i / 4);
+                                        col: Math.mod(i, 4);
+                                        text: [Strings.fx-normal, Strings.fx-gray, Strings.fx-red, Strings.fx-green, Strings.fx-blue, Strings.fx-yellow, Strings.fx-sepia, Strings.fx-invert][m];
+                                        enabled: !root.locked;
+                                        selected: root.fx-mode == m;
+                                        clicked => { root.fx-mode = m; root.set-fx-mode(m); }
+                                    }
+                                }
+                                HorizontalLayout {
+                                    alignment: start;
+                                    RestoreBtn { enabled: !root.locked; clicked => { root.restore-filter(); } }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 14px;
+                                SectionTitle { text: @tr("CONFIGURE RGB (HARDWARE)"); }
+                                Text { text: @tr("Gain (whites)"); color: Theme.text; font-size: 12px; font-weight: 700; }
+                                Text {
+                                    text: @tr("Scales each color channel. It mostly affects the bright areas of the image.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/sun.svg");
+                                    title: Strings.color-red;
+                                    tint: Theme.red-ch;
+                                    enabled: root.has-rgb && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.red;
+                                    moved(v) => { root.set-level("red", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/sun.svg");
+                                    title: Strings.color-green;
+                                    tint: Theme.green-ch;
+                                    enabled: root.has-rgb && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.green;
+                                    moved(v) => { root.set-level("green", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/sun.svg");
+                                    title: Strings.color-blue;
+                                    tint: Theme.blue-ch;
+                                    enabled: root.has-rgb && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.blue;
+                                    moved(v) => { root.set-level("blue", v); }
+                                }
+                                HorizontalLayout {
+                                    alignment: start;
+                                    RestoreBtn { enabled: root.has-rgb && !root.locked; clicked => { root.restore-rgb(); } }
+                                }
+                                Rectangle { height: 1px; background: Theme.border; }
+                                Text { text: @tr("Black level (blacks)"); color: Theme.text; font-size: 12px; font-weight: 700; }
+                                Text {
+                                    text: @tr("Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/moon.svg");
+                                    title: Strings.color-red;
+                                    tint: Theme.red-ch;
+                                    enabled: root.has-black && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.black-r;
+                                    moved(v) => { root.set-level("black_red", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/moon.svg");
+                                    title: Strings.color-green;
+                                    tint: Theme.green-ch;
+                                    enabled: root.has-black && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.black-g;
+                                    moved(v) => { root.set-level("black_green", v); }
+                                }
+                                SliderRow {
+                                    icon: @image-url("icons/moon.svg");
+                                    title: Strings.color-blue;
+                                    tint: Theme.blue-ch;
+                                    enabled: root.has-black && !root.locked;
+                                    unsupported-text: root.locked ? "" : @tr("Not supported");
+                                    value <=> root.black-b;
+                                    moved(v) => { root.set-level("black_blue", v); }
+                                }
+                                HorizontalLayout {
+                                    alignment: start;
+                                    RestoreBtn { enabled: root.has-black && !root.locked; clicked => { root.restore-black(); } }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 10px;
+                                SectionTitle { text: @tr("COLOR TEMPERATURE"); }
+                                Text {
+                                    text: @tr("Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                if root.has-presets: GridLayout {
+                                    spacing: 6px;
+                                    for p[i] in root.presets: Pill {
+                                        row: Math.floor(i / 4);
+                                        col: Math.mod(i, 4);
+                                        text: p.label;
+                                        dim: p.dim;
+                                        enabled: !root.locked;
+                                        selected: root.preset-value == p.value;
+                                        clicked => { root.set-preset(p.value); }
+                                    }
+                                }
+                                HorizontalLayout {
+                                    alignment: start;
+                                    RestoreBtn { enabled: root.has-presets && !root.locked; clicked => { root.restore-preset(); } }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // ===== Input =====
+                if root.monitors.length > 0 && root.has-inputs && root.tab == 2 && !root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 10px;
+                                SectionTitle { text: @tr("INPUT SOURCE"); }
+                                Text {
+                                    text: @tr("If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                GridLayout {
+                                    spacing: 6px;
+                                    for p[i] in root.inputs: Pill {
+                                        row: Math.floor(i / 4);
+                                        col: Math.mod(i, 4);
+                                        text: p.label;
+                                        dim: p.dim;
+                                        selected: root.input-value == p.value;
+                                        clicked => { root.set-input(p.value); }
+                                    }
+                                }
+                                Text {
+                                    text: @tr("Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list).");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // ===== Profiles =====
+                if root.tab == 3 && !root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 10px;
+                                SectionTitle { text: @tr("SAVE CURRENT SETTINGS AS A PROFILE"); }
+                                HorizontalLayout {
+                                    spacing: 8px;
+                                    LineEdit {
+                                        horizontal-stretch: 1;
+                                        placeholder-text: @tr("Profile name (e.g. Night, Cinema, Work)");
+                                        text <=> root.new-profile-name;
+                                        accepted => { root.save-profile(root.new-profile-name, false); }
+                                    }
+                                    Btn {
+                                        text: @tr("Save");
+                                        icon: @image-url("icons/check.svg");
+                                        primary: true;
+                                        clicked => { root.save-profile(root.new-profile-name, false); }
+                                    }
+                                }
+                                ToggleRow {
+                                    title: @tr("Allow modifying saved profiles");
+                                    subtitle: @tr("While a profile is active, every change you make is saved into it automatically.");
+                                    checked <=> root.opt-edit-profiles;
+                                    toggled(c) => { root.option-changed("edit_profiles", c); }
+                                }
+                            }
+                        }
+                        // Free profile: always on top, separated from the others
+                        Card {
+                            height: 62px;
+                            HorizontalLayout {
+                                padding: 12px;
+                                padding-left: 16px;
+                                spacing: 12px;
+                                Rectangle {
+                                    width: 32px;
+                                    Rectangle {
+                                        width: 32px; height: 32px; border-radius: 10px; background: Theme.tertiary-soft;
+                                        Icon { source: @image-url("icons/sparkle.svg"); tint: Theme.tertiary; size: 16px; }
+                                    }
+                                }
+                                VerticalLayout {
+                                    horizontal-stretch: 1;
+                                    alignment: center;
+                                    spacing: 2px;
+                                    Text { text: Strings.free-name; color: Theme.text; font-size: 13px; font-weight: 700; }
+                                    Text { text: @tr("Configure everything freely. Saved profiles lock the settings."); color: Theme.text-dim; font-size: 10px; overflow: elide; }
+                                }
+                                VerticalLayout {
+                                    alignment: center;
+                                    SoSwitch {
+                                        controlled: true;
+                                        checked: root.free-active;
+                                        toggled(c) => { root.activate-profile(-1, c); }
+                                    }
+                                }
+                            }
+                        }
+                        Rectangle { height: 1px; background: Theme.border; }
+                        if root.profiles.length == 0: Text {
+                            text: @tr("No profiles yet. Adjust your monitors and save the first one above.");
+                            color: Theme.text-dim; font-size: 11px; wrap: word-wrap;
+                        }
+                        Rectangle {
+                            height: root.profiles.length * root.p-pitch;
+                            for p[i] in root.profiles: Card {
+                                x: 0;
+                                y: Reorder.y(i, root.pdrag, root.pdy, root.p-pitch, root.profiles.length);
+                                height: root.p-pitch - 10px;
+                                width: parent.width;
+                                drop-shadow-blur: root.pdrag == i ? 14px : 0px;
+                                drop-shadow-color: #00000060;
+                                animate y { duration: root.pdrag == i ? 0ms : 160ms; easing: ease-out; }
+                                HorizontalLayout {
+                                    padding: 12px;
+                                    padding-left: 6px;
+                                    spacing: 6px;
+                                    Rectangle {
+                                        width: 24px;
+                                        Icon { source: @image-url("icons/grip.svg"); tint: Theme.text-dim; size: 14px; }
+                                    }
+                                    VerticalLayout {
+                                        horizontal-stretch: 1;
+                                        alignment: center;
+                                        spacing: 4px;
+                                        Text { text: p.name; color: Theme.text; font-size: 13px; font-weight: 700; overflow: elide; }
+                                        for r in p.rows: HorizontalLayout {
+                                            spacing: 5px;
+                                            alignment: start;
+                                            height: 18px;
+                                            for c in r: Chip { icon: Icons.chip(c.icon); text: c.text; }
+                                        }
+                                    }
+                                    VerticalLayout {
+                                        horizontal-stretch: 0;
+                                        width: 40px;
+                                        alignment: center;
+                                        SoSwitch { controlled: true; checked: p.active; toggled(c) => { root.activate-profile(i, c); } }
+                                    }
+                                    VerticalLayout {
+                                        horizontal-stretch: 0;
+                                        width: 92px;
+                                        alignment: center;
+                                        Btn { text: @tr("Delete"); icon: @image-url("icons/trash.svg"); danger: true; clicked => { root.delete-profile(i); } }
+                                    }
+                                }
+                            }
+                            // stationary drag areas (one per position)
+                            for p[i] in root.profiles: DragZone {
+                                x: 0;
+                                y: i * root.p-pitch;
+                                width: 32px;
+                                height: root.p-pitch - 10px;
+                                pitch: root.p-pitch;
+                                started => { root.pdrag = i; root.pdy = 0px; }
+                                dragged(dy) => { root.pdy = dy; }
+                                dropped(d) => {
+                                    root.pdrag = -1;
+                                    root.pdy = 0px;
+                                    root.reorder-profile(i, d);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // ===== Schedule =====
+                if root.tab == 4 && !root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 10px;
+                                SectionTitle { text: @tr("SCHEDULED CHANGE"); }
+                                HorizontalLayout {
+                                    spacing: 8px;
+                                    LineEdit {
+                                        width: root.clock-12h ? 104px : 89px;
+                                        placeholder-text: root.clock-12h ? "HH:MM AM" : "HH:MM";
+                                        text <=> root.new-time;
+                                        horizontal-alignment: center;
+                                    }
+                                    if root.new-has-end: LineEdit {
+                                        width: root.clock-12h ? 104px : 89px;
+                                        placeholder-text: root.clock-12h ? "HH:MM AM" : "HH:MM";
+                                        text <=> root.new-end-time;
+                                        horizontal-alignment: center;
+                                    }
+                                    ComboBox {
+                                        horizontal-stretch: 1;
+                                        model: root.profile-names;
+                                        current-index <=> root.new-sched-profile;
+                                    }
+                                    Btn {
+                                        text: @tr("Add");
+                                        icon: @image-url("icons/plus.svg");
+                                        primary: true;
+                                        clicked => { root.add-schedule(root.new-time, root.new-sched-profile, root.new-has-end ? root.new-end-time : ""); }
+                                    }
+                                }
+                                ToggleRow {
+                                    title: @tr("Set an end time");
+                                    subtitle: @tr("When it ends, the previous profile is restored.");
+                                    checked <=> root.new-has-end;
+                                }
+                                ToggleRow {
+                                    title: @tr("12-hour clock (AM/PM)");
+                                    checked <=> root.clock-12h;
+                                    toggled(c) => { root.option-changed("clock_12h", c); }
+                                }
+                                ToggleRow {
+                                    title: @tr("Apply the most recent entry at startup");
+                                    subtitle: @tr("Useful if the computer was off at the scheduled time.");
+                                    checked <=> root.opt-apply-on-start;
+                                    toggled(c) => { root.option-changed("apply_on_start", c); }
+                                }
+                            }
+                        }
+                        Rectangle {
+                            height: root.schedule.length * root.s-pitch;
+                            for s[i] in root.schedule: Card {
+                                x: 0;
+                                y: Reorder.y(i, root.sdrag, root.sdy, root.s-pitch, root.schedule.length);
+                                height: root.s-pitch - 10px;
+                                width: parent.width;
+                                drop-shadow-blur: root.sdrag == i ? 14px : 0px;
+                                drop-shadow-color: #00000060;
+                                animate y { duration: root.sdrag == i ? 0ms : 160ms; easing: ease-out; }
+                                VerticalLayout {
+                                    padding: 10px;
+                                    padding-left: 6px;
+                                    spacing: 6px;
+                                    HorizontalLayout {
+                                        spacing: 8px;
+                                        Rectangle {
+                                            width: 24px;
+                                            Icon { source: @image-url("icons/grip.svg"); tint: Theme.text-dim; size: 14px; }
+                                        }
+                                        // time: click to edit
+                                        if root.editing != i: Rectangle {
+                                            width: root.clock-12h ? 100px : 78px;
+                                            border-radius: 9px;
+                                            background: tpa.has-hover ? Theme.secondary-soft.brighter(0.1) : Theme.secondary-soft;
+                                            animate background { duration: 120ms; }
+                                            Text { text: s.time; color: Theme.secondary; font-size: root.clock-12h ? 14px : 17px; font-weight: 800; horizontal-alignment: center; vertical-alignment: center; }
+                                            tpa := TouchArea {
+                                                mouse-cursor: pointer;
+                                                clicked => { root.edit-text = s.time; root.editing = i; }
+                                            }
+                                        }
+                                        // end time: click to edit (empty removes; "+" adds)
+                                        if root.editing-end != i: Rectangle {
+                                            width: s.end != "" ? (root.clock-12h ? 100px : 78px) : 28px;
+                                            border-radius: 9px;
+                                            background: epa.has-hover ? Theme.tertiary-soft.brighter(0.15) : Theme.tertiary-soft;
+                                            animate background { duration: 120ms; }
+                                            Text { text: s.end != "" ? s.end : "+"; color: Theme.tertiary; font-size: s.end != "" ? 17px : 18px; font-weight: 800; horizontal-alignment: center; vertical-alignment: center; }
+                                            epa := TouchArea {
+                                                mouse-cursor: pointer;
+                                                clicked => { root.edit-end-text = s.end; root.editing-end = i; }
+                                            }
+                                        }
+                                        if root.editing-end == i: LineEdit {
+                                            width: root.clock-12h ? 100px : 78px;
+                                            text <=> root.edit-end-text;
+                                            placeholder-text: "HH:MM";
+                                            horizontal-alignment: center;
+                                            init => { self.focus(); }
+                                            accepted => {
+                                                root.edit-schedule-end(i, root.edit-end-text);
+                                                root.editing-end = -1;
+                                            }
+                                            changed has-focus => {
+                                                if (!self.has-focus && root.editing-end == i) {
+                                                    root.edit-schedule-end(i, root.edit-end-text);
+                                                    root.editing-end = -1;
+                                                }
+                                            }
+                                        }
+                                        if root.editing == i: LineEdit {
+                                            width: root.clock-12h ? 100px : 78px;
+                                            text <=> root.edit-text;
+                                            horizontal-alignment: center;
+                                            init => { self.focus(); }
+                                            accepted => {
+                                                root.edit-schedule-time(i, root.edit-text);
+                                                root.editing = -1;
+                                            }
+                                            changed has-focus => {
+                                                if (!self.has-focus && root.editing == i) {
+                                                    root.edit-schedule-time(i, root.edit-text);
+                                                    root.editing = -1;
+                                                }
+                                            }
+                                        }
+                                        Text { text: s.profile; color: Theme.text; font-size: 12px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; overflow: elide; }
+                                        VerticalLayout {
+                                            alignment: center;
+                                            width: 40px;
+                                            SoSwitch { controlled: true; checked: s.enabled; toggled(c) => { root.toggle-schedule(i, c); } }
+                                        }
+                                        VerticalLayout {
+                                            alignment: center;
+                                            width: 92px;
+                                            Btn { text: @tr("Delete"); icon: @image-url("icons/trash.svg"); danger: true; clicked => { root.delete-schedule(i); } }
+                                        }
+                                    }
+                                    HorizontalLayout {
+                                        spacing: 5px;
+                                        alignment: start;
+                                        padding-left: 32px;
+                                        height: 24px;
+                                        for d[di] in s.days: DayChip {
+                                            width: 42px;
+                                            text: [@tr("Mon"), @tr("Tue"), @tr("Wed"), @tr("Thu"), @tr("Fri"), @tr("Sat"), @tr("Sun")][di];
+                                            selected: d;
+                                            clicked => { root.toggle-sched-day(i, di); }
+                                        }
+                                    }
+                                }
+                            }
+                            for s[i] in root.schedule: DragZone {
+                                x: 0;
+                                y: i * root.s-pitch;
+                                width: 32px;
+                                height: root.s-pitch - 10px;
+                                pitch: root.s-pitch;
+                                started => { root.sdrag = i; root.sdy = 0px; }
+                                dragged(dy) => { root.sdy = dy; }
+                                dropped(d) => {
+                                    root.sdrag = -1;
+                                    root.sdy = 0px;
+                                    root.reorder-schedule(i, d);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // ===== Advanced =====
+                if root.monitors.length > 0 && root.tab == 5 && !root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 6px;
+                                SectionTitle { text: @tr("MONITOR INFORMATION"); }
+                                for r in root.info-rows: HorizontalLayout {
+                                    spacing: 10px;
+                                    height: 22px;
+                                    Text { text: r.label; color: Theme.text-dim; font-size: 11px; vertical-alignment: center; horizontal-stretch: 1; }
+                                    Text { text: r.value; color: Theme.text; font-size: 11px; font-weight: 600; vertical-alignment: center; horizontal-alignment: right; }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 10px;
+                                SectionTitle { text: @tr("WRITE A VCP CODE"); }
+                                Text {
+                                    text: @tr("Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                HorizontalLayout {
+                                    spacing: 8px;
+                                    Text { text: @tr("Code (hex)"); color: Theme.text-dim; vertical-alignment: center; }
+                                    LineEdit { width: 65px; text <=> root.raw-code; horizontal-alignment: center; }
+                                    Text { text: @tr("Value"); color: Theme.text-dim; vertical-alignment: center; }
+                                    LineEdit { width: 81px; text <=> root.raw-value; horizontal-alignment: center; }
+                                    Btn { text: @tr("Write"); icon: @image-url("icons/check.svg"); primary: true; clicked => { root.write-vcp(root.raw-code, root.raw-value); } }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 8px;
+                                HorizontalLayout {
+                                    SectionTitle { text: @tr("CAPABILITIES (VCP)"); vertical-alignment: center; }
+                                    Rectangle { horizontal-stretch: 1; }
+                                    Btn { text: @tr("Read all values"); icon: @image-url("icons/refresh.svg"); clicked => { root.read-vcp-table(); } }
+                                }
+                                Text {
+                                    text: @tr("What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                if root.vcp-rows.length == 0: Text {
+                                    text: @tr("No capability data. Press “Read all values”.");
+                                    color: Theme.text-dim; font-size: 10px;
+                                }
+                                if root.vcp-rows.length > 0: HorizontalLayout {
+                                    spacing: 6px;
+                                    Text { text: @tr("Code"); width: 40px; color: Theme.text-dim; font-size: 9px; font-weight: 700; }
+                                    Text { text: @tr("Name"); horizontal-stretch: 1; color: Theme.text-dim; font-size: 9px; font-weight: 700; }
+                                    Text { text: @tr("Current"); width: 52px; color: Theme.text-dim; font-size: 9px; font-weight: 700; }
+                                    Text { text: @tr("Max"); width: 45px; color: Theme.text-dim; font-size: 9px; font-weight: 700; }
+                                }
+                                for r in root.vcp-rows: HorizontalLayout {
+                                    spacing: 6px;
+                                    Text { text: r.code; width: 40px; color: Theme.tertiary; font-family: "monospace"; font-size: 10px; font-weight: 700; }
+                                    VerticalLayout {
+                                        horizontal-stretch: 1;
+                                        Text { text: r.name; color: Theme.text; font-size: 10px; overflow: elide; }
+                                        if r.values != "": Text { text: r.values; color: Theme.text-dim; font-size: 9px; overflow: elide; }
+                                    }
+                                    Text { text: r.current; width: 52px; color: Theme.text; font-size: 10px; }
+                                    Text { text: r.max; width: 45px; color: Theme.text-dim; font-size: 10px; }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 8px;
+                                SectionTitle { text: @tr("RAW CAPABILITIES STRING"); }
+                                Text {
+                                    text: @tr("The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                TextEdit {
+                                    height: 89px;
+                                    read-only: true;
+                                    wrap: word-wrap;
+                                    text: root.caps-text == "" ? Strings.st-caps-missing : root.caps-text;
+                                    font-size: 9px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // ===== Settings =====
+                if root.in-settings: ScrollView {
+                    VerticalLayout {
+                        spacing: 12px;
+                        padding-right: 6px;
+                        alignment: start;
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 10px;
+                                SectionTitle { text: @tr("LANGUAGE AND APPEARANCE"); }
+                                HorizontalLayout {
+                                    spacing: 10px;
+                                    Icon { source: @image-url("icons/globe.svg"); tint: Theme.text-dim; y: 6px; }
+                                    Text { text: @tr("Language"); color: Theme.text; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; }
+                                    ComboBox {
+                                        width: 194px;
+                                        model: root.language-names;
+                                        current-index: root.language-index;
+                                        selected(_) => { root.language-changed(self.current-index); }
+                                    }
+                                }
+                                HorizontalLayout {
+                                    spacing: 10px;
+                                    Icon { source: @image-url("icons/moon.svg"); tint: Theme.text-dim; y: 6px; }
+                                    Text { text: @tr("Theme"); color: Theme.text; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; }
+                                    ComboBox {
+                                        width: 194px;
+                                        model: root.theme-names;
+                                        current-index: root.theme-index;
+                                        selected(_) => { root.theme-changed(self.current-index); }
+                                    }
+                                }
+                                if root.theme-index == 2: HorizontalLayout {
+                                    spacing: 10px;
+                                    Icon { source: @image-url("icons/palette.svg"); tint: Theme.text-dim; y: 6px; }
+                                    Text { text: @tr("Color"); color: Theme.text; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; }
+                                    ComboBox {
+                                        width: 194px;
+                                        model: [Strings.color-blue, Strings.color-violet, Strings.color-default];
+                                        current-index: root.theme-color-index;
+                                        selected(_) => { root.theme-color-changed(self.current-index); }
+                                    }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 4px;
+                                SectionTitle { text: @tr("BEHAVIOR"); }
+                                if root.is-windows: ToggleRow { title: @tr("Start with the system"); checked <=> root.opt-autostart; toggled(c) => { root.option-changed("autostart", c); } }
+                                if !root.is-windows: ToggleRow {
+                                    title: @tr("Start with the system");
+                                    subtitle: @tr("Starts Solua hidden when you log in.");
+                                    checked <=> root.opt-autostart;
+                                    toggled(c) => { root.option-changed("autostart", c); }
+                                }
+                                if !root.is-windows: ToggleRow {
+                                    title: @tr("Run in the background");
+                                    subtitle: @tr("Keeps Solua running when the window is closed, so shortcuts keep working.");
+                                    checked <=> root.opt-background;
+                                    toggled(c) => { root.option-changed("background", c); }
+                                }
+                                if !root.is-windows && root.is-appimage: ToggleRow {
+                                    title: @tr("Add to the applications menu");
+                                    subtitle: @tr("Creates a launcher for this AppImage.");
+                                    checked <=> root.opt-menu-entry;
+                                    toggled(c) => { root.option-changed("menu_entry", c); }
+                                }
+                                if root.is-windows: ToggleRow { title: @tr("Start minimized to the tray"); checked <=> root.opt-minimized; toggled(c) => { root.option-changed("minimized", c); } }
+                                if root.is-windows: ToggleRow { title: @tr("Keep running in the tray when closed"); checked <=> root.opt-tray; toggled(c) => { root.option-changed("tray", c); } }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 4px;
+                                SectionTitle { text: @tr("SLIDERS AND SHORTCUTS"); }
+                                ToggleRow {
+                                    title: @tr("Stepped sliders");
+                                    subtitle: root.is-windows ? @tr("Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel.") : @tr("Sliders move in fixed steps, marked with dots.");
+                                    checked <=> root.opt-discrete;
+                                    toggled(c) => { root.option-changed("discrete", c); }
+                                }
+                                HorizontalLayout {
+                                    spacing: 10px;
+                                    height: 39px;
+                                    Text { text: @tr("Step (sliders and shortcuts)"); color: Theme.text; font-size: 12px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; }
+                                    Text { text: root.opt-step + "%"; color: Theme.secondary; font-weight: 700; vertical-alignment: center; width: 36px; horizontal-alignment: right; }
+                                    VerticalLayout {
+                                        alignment: center;
+                                        SoSlider {
+                                            width: 146px;
+                                            free: true;
+                                            value: root.opt-step * 4;
+                                            moved(v) => { root.setting-changed("step", Math.max(1, Math.round(v / 4))); }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if root.is-windows: Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 6px;
+                                SectionTitle { text: @tr("INDICATOR AND MINI PANEL"); }
+                                ToggleRow { title: @tr("Show on-screen indicator for shortcuts"); checked <=> root.opt-osd; toggled(c) => { root.option-changed("osd", c); } }
+                                HorizontalLayout {
+                                    spacing: 10px;
+                                    height: 36px;
+                                    Text { text: @tr("Indicator position"); color: Theme.text; font-size: 12px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; }
+                                    VerticalLayout {
+                                        alignment: center;
+                                        ComboBox {
+                                            width: 194px;
+                                            model: root.pos-names;
+                                            current-index: root.osd-pos;
+                                            selected(_) => { root.setting-changed("osd_pos", self.current-index); }
+                                        }
+                                    }
+                                }
+                                HorizontalLayout {
+                                    spacing: 10px;
+                                    height: 36px;
+                                    Text { text: @tr("Indicator size"); color: Theme.text; font-size: 12px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; }
+                                    Text { text: root.osd-scale + "%"; color: Theme.secondary; font-weight: 700; vertical-alignment: center; width: 40px; horizontal-alignment: right; }
+                                    VerticalLayout {
+                                        alignment: center;
+                                        SoSlider {
+                                            width: 146px;
+                                            free: true;
+                                            value: Math.round((root.osd-scale - 60) * 100 / 90);
+                                            released(v) => { root.setting-changed("osd_scale", 60 + Math.round(v * 0.9)); }
+                                            moved(v) => { root.setting-changed("osd_scale_live", 60 + Math.round(v * 0.9)); }
+                                        }
+                                    }
+                                }
+                                ToggleRow {
+                                    title: @tr("Transparency");
+                                    checked <=> root.opt-transparent;
+                                    toggled(c) => { root.option-changed("transparent", c); }
+                                }
+                            }
+                        }
+                        if root.has-hotkeys && !root.hk-editable: Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 6px;
+                                SectionTitle { text: @tr("GLOBAL SHORTCUTS"); }
+                                for h[i] in root.hotkeys: HorizontalLayout {
+                                    spacing: 10px;
+                                    height: 32px;
+                                    Text { text: h.label; color: Theme.text; font-size: 11px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; overflow: elide; }
+                                    VerticalLayout {
+                                        alignment: center;
+                                        Rectangle {
+                                            height: 26px;
+                                            width: max(110px, keytxt.preferred-width + 20px);
+                                            border-radius: 6px;
+                                            background: Theme.card-hover;
+                                            border-width: 1px;
+                                            border-color: Theme.border;
+                                            keytxt := Text {
+                                                text: h.combo == "" ? Strings.hk-none : h.combo;
+                                                color: h.combo == "" ? Theme.text-dim : Theme.text;
+                                                font-size: 10px; font-weight: 600;
+                                                horizontal-alignment: center; vertical-alignment: center;
+                                            }
+                                        }
+                                    }
+                                }
+                                Text {
+                                    text: @tr("Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts.");
+                                    color: Theme.text-dim; font-size: 9px; wrap: word-wrap;
+                                }
+                            }
+                        }
+                        if root.has-hotkeys && root.hk-editable: Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 6px;
+                                SectionTitle { text: @tr("GLOBAL SHORTCUTS"); }
+                                for h[i] in root.hotkeys: HorizontalLayout {
+                                    spacing: 10px;
+                                    height: 32px;
+                                    Text { text: h.label; color: Theme.text; font-size: 11px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; overflow: elide; }
+                                    VerticalLayout {
+                                        alignment: center;
+                                        HotkeyField {
+                                            combo: h.combo;
+                                            placeholder: Strings.hk-none;
+                                            hint: Strings.hk-press;
+                                            capturing: root.capture-idx == i;
+                                            live: root.capture-live;
+                                            capture-started => { root.capture-start(i); }
+                                            capture-ended => { root.capture-end(i); }
+                                            captured(t, c, a, s, m) => { return root.hotkey-captured(i, t, c, a, s, m); }
+                                        }
+                                    }
+                                }
+                                Text {
+                                    text: @tr("Click a field and press the keys. Backspace clears it, Esc cancels.");
+                                    color: Theme.text-dim; font-size: 9px; wrap: word-wrap;
+                                }
+                                HorizontalLayout {
+                                    alignment: start;
+                                    ConfirmBtn {
+                                        text: @tr("Restore defaults");
+                                        confirm-text: @tr("Click again to confirm");
+                                        icon: @image-url("icons/rotate-ccw.svg");
+                                        confirmed => { root.restore-hotkeys(); }
+                                    }
+                                }
+                            }
+                        }
+                        Card {
+                            VerticalLayout {
+                                padding: 16px;
+                                spacing: 8px;
+                                SectionTitle { text: @tr("BACKUP"); }
+                                Text {
+                                    text: @tr("Save all your settings, profiles, schedule and shortcuts to a file, or load them from one.");
+                                    color: Theme.text-dim; font-size: 10px; wrap: word-wrap;
+                                }
+                                HorizontalLayout {
+                                    spacing: 8px;
+                                    alignment: start;
+                                    Btn { text: @tr("Export all settings"); icon: @image-url("icons/file-down.svg"); clicked => { root.export-backup(); } }
+                                    Btn { text: @tr("Import settings"); icon: @image-url("icons/file-up.svg"); clicked => { root.import-backup(); } }
+                                }
+                            }
+                        }
+                        HorizontalLayout {
+                            alignment: center;
+                            padding-top: 4px;
+                            padding-bottom: 6px;
+                            Btn { text: @tr("About"); icon: @image-url("icons/info.svg"); clicked => { root.about-open = true; } }
+                        }
+                    }
+                }
+            }
+
+            // ---------------- status bar ----------------
+            HorizontalLayout {
+                height: 22px;
+                spacing: 6px;
+                Rectangle {
+                    width: 6px;
+                    height: 6px;
+                    y: 8px;
+                    border-radius: 3px;
+                    background: root.busy ? Theme.secondary : Theme.ok;
+                    animate background { duration: 200ms; }
+                }
+                Text { text: root.status; color: Theme.text-dim; font-size: 10px; vertical-alignment: center; overflow: elide; }
+            }
+        }
+    }
+
+    // ===================== About (overlay panel) =====================
+    if root.about-open: Rectangle {
+        background: #000000b0;
+        TouchArea { clicked => { root.about-open = false; } }
+        Card {
+            width: 360px;
+            height: min(about-content.preferred-height + 36px, parent.height - 36px);
+            TouchArea { }
+            ScrollView {
+                about-content := VerticalLayout {
+                    padding: 20px;
+                    spacing: 10px;
+                    alignment: start;
+                    HorizontalLayout {
+                        alignment: center;
+                        Image { source: @image-url("../assets/icon.svg"); width: 64px; height: 64px; }
+                    }
+                    Text { text: "Solua"; color: Theme.text; font-size: 20px; font-weight: 800; horizontal-alignment: center; }
+                    Text {
+                        text: @tr("A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast.");
+                        color: Theme.text-dim; font-size: 11px; wrap: word-wrap; horizontal-alignment: center;
+                    }
+                    HorizontalLayout {
+                        alignment: center;
+                        Btn { text: "github.com/uenzuwkxos/Solua"; icon: @image-url("icons/link.svg"); clicked => { root.open-link("https://github.com/uenzuwkxos/Solua"); } }
+                    }
+                    Accordion {
+                        icon: @image-url("icons/lock.svg");
+                        title: @tr("Privacy policy");
+                        tint: Theme.accent;
+                        body: @tr("Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol.");
+                        open <=> root.acc-privacy;
+                    }
+                    Accordion {
+                        icon: @image-url("icons/code.svg");
+                        title: @tr("Open source licenses");
+                        tint: Theme.tertiary;
+                        body: "Slint — GPL-3.0\nLucide (icons) — ISC\nwinit — Apache-2.0\nzbus — MIT\nserde, serde_json, chrono — MIT / Apache-2.0\nRust standard library — MIT / Apache-2.0";
+                        open <=> root.acc-licenses;
+                    }
+                    Text { text: root.version; color: Theme.text-dim; font-size: 10px; horizontal-alignment: center; }
+                    Text {
+                        text: @tr("Distributed under the GPL-3.0 license or later");
+                        color: Theme.text-dim; font-size: 10px; wrap: word-wrap; horizontal-alignment: center;
+                    }
+                    HorizontalLayout {
+                        alignment: center;
+                        padding-top: 6px;
+                        Btn { text: @tr("Close"); primary: true; clicked => { root.about-open = false; } }
+                    }
+                }
+            }
+        }
+    }
+}
+
+export component TrayPopup inherits Window {
+    in-out property <int> page: 0;        // 0 controls, 1 profiles, 2 schedule
+    in property <[string]> monitor-names;
+    in property <[MiniProfileItem]> profiles;
+    in property <[ScheduleItem]> schedule;
+    in property <bool> clock-12h;
+    in property <bool> free-active: true;
+    in property <bool> locked;
+    in-out property <bool> sync;
+    in-out property <int> selected;
+    in-out property <int> brightness;
+    in-out property <int> contrast;
+    in-out property <int> saturation: 50;
+    in-out property <int> fx-temp: 50;
+    in-out property <int> fx-mode;
+    in property <float> alpha: 1.0;
+    in property <bool> show-audio;
+    in-out property <int> volume;
+    in property <bool> muted;
+    in-out property <int> phase: 0;       // 0 entering, 1 visible, 2 leaving
+    in property <bool> has-brightness;
+    in property <bool> has-contrast;
+    in property <bool> has-power: true;
+    in property <int> step: 5;
+    // keyboard navigation
+    property <int> frow: 1;
+    property <int> fcol: 0;
+    property <int> lrow: 0;
+    property <int> ar: root.show-audio ? 1 : 0;   // extra audio row (index 5)
+    in-out property <bool> pw-armed: false;
+    property <int> list-rows: max(1, min(root.profiles.length, 5));
+    property <int> agenda-rows: max(1, min(root.schedule.length, 6));
+    out property <length> panel-h: root.page == 0 ? (root.show-audio ? 330px : 294px) : (root.page == 1 ? 103px + root.list-rows * 32px : 62px + root.agenda-rows * 32px);
+    callback toggle-sync(bool);
+    callback toggle-mute();
+    callback select-monitor(int);
+    callback set-level(string, int);
+    callback set-fx(string, int);
+    callback set-fx-mode(int);
+    callback open();
+    callback quit();
+    callback power();
+    callback activate-profile(int, bool);
+    callback toggle-schedule(int, bool);
+    callback page-changed();
+    callback dismissed();
+
+    no-frame: true;
+    always-on-top: true;
+    background: transparent;
+    width: 300px;
+    height: root.panel-h;
+
+    function nudge(d: int) {
+        if (root.locked) { return; }
+        if (root.frow == 1 && root.has-brightness) {
+            root.brightness = Math.clamp(root.brightness + d, 0, 100);
+            root.set-level("brightness", root.brightness);
+        } else if (root.frow == 2 && root.has-contrast) {
+            root.contrast = Math.clamp(root.contrast + d, 0, 100);
+            root.set-level("contrast", root.contrast);
+        } else if (root.show-audio && root.frow == 5) {
+            root.volume = Math.clamp(root.volume + d, 0, 100);
+            root.set-level("volume", root.volume);
+        } else if (root.frow == 3) {
+            root.saturation = Math.clamp(root.saturation + d, 0, 100);
+            root.set-fx("saturation", root.saturation);
+        } else if (root.frow == 4) {
+            root.fx-temp = Math.clamp(root.fx-temp + d, 0, 100);
+            root.set-fx("temp", root.fx-temp);
+        }
+    }
+    function go-page(p: int) {
+        root.page = p;
+        root.lrow = 0;
+        root.page-changed();
+    }
+    function max-col() -> int {
+        return root.frow == 0 ? (root.has-power ? 4 : 3) : (root.frow == 5 + root.ar || root.frow == 6 + root.ar ? 3 : (root.frow == 7 + root.ar ? 1 : 0));
+    }
+    function enter() {
+        if (root.page == 1) {
+            if (root.lrow == 0) { root.activate-profile(-1, true); }
+            else { root.activate-profile(root.lrow - 1, !root.profiles[root.lrow - 1].active); }
+            return;
+        }
+        if (root.page == 2) {
+            if (root.lrow < root.schedule.length) { root.toggle-schedule(root.lrow, !root.schedule[root.lrow].enabled); }
+            return;
+        }
+        if (root.frow == 0) {
+            if (root.fcol == 0) { root.select-monitor(Math.mod(root.selected + 1, max(1, root.monitor-names.length))); }
+            else if (root.fcol == 1) { root.go-page(1); }
+            else if (root.fcol == 2) { root.go-page(2); }
+            else if (root.fcol == 3) { root.open(); }
+            else if (root.pw-armed) { root.pw-armed = false; root.power(); }
+            else { root.pw-armed = true; }
+        } else if (root.show-audio && root.frow == 5) {
+            root.toggle-mute();
+        } else if (root.frow == 5 + root.ar || root.frow == 6 + root.ar) {
+            if (!root.locked) {
+                root.fx-mode = [0, 6, 1, 7, 2, 3, 4, 5][(root.frow - 5 - root.ar) * 4 + root.fcol];
+                root.set-fx-mode(root.fx-mode);
+            }
+        } else if (root.frow == 7 + root.ar) {
+            if (root.fcol == 0) { root.toggle-sync(!root.sync); } else { root.quit(); }
+        }
+    }
+
+    // keyboard focus: take it every time the panel is shown (not only once on creation), so the
+    // arrow keys work without clicking the panel first
+    public function focus-keys() { fs.focus(); }
+    changed phase => { if root.phase == 1 { fs.focus(); } }
+
+    fs := FocusScope {
+        init => { self.focus(); }
+        key-pressed(e) => {
+            if (e.text == Key.Escape) {
+                root.dismissed();
+                return accept;
+            }
+            if (root.page != 0) {
+                if (e.text == Key.UpArrow) { root.lrow = Math.max(0, root.lrow - 1); return accept; }
+                if (e.text == Key.DownArrow) {
+                    root.lrow = Math.min(root.page == 1 ? root.profiles.length : root.schedule.length - 1, root.lrow + 1);
+                    if (root.lrow < 0) { root.lrow = 0; }
+                    return accept;
+                }
+                if (e.text == Key.LeftArrow || e.text == Key.Backspace) { root.go-page(0); return accept; }
+                if (e.text == Key.Return) { root.enter(); return accept; }
+                return reject;
+            }
+            if (e.text == Key.UpArrow) { root.frow = Math.mod(root.frow + 7 + root.ar, 8 + root.ar); root.fcol = Math.min(root.fcol, root.max-col()); return accept; }
+            if (e.text == Key.DownArrow) { root.frow = Math.mod(root.frow + 1, 8 + root.ar); root.fcol = Math.min(root.fcol, root.max-col()); return accept; }
+            if (e.text == Key.LeftArrow) {
+                if ((root.frow >= 1 && root.frow <= 4) || (root.show-audio && root.frow == 5)) { root.nudge(-root.step); }
+                else if (root.frow == 0 && root.fcol == 0) { root.select-monitor(Math.mod(root.selected + root.monitor-names.length - 1, max(1, root.monitor-names.length))); }
+                else { root.fcol = Math.max(0, root.fcol - 1); }
+                return accept;
+            }
+            if (e.text == Key.RightArrow) {
+                if ((root.frow >= 1 && root.frow <= 4) || (root.show-audio && root.frow == 5)) { root.nudge(root.step); }
+                else if (root.frow == 0 && root.fcol == 0) { root.select-monitor(Math.mod(root.selected + 1, max(1, root.monitor-names.length))); }
+                else { root.fcol = Math.min(root.max-col(), root.fcol + 1); }
+                return accept;
+            }
+            if (e.text == Key.Return) { root.enter(); return accept; }
+            reject
+        }
+
+        Rectangle {
+            // enter: Fade In + Zoom In; exit: Zoom Out + Fade Out
+            opacity: root.phase == 1 ? 1.0 : 0.0;
+            transform-scale: root.phase == 1 ? 1.0 : 0.92;
+            animate opacity { duration: 190ms; easing: root.phase == 1 ? ease-out : ease-in; }
+            animate transform-scale { duration: 210ms; easing: root.phase == 1 ? ease-out : ease-in; }
+            border-radius: 13px;
+            background: Theme.card.with-alpha(root.alpha);
+                border-width: 1px;
+            border-color: Theme.border.with-alpha(root.alpha);
+
+            VerticalLayout {
+                padding: 12px;
+                spacing: 8px;
+                alignment: start;
+                HorizontalLayout {
+                    height: 30px;
+                    spacing: 4px;
+                    ComboBox {
+                        horizontal-stretch: 1;
+                        model: root.monitor-names;
+                        current-index: root.selected;
+                        selected(_) => { root.select-monitor(self.current-index); fs.focus(); }
+                    }
+                    IconBtn { icon: @image-url("icons/bookmark.svg"); active: root.page == 1; focused: root.page == 0 && root.frow == 0 && root.fcol == 1; box: 27px; clicked => { root.go-page(root.page == 1 ? 0 : 1); fs.focus(); } }
+                    IconBtn { icon: @image-url("icons/calendar.svg"); active: root.page == 2; focused: root.page == 0 && root.frow == 0 && root.fcol == 2; box: 27px; clicked => { root.go-page(root.page == 2 ? 0 : 2); fs.focus(); } }
+                    IconBtn { icon: @image-url("icons/settings.svg"); focused: root.page == 0 && root.frow == 0 && root.fcol == 3; box: 27px; clicked => { root.open(); } }
+                    if root.has-power: ConfirmIconBtn {
+                        armed <=> root.pw-armed;
+                        icon: @image-url("icons/power.svg");
+                        box: 27px;
+                        focused: root.page == 0 && root.frow == 0 && root.fcol == 4;
+                        confirmed => { root.power(); }
+                    }
+                }
+
+                if root.page == 0: VerticalLayout {
+                    spacing: 8px;
+                    MiniRow {
+                        icon: @image-url("icons/sun.svg");
+                        tint: Theme.c-brightness;
+                        enabled: root.has-brightness && !root.locked;
+                        selected: root.frow == 1;
+                        value <=> root.brightness;
+                        moved(v) => { root.frow = 1; root.set-level("brightness", v); }
+                    }
+                    MiniRow {
+                        icon: @image-url("icons/contrast.svg");
+                        tint: Theme.c-contrast;
+                        enabled: root.has-contrast && !root.locked;
+                        selected: root.frow == 2;
+                        value <=> root.contrast;
+                        moved(v) => { root.frow = 2; root.set-level("contrast", v); }
+                    }
+                    MiniRow {
+                        icon: @image-url("icons/droplet.svg");
+                        tint: Theme.c-saturation;
+                        enabled: !root.locked;
+                        selected: root.frow == 3;
+                        value <=> root.saturation;
+                        moved(v) => { root.frow = 3; root.set-fx("saturation", v); }
+                    }
+                    MiniRow {
+                        icon: @image-url("icons/thermometer.svg");
+                        tint: Theme.c-temperature;
+                        enabled: !root.locked;
+                        selected: root.frow == 4;
+                        value <=> root.fx-temp;
+                        moved(v) => { root.frow = 4; root.set-fx("temp", v); }
+                    }
+                    if root.show-audio: MiniRow {
+                        icon: root.muted ? @image-url("icons/mute.svg") : @image-url("icons/volume.svg");
+                        tint: Theme.c-volume;
+                        selected: root.frow == 5;
+                        value <=> root.volume;
+                        icon-clicked => { root.toggle-mute(); fs.focus(); }
+                        moved(v) => { root.frow = 5; root.set-level("volume", v); }
+                    }
+                    GridLayout {
+                        spacing: 4px;
+                        for m[i] in [0, 6, 1, 7, 2, 3, 4, 5]: MiniPill {
+                            row: Math.floor(i / 4);
+                            col: Math.mod(i, 4);
+                            height: 24px;
+                            text: [Strings.fs-normal, Strings.fs-gray, Strings.fs-red, Strings.fs-green, Strings.fs-blue, Strings.fs-yellow, Strings.fs-sepia, Strings.fs-invert][m];
+                            enabled: !root.locked;
+                            selected: root.fx-mode == m;
+                            focused: root.frow == 5 + root.ar + Math.floor(i / 4) && root.fcol == Math.mod(i, 4);
+                            clicked => { root.fx-mode = m; root.set-fx-mode(m); fs.focus(); }
+                        }
+                    }
+                    HorizontalLayout {
+                        height: 28px;
+                        spacing: 8px;
+                        VerticalLayout {
+                            alignment: center;
+                            Rectangle {
+                                width: 36px;
+                                height: 20px;
+                                border-radius: 10px;
+                                border-width: root.frow == 7 + root.ar && root.fcol == 0 ? 1px : 0px;
+                                border-color: Theme.accent;
+                                SoSwitch { controlled: true; checked: root.sync; toggled(c) => { root.toggle-sync(c); fs.focus(); } }
+                            }
+                        }
+                        Text { text: @tr("All monitors"); color: Theme.text-dim; font-size: 11px; vertical-alignment: center; horizontal-stretch: 1; }
+                        IconBtn { icon: @image-url("icons/x.svg"); danger: true; box: 28px; focused: root.frow == 7 + root.ar && root.fcol == 1; clicked => { root.quit(); } }
+                    }
+                }
+
+                if root.page == 1: VerticalLayout {
+                    spacing: 0px;
+                    // Free: always on top, separated by a line
+                    Rectangle {
+                        height: 32px;
+                        border-radius: 7px;
+                        background: root.lrow == 0 ? Theme.card-hover : transparent;
+                        HorizontalLayout {
+                            padding-left: 8px;
+                            padding-right: 8px;
+                            spacing: 8px;
+                            Icon { source: @image-url("icons/sparkle.svg"); tint: Theme.tertiary; size: 14px; y: 9px; }
+                            Text { text: Strings.free-name; color: Theme.text; font-size: 12px; font-weight: 700; vertical-alignment: center; horizontal-stretch: 1; }
+                            VerticalLayout { alignment: center; SoSwitch { controlled: true; checked: root.free-active; toggled(c) => { root.activate-profile(-1, c); fs.focus(); } } }
+                        }
+                    }
+                    Rectangle { height: 9px; Rectangle { y: 4px; height: 1px; background: Theme.border; } }
+                    ScrollView {
+                        height: root.list-rows * 32px;
+                        VerticalLayout {
+                            alignment: start;
+                            if root.profiles.length == 0: Text {
+                                height: 32px;
+                                text: @tr("No profiles yet.");
+                                color: Theme.text-dim; font-size: 11px; vertical-alignment: center;
+                            }
+                            for p[i] in root.profiles: Rectangle {
+                                height: 32px;
+                                border-radius: 7px;
+                                background: root.lrow == i + 1 ? Theme.card-hover : transparent;
+                                HorizontalLayout {
+                                    padding-left: 8px;
+                                    padding-right: 8px;
+                                    spacing: 8px;
+                                    Icon { source: @image-url("icons/bookmark.svg"); tint: Theme.secondary; size: 14px; y: 9px; }
+                                    Text { text: p.name; color: Theme.text; font-size: 12px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; overflow: elide; }
+                                    VerticalLayout { alignment: center; SoSwitch { controlled: true; checked: p.active; toggled(c) => { root.activate-profile(i, c); fs.focus(); } } }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if root.page == 2: ScrollView {
+                    height: root.agenda-rows * 32px;
+                    VerticalLayout {
+                        alignment: start;
+                        if root.schedule.length == 0: Text {
+                            height: 32px;
+                            text: @tr("No scheduled changes.");
+                            color: Theme.text-dim; font-size: 11px; vertical-alignment: center;
+                        }
+                        for s[i] in root.schedule: Rectangle {
+                            height: 32px;
+                            border-radius: 7px;
+                            background: root.lrow == i ? Theme.card-hover : transparent;
+                            HorizontalLayout {
+                                padding-left: 8px;
+                                padding-right: 8px;
+                                spacing: 8px;
+                                Text { text: s.time; color: Theme.secondary; font-size: 13px; font-weight: 800; vertical-alignment: center; width: root.clock-12h ? 72px : 44px; }
+                                Text { text: s.profile; color: Theme.text; font-size: 12px; font-weight: 600; vertical-alignment: center; horizontal-stretch: 1; overflow: elide; }
+                                VerticalLayout { alignment: center; SoSwitch { controlled: true; checked: s.enabled; toggled(c) => { root.toggle-schedule(i, c); fs.focus(); } } }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

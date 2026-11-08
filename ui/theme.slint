@@ -1,0 +1,68 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+import { Palette } from "std-widgets.slint";
+
+// Solua design tokens. Themes: Light (blue accent), Dark (blue, violet or neutral gray
+// background, yellow accent) and Black (yellow accent). Red, green etc. appear where they make sense.
+export global Theme {
+    out property <bool> dark: Palette.color-scheme == ColorScheme.dark;
+    // set by Rust together with `apply(true)`: the "Black" (AMOLED) theme and the Violet color of the Dark theme
+    in-out property <bool> black: false;
+    in-out property <bool> violet: false;
+    // the "Default" color of the Dark theme: neutral gray, no tint
+    in-out property <bool> neutral: false;
+
+    pure function pick(light: color, dark-c: color, black-c: color, violet-c: color, neutral-c: color) -> color {
+        return black ? black-c : (violet ? violet-c : (neutral ? neutral-c : (dark ? dark-c : light)));
+    }
+
+    out property <color> bg: pick(#eef0f4, #05070b, #000000, #07050b, #18191d);
+    out property <brush> bg-brush: dark ? bg : @linear-gradient(160deg, #f3f5f9 0%, #eef0f4 50%, #e9ecf2 100%);
+    out property <color> sidebar: pick(#e2e6ee, #031035, #0e0f12, #190234, #121316);
+    out property <color> side-hover: pick(#d6dce8, #0b1d59, #1a1c21, #2a0a5e, #1f2126);
+    out property <color> side-sel: pick(#ffffff, #05070b, #000000, #07050b, #18191d);
+    out property <color> card: pick(#ffffff, #041238, #15161a, #1b0538, #22242a);
+    out property <color> card-hover: pick(#e8ecf3, #1a2130, #24262d, #221d33, #2c2f36);
+    out property <color> card-active: pick(#dae0ec, #283148, #30333b, #312a4a, #383c45);
+    out property <color> border: pick(#d6dbe5, #16358a, #2c2f37, #43207f, #363942);
+    out property <color> text: pick(#151a2b, #eef2ff, #f0f1f5, #f3efff, #eceef3);
+    // secondary text: a single tone for captions, inactive icons and tabs (no transparency)
+    out property <color> text-dim: pick(#485066, #b4bacb, #b0b5c0, #bdb4d4, #b2b6c1);
+    out property <color> track: pick(#d3d9e4, #2a3144, #2d3038, #2e2946, #33363f);
+    // accent: blue in the Light theme, yellow in the others
+    out property <color> accent: pick(#2f6bff, #ffc933, #ffc933, #ffc933, #ffc933);
+    out property <color> accent-soft: pick(#dbe6ff, #3a3115, #2b2410, #3a2f18, #3a3115);
+    out property <color> secondary: accent;
+    out property <color> secondary-soft: accent-soft;
+    // support color: contrasts with the accent
+    out property <color> tertiary: pick(#c98400, #8fa8ff, #8fa8ff, #b9a0ff, #8fa8ff);
+    out property <color> tertiary-soft: pick(#fff0c4, #1b2a5e, #121a3a, #2a1f5c, #1f2640);
+    out property <color> indigo: tertiary;
+    out property <color> on-accent: pick(#ffffff, #1a1400, #1a1400, #1a1400, #1a1400);
+    // fixed colors per setting (window, mini panel and indicator): brightness yellow, contrast blue,
+    // saturation green, temperature red and volume cyan
+    out property <color> c-brightness: dark ? #ffc933 : #b87800;
+    out property <color> c-contrast: dark ? #4d8dff : #2457e6;
+    out property <color> c-saturation: dark ? #3ddc97 : #0e8a58;
+    out property <color> c-temperature: dark ? #ff5d6c : #cc2e40;
+    out property <color> c-volume: dark ? #22d3ee : #087f97;
+    // 0 brightness, 1 contrast, 2 volume, 3 mute, 4 saturation, 5 temperature
+    public pure function kind-color(k: int) -> color {
+        return k == 0 ? c-brightness : k == 1 ? c-contrast : (k == 2 || k == 3) ? c-volume : k == 4 ? c-saturation : c-temperature;
+    }
+    out property <color> danger: dark ? #ff5d6c : #c9283b;
+    out property <color> ok: #2fcf8f;
+    out property <color> red-ch: #ff5d6c;
+    out property <color> green-ch: #3ddc97;
+    out property <color> blue-ch: #5aa7ff;
+
+    // Called by Rust: sets the effective color scheme.
+    public function apply(is-dark: bool) {
+        Palette.color-scheme = is-dark ? ColorScheme.dark : ColorScheme.light;
+    }
+}
+
+// Slider steps (dotted), set in Settings.
+export global SliderCfg {
+    in-out property <int> step: 5;
+    in-out property <bool> discrete: true;
+}

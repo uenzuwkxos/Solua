@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+
+msgid "Open Solua"
+msgstr "Solua openen"
+
+msgid "Quit"
+msgstr "Afsluiten"
+
+msgid "Profiles"
+msgstr "Profielen"
+
+msgid "Brightness"
+msgstr "Helderheid"
+
+msgid "Solua — monitor control"
+msgstr "Solua — monitorbediening"
+
+msgid "Ready"
+msgstr "Gereed"
+
+msgid "No DDC/CI monitors found"
+msgstr "Geen DDC/CI-monitoren gevonden"
+
+msgid "Monitors found: %1"
+msgstr "Gevonden monitoren: %1"
+
+msgid "Profile “%1” applied"
+msgstr "Profiel “%1” toegepast"
+
+msgid "Profile “%1” saved"
+msgstr "Profiel “%1” opgeslagen"
+
+msgid "Profile “%1” was updated"
+msgstr "Profiel “%1” bijgewerkt"
+
+msgid "Reset command sent"
+msgstr "Resetcommando verzonden"
+
+msgid "Could not change: %1"
+msgstr "Wijzigen mislukt: %1"
+
+msgid "Could not read: %1"
+msgstr "Lezen mislukt: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "Schema: profiel “%1” toegepast"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "Sneltoets niet beschikbaar (al in gebruik?): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "Ongeldige tijd. Gebruik UU:MM (bijv. 22:30)"
+
+msgid "Create a profile first"
+msgstr "Maak eerst een profiel aan"
+
+msgid "Give the profile a name"
+msgstr "Geef het profiel een naam"
+
+msgid "This monitor did not report its capabilities"
+msgstr "Deze monitor heeft zijn mogelijkheden niet doorgegeven"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "Demomodus: gesimuleerde monitoren, er wordt niets naar de hardware gestuurd"
+
+msgid "Power command sent"
+msgstr "Aan/uit-commando verzonden"
+
+msgid "Value written"
+msgstr "Waarde geschreven"
+
+msgid "Invalid code or value"
+msgstr "Ongeldige code of waarde"
+
+msgid "Reading monitor…"
+msgstr "Monitor uitlezen…"
+
+msgid "unknown"
+msgstr "onbekend"
+
+msgid "Press the keys…"
+msgstr "Druk op de toetsen…"
+
+msgid "Not set"
+msgstr "Niet ingesteld"
+
+msgid "Brightness up"
+msgstr "Helderheid verhogen"
+
+msgid "Brightness down"
+msgstr "Helderheid verlagen"
+
+msgid "Contrast up"
+msgstr "Contrast verhogen"
+
+msgid "Contrast down"
+msgstr "Contrast verlagen"
+
+msgid "Show / hide Solua"
+msgstr "Solua tonen / verbergen"
+
+msgid "Profile: %1"
+msgstr "Profiel: %1"
+
+msgid "Contrast"
+msgstr "Contrast"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Muted"
+msgstr "Gedempt"
+
+msgid "System default"
+msgstr "Systeemstandaard"
+
+msgid "System"
+msgstr "Systeem"
+
+msgid "Light"
+msgstr "Licht"
+
+msgid "Dark"
+msgstr "Donker"
+
+msgid "Built-in display"
+msgstr "Ingebouwd scherm"
+
+msgid "External display"
+msgstr "Extern scherm"
+
+msgid "%1 monitor(s)"
+msgstr "%1 monitor(en)"
+
+msgid "Red"
+msgstr "Rood"
+
+msgid "Green"
+msgstr "Groen"
+
+msgid "Blue"
+msgstr "Blauw"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "Er zijn geen monitoren met DDC/CI-ondersteuning gevonden"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "Schakel DDC/CI in via het schermmenu van de monitor, gebruik een directe kabel (vermijd docks en adapters) en probeer het opnieuw."
+
+msgid "Search again"
+msgstr "Opnieuw zoeken"
+
+msgid "MONITORS"
+msgstr "MONITOREN"
+
+msgid "DEMO MODE"
+msgstr "DEMOMODUS"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Controls"
+msgstr "Bediening"
+
+msgid "Color"
+msgstr "Kleur"
+
+msgid "Schedule"
+msgstr "Schema"
+
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+msgid "Not supported"
+msgstr "Niet ondersteund"
+
+msgid "Control all monitors together"
+msgstr "Alle monitoren samen bedienen"
+
+msgid "COLOR TEMPERATURE"
+msgstr "KLEURTEMPERATUUR"
+
+msgid "Click again to confirm"
+msgstr "Klik nogmaals om te bevestigen"
+
+msgid "INPUT SOURCE"
+msgstr "INGANGSBRON"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "Als je overschakelt naar een ingang zonder signaal, wordt het scherm zwart. Gebruik de knoppen van de monitor zelf om terug te gaan."
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "HUIDIGE INSTELLINGEN OPSLAAN ALS PROFIEL"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "Profielnaam (bijv. Nacht, Bioscoop, Werk)"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "Nog geen profielen. Pas je monitoren aan en sla hierboven het eerste op."
+
+msgid "Add"
+msgstr "Toevoegen"
+
+msgid "Apply the most recent entry at startup"
+msgstr "Meest recente item toepassen bij het opstarten"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "Handig als de computer uit stond op het geplande tijdstip."
+
+msgid "WRITE A VCP CODE"
+msgstr "EEN VCP-CODE SCHRIJVEN"
+
+msgid "Code (hex)"
+msgstr "Code (hex)"
+
+msgid "Value"
+msgstr "Waarde"
+
+msgid "Write"
+msgstr "Schrijven"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "MOGELIJKHEDEN (VCP)"
+
+msgid "Read all values"
+msgstr "Alle waarden lezen"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "Geen gegevens over mogelijkheden. Klik op “Alle waarden lezen”."
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Current"
+msgstr "Huidig"
+
+msgid "Max"
+msgstr "Max."
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "RUWE MOGELIJKHEDENSTRING"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "TAAL EN UITERLIJK"
+
+msgid "Language"
+msgstr "Taal"
+
+msgid "Theme"
+msgstr "Thema"
+
+msgid "BEHAVIOR"
+msgstr "GEDRAG"
+
+msgid "Start minimized to the tray"
+msgstr "Geminimaliseerd starten in het systeemvak"
+
+msgid "Keep running in the tray when closed"
+msgstr "Blijven draaien in het systeemvak bij sluiten"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "Schermindicator tonen voor sneltoetsen"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "GLOBALE SNELTOETSEN"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "Klik op een veld en druk op de toetsen. Backspace wist het veld, Esc annuleert."
+
+msgid "Usage time: %1"
+msgstr "Gebruiksduur: %1"
+
+msgid "%1 year"
+msgstr "%1 jaar"
+
+msgid "%1 years"
+msgstr "%1 jaar"
+
+msgid "%1 day"
+msgstr "%1 dag"
+
+msgid "%1 days"
+msgstr "%1 dagen"
+
+msgid "%1 hour"
+msgstr "%1 uur"
+
+msgid "%1 hours"
+msgstr "%1 uur"
+
+msgid "The monitor ignored this change: %1"
+msgstr "De monitor negeerde deze wijziging: %1"
+
+msgid "Could not import: %1"
+msgstr "Importeren mislukt: %1"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Grayscale"
+msgstr "Grijstinten"
+
+msgid "Redscale"
+msgstr "Roodtinten"
+
+msgid "Greenscale"
+msgstr "Groentinten"
+
+msgid "Bluescale"
+msgstr "Blauwtinten"
+
+msgid "Sepia"
+msgstr "Sepia"
+
+msgid "Inverted"
+msgstr "Geïnverteerd"
+
+msgid "Saturation"
+msgstr "Verzadiging"
+
+msgid "The color filter is not available on this system"
+msgstr "Het kleurfilter is niet beschikbaar op dit systeem"
+
+msgid "Saturation up"
+msgstr "Verzadiging verhogen"
+
+msgid "Saturation down"
+msgstr "Verzadiging verlagen"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "Voorinstellingen van de monitor. Gedimde zijn niet door de monitor gemeld; als er niets verandert, negeert je monitor dit commando."
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "Gedimde ingangen zijn niet door de monitor gemeld, maar veel monitoren accepteren ze toch (HDMI en DisplayPort ontbreken vaak in de lijst)."
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "Stuurt elk MCCS-commando rechtstreeks naar de monitor. Code is het VCP-nummer in hexadecimaal. Verkeerde waarden bij onbekende codes kunnen voor problemen zorgen, dus wees voorzichtig."
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "Wat de monitor zegt te ondersteunen. “Alle waarden lezen” vraagt de monitor om de huidige en maximale waarde van elke vermelde code; dit duurt enkele seconden."
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "De onbewerkte tekst die de monitor doorgeeft. Handig bij het vragen om ondersteuning of het melden van een probleem."
+
+msgid "Open the mini panel"
+msgstr "Minipaneel openen"
+
+msgid "Restore"
+msgstr "Herstellen"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "KLEURFILTER (SOFTWARE)"
+
+msgid "Temperature"
+msgstr "Temperatuur"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "RGB INSTELLEN (HARDWARE)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "GEPLANDE WIJZIGING"
+
+msgid "Mon"
+msgstr "Ma"
+
+msgid "Tue"
+msgstr "Di"
+
+msgid "Wed"
+msgstr "Wo"
+
+msgid "Thu"
+msgstr "Do"
+
+msgid "Fri"
+msgstr "Vr"
+
+msgid "Sat"
+msgstr "Za"
+
+msgid "Sun"
+msgstr "Zo"
+
+msgid "About"
+msgstr "Over"
+
+msgid "Privacy policy"
+msgstr "Privacybeleid"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Solua verzamelt, bewaart of verstuurt geen persoonsgegevens. Er zijn geen accounts, geen analyses en de app maakt geen netwerkverbindingen. Je instellingen blijven in een lokaal bestand op deze computer en de enige communicatie vindt plaats tussen de app en je monitoren via het standaard DDC/CI-protocol."
+
+msgid "Open source licenses"
+msgstr "Open-sourcelicenties"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "All monitors"
+msgstr "Alle monitoren"
+
+msgid "No profiles yet."
+msgstr "Nog geen profielen."
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "Een opgeslagen profiel is actief. Schakel over naar “Vrij” om instellingen aan te passen."
+
+msgid "Allow modifying saved profiles"
+msgstr "Wijzigen van opgeslagen profielen toestaan"
+
+msgid "BACKUP"
+msgstr "BACK-UP"
+
+msgid "Backup saved"
+msgstr "Back-up opgeslagen"
+
+msgid "Black"
+msgstr "Zwart"
+
+msgid "Bottom"
+msgstr "Onder"
+
+msgid "Bottom left"
+msgstr "Linksonder"
+
+msgid "Bottom right"
+msgstr "Rechtsonder"
+
+msgid "Center"
+msgstr "Midden"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "Stel alles vrij in. Opgeslagen profielen vergrendelen de instellingen."
+
+msgid "Could not save the backup: %1"
+msgstr "Back-up opslaan mislukt: %1"
+
+msgid "Default shortcuts restored"
+msgstr "Standaardsneltoetsen hersteld"
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "Verspreid onder de GPL-3.0-licentie of nieuwer"
+
+msgid "Down"
+msgstr "Omlaag"
+
+msgid "Export all settings"
+msgstr "Alle instellingen exporteren"
+
+msgid "Free"
+msgstr "Vrij"
+
+msgid "Gray"
+msgstr "Grijs"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "INDICATOR EN MINIPANEEL"
+
+msgid "Import settings"
+msgstr "Instellingen importeren"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "Geïmporteerd: %1 profielen, %2 geplande wijzigingen"
+
+msgid "Indicator position"
+msgstr "Positie van de indicator"
+
+msgid "Indicator size"
+msgstr "Grootte van de indicator"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "No scheduled changes."
+msgstr "Geen geplande wijzigingen."
+
+msgid "Restore defaults"
+msgstr "Standaardwaarden herstellen"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "SCHUIFREGELAARS EN SNELTOETSEN"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "Sla al je instellingen, profielen, schema en sneltoetsen op in een bestand, of laad ze uit een bestand."
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "Schuifregelaars bewegen in vaste stappen, gemarkeerd met stippen. Geldt voor het venster en het minipaneel."
+
+msgid "Step (sliders and shortcuts)"
+msgstr "Stap (schuifregelaars en sneltoetsen)"
+
+msgid "Stepped sliders"
+msgstr "Schuifregelaars met stappen"
+
+msgid "Top"
+msgstr "Boven"
+
+msgid "Top left"
+msgstr "Linksboven"
+
+msgid "Top right"
+msgstr "Rechtsboven"
+
+msgid "Up"
+msgstr "Omhoog"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "Zolang een profiel actief is, wordt elke wijziging die je maakt automatisch erin opgeslagen."
+
+msgid "Yellow"
+msgstr "Geel"
+
+msgid "Yellowscale"
+msgstr "Geeltinten"
+
+msgid "Temperature down"
+msgstr "Temperatuur verlagen"
+
+msgid "Temperature up"
+msgstr "Temperatuur verhogen"
+
+msgid "Black level (blacks)"
+msgstr "Zwartniveau (zwartwaarden)"
+
+msgid "Display controller"
+msgstr "Displaycontroller"
+
+msgid "Firmware version"
+msgstr "Firmwareversie"
+
+msgid "Gain (whites)"
+msgstr "Gain (witwaarden)"
+
+msgid "Horizontal frequency"
+msgstr "Horizontale frequentie"
+
+msgid "IMAGE"
+msgstr "BEELD"
+
+msgid "MONITOR AUDIO"
+msgstr "MONITORAUDIO"
+
+msgid "MONITOR INFORMATION"
+msgstr "MONITORINFORMATIE"
+
+msgid "Monitor volume"
+msgstr "Monitorvolume"
+
+msgid "Mute the monitor audio"
+msgstr "Monitoraudio dempen"
+
+msgid "Not reported"
+msgstr "Niet gemeld"
+
+msgid "Panel technology"
+msgstr "Paneeltechnologie"
+
+msgid "Restore factory defaults"
+msgstr "Fabrieksinstellingen herstellen"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "Schaalt elk kleurkanaal. Heeft vooral invloed op de heldere delen van het beeld."
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "Stelt het niveau van de donkerste delen van elk kleurkanaal in. Heeft vooral invloed op de schaduwen, niet op de witte delen."
+
+msgid "Show in the mini panel"
+msgstr "Tonen in het minipaneel"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "Dit is het geluid van de monitor zelf (luidsprekers of koptelefoonuitgang), voor monitoren die dat hebben. Het is niet het systeemvolume."
+
+msgid "VCP version"
+msgstr "VCP-versie"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "Verticale frequentie (verversingssnelheid)"
+
+msgid "Color filter"
+msgstr "Kleurfilter"
+
+msgid "Software filter applied to the whole system."
+msgstr "Softwarefilter dat op het hele systeem wordt toegepast."
+
+msgid "Monitor volume up"
+msgstr "Monitorvolume verhogen"
+
+msgid "Monitor volume down"
+msgstr "Monitorvolume verlagen"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "Monitoraudio dempen/dempen opheffen"
+
+msgid "Input"
+msgstr "Ingang"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "Sneltoetsen worden toegewezen door je bureaublad. Je kunt ze wijzigen in Systeeminstellingen → Sneltoetsen."
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "Schuifregelaars bewegen in vaste stappen, gemarkeerd met stippen."
+
+msgid "Adjust all together"
+msgstr "Alles samen aanpassen"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "Wijzigingen in Bediening en Kleur worden op elke monitor toegepast."
+
+msgid "Violet"
+msgstr "Paars"
+
+msgid "Set an end time"
+msgstr "Eindtijd instellen"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "Als het afloopt, wordt het vorige profiel hersteld."
+
+msgid "Transparency"
+msgstr "Transparantie"
+
+msgid "Run in the background"
+msgstr "Op de achtergrond uitvoeren"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "Een DDC/CI-monitorcontroller geschreven in puur Rust (Slint-interface). Extreem licht en snel."
+
+msgid "Add to the applications menu"
+msgstr "Toevoegen aan het toepassingenmenu"
+
+msgid "Could not enable monitor access."
+msgstr "Kan monitortoegang niet inschakelen."
+
+msgid "Creates a launcher for this AppImage."
+msgstr "Maakt een starter voor deze AppImage."
+
+msgid "Enable monitor access"
+msgstr "Monitortoegang inschakelen"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "Houdt Solua actief wanneer het venster wordt gesloten, zodat sneltoetsen blijven werken."
+
+msgid "Monitor access enabled."
+msgstr "Monitortoegang ingeschakeld."
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "Solua heeft nog geen toegang tot je monitoren. Door toegang in te schakelen wordt een kleine systeemregel ingesteld en wordt om je wachtwoord gevraagd."
+
+msgid "Start with the system"
+msgstr "Starten met het systeem"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "Start Solua verborgen wanneer je inlogt."
+
+msgid "12-hour clock (AM/PM)"
+msgstr "12-uurs klok (AM/PM)"

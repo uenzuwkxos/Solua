@@ -1,0 +1,76 @@
+name: Release
+
+# Builds every executable (Windows .exe, Linux .deb/.AppImage) when a version tag is pushed
+# (e.g. `git tag v1.0.0 && git push --tags`) and attaches them to a GitHub Release.
+# It can also be started by hand from the Actions tab to get the files as workflow artifacts.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        include:
+          - target: x86_64-pc-windows-msvc
+            name: Solua-x64.exe
+          - target: i686-pc-windows-msvc
+            name: Solua-x86.exe
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test --release --target ${{ matrix.target }}
+      - run: cargo build --release --target ${{ matrix.target }}
+      - name: Rename
+        shell: bash
+        run: cp target/${{ matrix.target }}/release/Solua.exe ${{ matrix.name }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.name }}
+          path: ${{ matrix.name }}
+
+  linux:
+    # the oldest runner: binaries built here run on almost every current distribution
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: System packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential pkg-config libfontconfig1-dev libxkbcommon-dev libwayland-dev
+      - run: cargo test --release
+      - name: Packaging tools
+        run: cargo install cargo-deb --locked
+      - name: Build .deb and .AppImage
+        run: packaging/linux/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-packages
+          path: |
+            dist/*.deb
+            dist/*.AppImage
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [windows, linux]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: files
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: files/*
+          generate_release_notes: true

@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+
+msgid "Open Solua"
+msgstr "Solua を開く"
+
+msgid "Quit"
+msgstr "終了"
+
+msgid "Profiles"
+msgstr "プロファイル"
+
+msgid "Brightness"
+msgstr "明るさ"
+
+msgid "Solua — monitor control"
+msgstr "Solua — モニター制御"
+
+msgid "Ready"
+msgstr "準備完了"
+
+msgid "No DDC/CI monitors found"
+msgstr "DDC/CI 対応モニターが見つかりません"
+
+msgid "Monitors found: %1"
+msgstr "見つかったモニター: %1"
+
+msgid "Profile “%1” applied"
+msgstr "プロファイル「%1」を適用しました"
+
+msgid "Profile “%1” saved"
+msgstr "プロファイル「%1」を保存しました"
+
+msgid "Profile “%1” was updated"
+msgstr "プロファイル「%1」を更新しました"
+
+msgid "Reset command sent"
+msgstr "リセットコマンドを送信しました"
+
+msgid "Could not change: %1"
+msgstr "変更できませんでした: %1"
+
+msgid "Could not read: %1"
+msgstr "読み取れませんでした: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "スケジュール: プロファイル「%1」を適用しました"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "ショートカットを使用できません（すでに使われていませんか？）: %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "時刻が正しくありません。HH:MM 形式で入力してください（例: 22:30）"
+
+msgid "Create a profile first"
+msgstr "先にプロファイルを作成してください"
+
+msgid "Give the profile a name"
+msgstr "プロファイル名を入力してください"
+
+msgid "This monitor did not report its capabilities"
+msgstr "このモニターは機能情報を報告しませんでした"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "デモモード: 模擬モニターです。ハードウェアには何も送信されません"
+
+msgid "Power command sent"
+msgstr "電源コマンドを送信しました"
+
+msgid "Value written"
+msgstr "値を書き込みました"
+
+msgid "Invalid code or value"
+msgstr "コードまたは値が無効です"
+
+msgid "Reading monitor…"
+msgstr "モニターを読み取り中…"
+
+msgid "unknown"
+msgstr "不明"
+
+msgid "Press the keys…"
+msgstr "キーを押してください…"
+
+msgid "Not set"
+msgstr "未設定"
+
+msgid "Brightness up"
+msgstr "明るさを上げる"
+
+msgid "Brightness down"
+msgstr "明るさを下げる"
+
+msgid "Contrast up"
+msgstr "コントラストを上げる"
+
+msgid "Contrast down"
+msgstr "コントラストを下げる"
+
+msgid "Show / hide Solua"
+msgstr "Solua の表示 / 非表示"
+
+msgid "Profile: %1"
+msgstr "プロファイル: %1"
+
+msgid "Contrast"
+msgstr "コントラスト"
+
+msgid "Volume"
+msgstr "音量"
+
+msgid "Muted"
+msgstr "ミュート中"
+
+msgid "System default"
+msgstr "システム既定"
+
+msgid "System"
+msgstr "システム"
+
+msgid "Light"
+msgstr "ライト"
+
+msgid "Dark"
+msgstr "ダーク"
+
+msgid "Built-in display"
+msgstr "内蔵ディスプレイ"
+
+msgid "External display"
+msgstr "外部ディスプレイ"
+
+msgid "%1 monitor(s)"
+msgstr "%1 台のモニター"
+
+msgid "Red"
+msgstr "赤"
+
+msgid "Green"
+msgstr "緑"
+
+msgid "Blue"
+msgstr "青"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "DDC/CI 対応モニターが見つかりませんでした"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "モニターのオンスクリーンメニューで DDC/CI を有効にし、直接接続のケーブルを使用して（ドックやアダプターは避けてください）、もう一度お試しください。"
+
+msgid "Search again"
+msgstr "再検索"
+
+msgid "MONITORS"
+msgstr "モニター"
+
+msgid "DEMO MODE"
+msgstr "デモモード"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Controls"
+msgstr "コントロール"
+
+msgid "Color"
+msgstr "色"
+
+msgid "Schedule"
+msgstr "スケジュール"
+
+msgid "Advanced"
+msgstr "詳細"
+
+msgid "Not supported"
+msgstr "非対応"
+
+msgid "Control all monitors together"
+msgstr "すべてのモニターをまとめて制御"
+
+msgid "COLOR TEMPERATURE"
+msgstr "色温度"
+
+msgid "Click again to confirm"
+msgstr "もう一度クリックして確定"
+
+msgid "INPUT SOURCE"
+msgstr "入力ソース"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "信号のない入力に切り替えると、画面が真っ暗になります。元に戻すにはモニター本体のボタンを使ってください。"
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "現在の設定をプロファイルとして保存"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "プロファイル名（例: 夜、シネマ、仕事）"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "プロファイルはまだありません。モニターを調整して、上で最初のプロファイルを保存してください。"
+
+msgid "Add"
+msgstr "追加"
+
+msgid "Apply the most recent entry at startup"
+msgstr "起動時に直近の項目を適用"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "予定の時刻にパソコンの電源が切れていた場合に便利です。"
+
+msgid "WRITE A VCP CODE"
+msgstr "VCP コードを書き込む"
+
+msgid "Code (hex)"
+msgstr "コード（16進）"
+
+msgid "Value"
+msgstr "値"
+
+msgid "Write"
+msgstr "書き込み"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "機能 (VCP)"
+
+msgid "Read all values"
+msgstr "すべての値を読み取る"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "機能データがありません。「すべての値を読み取る」を押してください。"
+
+msgid "Code"
+msgstr "コード"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Current"
+msgstr "現在値"
+
+msgid "Max"
+msgstr "最大値"
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "機能の生文字列"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "言語と外観"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Theme"
+msgstr "テーマ"
+
+msgid "BEHAVIOR"
+msgstr "動作"
+
+msgid "Start minimized to the tray"
+msgstr "トレイに最小化して起動"
+
+msgid "Keep running in the tray when closed"
+msgstr "閉じてもトレイで実行を継続"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "ショートカット用のオンスクリーン表示を表示"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "グローバルショートカット"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "フィールドをクリックしてキーを押してください。Backspace で消去、Esc でキャンセルします。"
+
+msgid "Usage time: %1"
+msgstr "使用時間: %1"
+
+msgid "%1 year"
+msgstr "%1 年"
+
+msgid "%1 years"
+msgstr "%1 年"
+
+msgid "%1 day"
+msgstr "%1 日"
+
+msgid "%1 days"
+msgstr "%1 日"
+
+msgid "%1 hour"
+msgstr "%1 時間"
+
+msgid "%1 hours"
+msgstr "%1 時間"
+
+msgid "The monitor ignored this change: %1"
+msgstr "モニターがこの変更を無視しました: %1"
+
+msgid "Could not import: %1"
+msgstr "インポートできませんでした: %1"
+
+msgid "Normal"
+msgstr "標準"
+
+msgid "Grayscale"
+msgstr "グレースケール"
+
+msgid "Redscale"
+msgstr "赤スケール"
+
+msgid "Greenscale"
+msgstr "緑スケール"
+
+msgid "Bluescale"
+msgstr "青スケール"
+
+msgid "Sepia"
+msgstr "セピア"
+
+msgid "Inverted"
+msgstr "反転"
+
+msgid "Saturation"
+msgstr "彩度"
+
+msgid "The color filter is not available on this system"
+msgstr "このシステムではカラーフィルターを利用できません"
+
+msgid "Saturation up"
+msgstr "彩度を上げる"
+
+msgid "Saturation down"
+msgstr "彩度を下げる"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "モニターのプリセットです。薄く表示されている項目はモニターから報告されていません。何も変わらない場合、このモニターはこのコマンドを無視しています。"
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "薄く表示されている入力はモニターから報告されていませんが、多くのモニターは受け付けます（HDMI や DisplayPort が一覧にないことがよくあります）。"
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "任意の MCCS コマンドをモニターに直接送信します。コードは16進の VCP 番号です。不明なコードに誤った値を送ると誤動作する場合があるため、注意してください。"
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "モニターが対応していると報告した内容です。「すべての値を読み取る」は、一覧の各コードの現在値と最大値をモニターに問い合わせます。数秒かかります。"
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "モニターが報告した未加工のテキストです。サポートへの問い合わせや問題の報告に役立ちます。"
+
+msgid "Open the mini panel"
+msgstr "ミニパネルを開く"
+
+msgid "Restore"
+msgstr "復元"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "カラーフィルター（ソフトウェア）"
+
+msgid "Temperature"
+msgstr "色温度"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "RGB を設定（ハードウェア）"
+
+msgid "SCHEDULED CHANGE"
+msgstr "スケジュール変更"
+
+msgid "Mon"
+msgstr "月"
+
+msgid "Tue"
+msgstr "火"
+
+msgid "Wed"
+msgstr "水"
+
+msgid "Thu"
+msgstr "木"
+
+msgid "Fri"
+msgstr "金"
+
+msgid "Sat"
+msgstr "土"
+
+msgid "Sun"
+msgstr "日"
+
+msgid "About"
+msgstr "情報"
+
+msgid "Privacy policy"
+msgstr "プライバシーポリシー"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Solua は個人データを収集、保存、送信しません。アカウントも分析機能もなく、ネットワーク接続も行いません。設定はこのコンピューター上のローカルファイルに保存され、通信は標準の DDC/CI プロトコルによるアプリとモニター間のみです。"
+
+msgid "Open source licenses"
+msgstr "オープンソースライセンス"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "All monitors"
+msgstr "すべてのモニター"
+
+msgid "No profiles yet."
+msgstr "プロファイルはまだありません。"
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "保存済みのプロファイルが有効です。設定を調整するには「フリー」に切り替えてください。"
+
+msgid "Allow modifying saved profiles"
+msgstr "保存済みプロファイルの変更を許可"
+
+msgid "BACKUP"
+msgstr "バックアップ"
+
+msgid "Backup saved"
+msgstr "バックアップを保存しました"
+
+msgid "Black"
+msgstr "黒"
+
+msgid "Bottom"
+msgstr "下"
+
+msgid "Bottom left"
+msgstr "左下"
+
+msgid "Bottom right"
+msgstr "右下"
+
+msgid "Center"
+msgstr "中央"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "すべて自由に設定できます。保存済みプロファイルは設定をロックします。"
+
+msgid "Could not save the backup: %1"
+msgstr "バックアップを保存できませんでした: %1"
+
+msgid "Default shortcuts restored"
+msgstr "既定のショートカットを復元しました"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "GPL-3.0 以降のライセンスで配布"
+
+msgid "Down"
+msgstr "下へ"
+
+msgid "Export all settings"
+msgstr "すべての設定をエクスポート"
+
+msgid "Free"
+msgstr "フリー"
+
+msgid "Gray"
+msgstr "グレー"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "インジケーターとミニパネル"
+
+msgid "Import settings"
+msgstr "設定をインポート"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "インポートしました: プロファイル %1 件、スケジュール変更 %2 件"
+
+msgid "Indicator position"
+msgstr "インジケーターの位置"
+
+msgid "Indicator size"
+msgstr "インジケーターのサイズ"
+
+msgid "Left"
+msgstr "左"
+
+msgid "No scheduled changes."
+msgstr "スケジュール変更はありません。"
+
+msgid "Restore defaults"
+msgstr "既定値に戻す"
+
+msgid "Right"
+msgstr "右"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "スライダーとショートカット"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "すべての設定、プロファイル、スケジュール、ショートカットをファイルに保存、またはファイルから読み込みます。"
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "スライダーはドットで示された固定のステップで動きます。ウィンドウとミニパネルに適用されます。"
+
+msgid "Step (sliders and shortcuts)"
+msgstr "ステップ（スライダーとショートカット）"
+
+msgid "Stepped sliders"
+msgstr "ステップ式スライダー"
+
+msgid "Top"
+msgstr "上"
+
+msgid "Top left"
+msgstr "左上"
+
+msgid "Top right"
+msgstr "右上"
+
+msgid "Up"
+msgstr "上へ"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "プロファイルが有効な間は、行った変更がすべて自動的にプロファイルに保存されます。"
+
+msgid "Yellow"
+msgstr "黄"
+
+msgid "Yellowscale"
+msgstr "黄スケール"
+
+msgid "Temperature down"
+msgstr "色温度を下げる"
+
+msgid "Temperature up"
+msgstr "色温度を上げる"
+
+msgid "Black level (blacks)"
+msgstr "黒レベル（黒）"
+
+msgid "Display controller"
+msgstr "ディスプレイコントローラー"
+
+msgid "Firmware version"
+msgstr "ファームウェアのバージョン"
+
+msgid "Gain (whites)"
+msgstr "ゲイン（白）"
+
+msgid "Horizontal frequency"
+msgstr "水平周波数"
+
+msgid "IMAGE"
+msgstr "画像"
+
+msgid "MONITOR AUDIO"
+msgstr "モニターの音声"
+
+msgid "MONITOR INFORMATION"
+msgstr "モニター情報"
+
+msgid "Monitor volume"
+msgstr "モニター音量"
+
+msgid "Mute the monitor audio"
+msgstr "モニターの音声をミュート"
+
+msgid "Not reported"
+msgstr "報告なし"
+
+msgid "Panel technology"
+msgstr "パネル技術"
+
+msgid "Restore factory defaults"
+msgstr "工場出荷時設定に戻す"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "各色チャンネルをスケーリングします。主に画像の明るい部分に影響します。"
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "各色チャンネルの最も暗い部分のレベルを設定します。主にシャドウに影響し、白には影響しません。"
+
+msgid "Show in the mini panel"
+msgstr "ミニパネルに表示"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "モニター自体の音声（スピーカーまたはヘッドホン端子）です。搭載しているモニター向けで、システム音量ではありません。"
+
+msgid "VCP version"
+msgstr "VCP バージョン"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "垂直周波数（リフレッシュレート）"
+
+msgid "Color filter"
+msgstr "カラーフィルター"
+
+msgid "Software filter applied to the whole system."
+msgstr "システム全体に適用されるソフトウェアフィルターです。"
+
+msgid "Monitor volume up"
+msgstr "モニター音量を上げる"
+
+msgid "Monitor volume down"
+msgstr "モニター音量を下げる"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "モニターの音声をミュート/解除"
+
+msgid "Input"
+msgstr "入力"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "ショートカットはデスクトップ環境が割り当てます。「システム設定 → ショートカット」で変更できます。"
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "スライダーはドットで示された固定のステップで動きます。"
+
+msgid "Adjust all together"
+msgstr "すべてまとめて調整"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "「コントロール」と「色」の変更はすべてのモニターに適用されます。"
+
+msgid "Violet"
+msgstr "バイオレット"
+
+msgid "Set an end time"
+msgstr "終了時刻を設定"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "終了すると、前のプロファイルに戻ります。"
+
+msgid "Transparency"
+msgstr "透明度"
+
+msgid "Run in the background"
+msgstr "バックグラウンドで実行"
+
+msgid "Default"
+msgstr "デフォルト"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "純粋な Rust で書かれた DDC/CI モニターコントローラー（Slint GUI）。非常に軽量で高速です。"
+
+msgid "Add to the applications menu"
+msgstr "アプリケーションメニューに追加"
+
+msgid "Could not enable monitor access."
+msgstr "モニターへのアクセスを有効にできませんでした。"
+
+msgid "Creates a launcher for this AppImage."
+msgstr "この AppImage のランチャーを作成します。"
+
+msgid "Enable monitor access"
+msgstr "モニターへのアクセスを有効にする"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "ウィンドウを閉じても Solua を実行し続けるため、ショートカットが引き続き使えます。"
+
+msgid "Monitor access enabled."
+msgstr "モニターへのアクセスを有効にしました。"
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "Solua はまだモニターにアクセスできません。アクセスを有効にすると、小さなシステムルールが設定され、パスワードの入力が求められます。"
+
+msgid "Start with the system"
+msgstr "システムと同時に起動"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "ログイン時に Solua を非表示で起動します。"
+
+msgid "12-hour clock (AM/PM)"
+msgstr "12時間表示 (AM/PM)"

@@ -1,0 +1,782 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+
+msgid "Open Soluna"
+msgstr "Buka Soluna"
+
+msgid "Quit"
+msgstr "Keluar"
+
+msgid "Profiles"
+msgstr "Profil"
+
+msgid "Brightness"
+msgstr "Kecerahan"
+
+msgid "Soluna — monitor control"
+msgstr "Soluna — kontrol monitor"
+
+msgid "Ready"
+msgstr "Siap"
+
+msgid "No DDC/CI monitors found"
+msgstr "Tidak ada monitor DDC/CI yang ditemukan"
+
+msgid "Monitors found: %1"
+msgstr "Monitor ditemukan: %1"
+
+msgid "Profile “%1” applied"
+msgstr "Profil “%1” diterapkan"
+
+msgid "Profile “%1” saved"
+msgstr "Profil “%1” disimpan"
+
+msgid "Profile “%1” was updated"
+msgstr "Profil “%1” diperbarui"
+
+msgid "Reset command sent"
+msgstr "Perintah reset terkirim"
+
+msgid "Could not change: %1"
+msgstr "Tidak dapat mengubah: %1"
+
+msgid "Could not read: %1"
+msgstr "Tidak dapat membaca: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "Jadwal: profil “%1” diterapkan"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "Pintasan tidak tersedia (sudah dipakai?): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "Waktu tidak valid. Gunakan JJ:MM (mis. 22:30)"
+
+msgid "Create a profile first"
+msgstr "Buat profil terlebih dahulu"
+
+msgid "Give the profile a name"
+msgstr "Beri nama profil"
+
+msgid "This monitor did not report its capabilities"
+msgstr "Monitor ini tidak melaporkan kemampuannya"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "Mode demo: monitor simulasi, tidak ada yang dikirim ke perangkat keras"
+
+msgid "Power command sent"
+msgstr "Perintah daya terkirim"
+
+msgid "Value written"
+msgstr "Nilai ditulis"
+
+msgid "Invalid code or value"
+msgstr "Kode atau nilai tidak valid"
+
+msgid "Reading monitor…"
+msgstr "Membaca monitor…"
+
+msgid "Usage time: %1 h"
+msgstr "Lama pemakaian: %1 j"
+
+msgid "unknown"
+msgstr "tidak diketahui"
+
+msgid "Press the keys…"
+msgstr "Tekan tombol…"
+
+msgid "Not set"
+msgstr "Belum diatur"
+
+msgid "Brightness up"
+msgstr "Tambah kecerahan"
+
+msgid "Brightness down"
+msgstr "Kurangi kecerahan"
+
+msgid "Contrast up"
+msgstr "Tambah kontras"
+
+msgid "Contrast down"
+msgstr "Kurangi kontras"
+
+msgid "Volume up"
+msgstr "Naikkan volume"
+
+msgid "Volume down"
+msgstr "Turunkan volume"
+
+msgid "Mute / unmute"
+msgstr "Bisukan / aktifkan suara"
+
+msgid "Show / hide Soluna"
+msgstr "Tampilkan / sembunyikan Soluna"
+
+msgid "Profile: %1"
+msgstr "Profil: %1"
+
+msgid "Contrast"
+msgstr "Kontras"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Muted"
+msgstr "Dibisukan"
+
+msgid "System default"
+msgstr "Default sistem"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Light"
+msgstr "Terang"
+
+msgid "Dark"
+msgstr "Gelap"
+
+msgid "Built-in display"
+msgstr "Layar bawaan"
+
+msgid "External display"
+msgstr "Layar eksternal"
+
+msgid "%1 monitor(s)"
+msgstr "%1 monitor"
+
+msgid "Red"
+msgstr "Merah"
+
+msgid "Green"
+msgstr "Hijau"
+
+msgid "Blue"
+msgstr "Biru"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "Tidak ada monitor yang mendukung DDC/CI"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "Aktifkan DDC/CI di menu layar monitor, gunakan kabel langsung (hindari dock dan adaptor), lalu coba lagi."
+
+msgid "Search again"
+msgstr "Cari lagi"
+
+msgid "Monitor control"
+msgstr "Kontrol monitor"
+
+msgid "MONITORS"
+msgstr "MONITOR"
+
+msgid "DEMO MODE"
+msgstr "MODE DEMO"
+
+msgid "Settings"
+msgstr "Pengaturan"
+
+msgid "Controls"
+msgstr "Kontrol"
+
+msgid "Color"
+msgstr "Warna"
+
+msgid "Input & power"
+msgstr "Input & daya"
+
+msgid "Schedule"
+msgstr "Jadwal"
+
+msgid "Advanced"
+msgstr "Lanjutan"
+
+msgid "Not supported"
+msgstr "Tidak didukung"
+
+msgid "Speaker volume"
+msgstr "Volume speaker"
+
+msgid "QUICK BRIGHTNESS"
+msgstr "KECERAHAN CEPAT"
+
+msgid "Control all monitors together"
+msgstr "Kontrol semua monitor sekaligus"
+
+msgid "Brightness, contrast and volume changes are applied to every monitor."
+msgstr "Perubahan kecerahan, kontras, dan volume diterapkan ke setiap monitor."
+
+msgid "RGB GAIN (WHITE POINT)"
+msgstr "GAIN RGB (TITIK PUTIH)"
+
+msgid "COLOR TEMPERATURE"
+msgstr "SUHU WARNA"
+
+msgid "This monitor does not expose color presets over DDC/CI."
+msgstr "Monitor ini tidak menyediakan preset warna melalui DDC/CI."
+
+msgid "Restore factory colors"
+msgstr "Pulihkan warna pabrik"
+
+msgid "Click again to confirm"
+msgstr "Klik lagi untuk mengonfirmasi"
+
+msgid "INPUT SOURCE"
+msgstr "SUMBER INPUT"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "Jika Anda beralih ke input tanpa sinyal, layar akan menjadi gelap. Gunakan tombol pada monitor untuk kembali."
+
+msgid "POWER"
+msgstr "DAYA"
+
+msgid "Wake up"
+msgstr "Bangunkan"
+
+msgid "Standby"
+msgstr "Siaga"
+
+msgid "Turn off"
+msgstr "Matikan"
+
+msgid "RESET"
+msgstr "RESET"
+
+msgid "Luminance and contrast"
+msgstr "Luminans dan kontras"
+
+msgid "Factory defaults"
+msgstr "Default pabrik"
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "SIMPAN PENGATURAN SAAT INI SEBAGAI PROFIL"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "Nama profil (mis. Malam, Bioskop, Kerja)"
+
+msgid "Save"
+msgstr "Simpan"
+
+msgid "Include input source"
+msgstr "Sertakan sumber input"
+
+msgid "Applying the profile will also switch the input of each monitor."
+msgstr "Menerapkan profil juga akan mengganti input setiap monitor."
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "Belum ada profil. Atur monitor Anda dan simpan yang pertama di atas."
+
+msgid "Apply"
+msgstr "Terapkan"
+
+msgid "NEW SCHEDULED CHANGE"
+msgstr "PERUBAHAN TERJADWAL BARU"
+
+msgid "Automatically apply a profile at a given time every day — for example, dim the screen at night."
+msgstr "Terapkan profil secara otomatis pada waktu tertentu setiap hari — misalnya, meredupkan layar di malam hari."
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Apply the most recent entry at startup"
+msgstr "Terapkan entri terbaru saat startup"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "Berguna jika komputer mati pada waktu yang dijadwalkan."
+
+msgid "WRITE A VCP CODE"
+msgstr "TULIS KODE VCP"
+
+msgid "Code (hex)"
+msgstr "Kode (hex)"
+
+msgid "Value"
+msgstr "Nilai"
+
+msgid "Write"
+msgstr "Tulis"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "KEMAMPUAN (VCP)"
+
+msgid "Read all values"
+msgstr "Baca semua nilai"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "Tidak ada data kemampuan. Tekan “Baca semua nilai”."
+
+msgid "Code"
+msgstr "Kode"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Current"
+msgstr "Saat ini"
+
+msgid "Max"
+msgstr "Maks"
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "STRING KEMAMPUAN MENTAH"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "BAHASA DAN TAMPILAN"
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "BEHAVIOR"
+msgstr "PERILAKU"
+
+msgid "Start with Windows"
+msgstr "Mulai bersama Windows"
+
+msgid "Start minimized to the tray"
+msgstr "Mulai diminimalkan ke baki sistem"
+
+msgid "Keep running in the tray when closed"
+msgstr "Tetap berjalan di baki sistem saat ditutup"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "Tampilkan indikator di layar untuk pintasan"
+
+msgid "Shortcut step"
+msgstr "Langkah pintasan"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "PINTASAN GLOBAL"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "Klik kolom lalu tekan tombol. Backspace menghapus, Esc membatalkan."
+
+msgid "ABOUT"
+msgstr "TENTANG"
+
+msgid "A modern DDC/CI monitor controller, rewritten in Rust and Slint. Inspired by ClickMonitorDDC."
+msgstr "Pengontrol monitor DDC/CI modern, ditulis ulang dengan Rust dan Slint. Terinspirasi dari ClickMonitorDDC."
+
+msgid "Open settings folder"
+msgstr "Buka folder pengaturan"
+
+msgid "Usage time: %1"
+msgstr "Lama pemakaian: %1"
+
+msgid "%1 year"
+msgstr "%1 tahun"
+
+msgid "%1 years"
+msgstr "%1 tahun"
+
+msgid "%1 day"
+msgstr "%1 hari"
+
+msgid "%1 days"
+msgstr "%1 hari"
+
+msgid "%1 hour"
+msgstr "%1 jam"
+
+msgid "%1 hours"
+msgstr "%1 jam"
+
+msgid "The monitor ignored this change: %1"
+msgstr "Monitor mengabaikan perubahan ini: %1"
+
+msgid "Imported: %1 settings, %2 scheduled changes"
+msgstr "Diimpor: %1 pengaturan, %2 perubahan terjadwal"
+
+msgid "Could not import: %1"
+msgstr "Tidak dapat mengimpor: %1"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Grayscale"
+msgstr "Skala abu-abu"
+
+msgid "Redscale"
+msgstr "Skala merah"
+
+msgid "Greenscale"
+msgstr "Skala hijau"
+
+msgid "Bluescale"
+msgstr "Skala biru"
+
+msgid "Sepia"
+msgstr "Sepia"
+
+msgid "Inverted"
+msgstr "Terbalik"
+
+msgid "Saturation"
+msgstr "Saturasi"
+
+msgid "The color filter is not available on this system"
+msgstr "Filter warna tidak tersedia di sistem ini"
+
+msgid "Saturation up"
+msgstr "Tambah saturasi"
+
+msgid "Saturation down"
+msgstr "Kurangi saturasi"
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Saturation is applied by software to the whole desktop and works with any graphics card. 50% is normal."
+msgstr "Saturasi diterapkan melalui perangkat lunak ke seluruh desktop dan bekerja dengan kartu grafis apa pun. 50% adalah normal."
+
+msgid "Brightness and contrast changes are applied to every monitor."
+msgstr "Perubahan kecerahan dan kontras diterapkan ke setiap monitor."
+
+msgid "COLOR FILTER (WHOLE SCREEN)"
+msgstr "FILTER WARNA (SELURUH LAYAR)"
+
+msgid "Software filter applied to the entire desktop. Unlike the monitor's RGB gain, it really removes colors: set Green and Blue to 0 and only red remains."
+msgstr "Filter perangkat lunak yang diterapkan ke seluruh desktop. Berbeda dengan gain RGB monitor, filter ini benar-benar menghilangkan warna: atur Hijau dan Biru ke 0 dan hanya merah yang tersisa."
+
+msgid "Temperature (warm ↔ cool)"
+msgstr "Suhu (hangat ↔ dingin)"
+
+msgid "Reset filter"
+msgstr "Reset filter"
+
+msgid "MONITOR RGB GAIN (HARDWARE)"
+msgstr "GAIN RGB MONITOR (PERANGKAT KERAS)"
+
+msgid "Adjusts the white balance inside the monitor. Most monitors never let a channel reach zero, so this tints the image instead of removing colors."
+msgstr "Mengatur keseimbangan putih di dalam monitor. Sebagian besar monitor tidak pernah membiarkan satu kanal mencapai nol, sehingga gambar hanya berubah rona, bukan kehilangan warna."
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "Preset monitor. Yang redup tidak dilaporkan oleh monitor; jika tidak ada yang berubah, monitor Anda mengabaikan perintah ini."
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "Input yang redup tidak dilaporkan oleh monitor, tetapi banyak monitor tetap menerimanya (HDMI dan DisplayPort sering tidak ada dalam daftar)."
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number (10 = brightness, 12 = contrast, 60 = input, D6 = power). Wrong values on unknown codes may misbehave, so use with care."
+msgstr "Mengirim perintah MCCS apa pun langsung ke monitor. Kode adalah nomor VCP heksadesimal (10 = kecerahan, 12 = kontras, 60 = input, D6 = daya). Nilai yang salah pada kode yang tidak dikenal dapat menyebabkan masalah, jadi gunakan dengan hati-hati."
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "Apa yang dinyatakan monitor sebagai fitur yang didukung. “Baca semua nilai” meminta nilai saat ini dan maksimum dari setiap kode yang terdaftar; butuh beberapa detik."
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "Teks mentah yang dilaporkan oleh monitor. Berguna saat meminta dukungan atau melaporkan masalah."
+
+msgid "IMPORT FROM CLICKMONITORDDC"
+msgstr "IMPOR DARI CLICKMONITORDDC"
+
+msgid "Imports startup, step and timed commands from the original app's ClickMonitorDDC.xml."
+msgstr "Mengimpor perintah startup, langkah, dan terjadwal dari ClickMonitorDDC.xml aplikasi asli."
+
+msgid "Import"
+msgstr "Impor"
+
+msgid "Open the mini panel"
+msgstr "Buka panel mini"
+
+msgid "Restore"
+msgstr "Pulihkan"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "FILTER WARNA (PERANGKAT LUNAK)"
+
+msgid "Software filter applied to the entire desktop. Unlike the monitor's RGB gain, it really removes colors."
+msgstr "Filter perangkat lunak yang diterapkan ke seluruh desktop. Berbeda dengan gain RGB monitor, filter ini benar-benar menghilangkan warna."
+
+msgid "Temperature"
+msgstr "Suhu"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "ATUR RGB (PERANGKAT KERAS)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "PERUBAHAN TERJADWAL"
+
+msgid "Mon"
+msgstr "Sen"
+
+msgid "Tue"
+msgstr "Sel"
+
+msgid "Wed"
+msgstr "Rab"
+
+msgid "Thu"
+msgstr "Kam"
+
+msgid "Fri"
+msgstr "Jum"
+
+msgid "Sat"
+msgstr "Sab"
+
+msgid "Sun"
+msgstr "Min"
+
+msgid "Adjust brightness on startup"
+msgstr "Atur kecerahan saat startup"
+
+msgid "Restores the last brightness of each monitor when Soluna starts."
+msgstr "Memulihkan kecerahan terakhir setiap monitor saat Soluna dimulai."
+
+msgid "About"
+msgstr "Tentang"
+
+msgid "A DDC/CI monitor controller written in Rust and Slint — extremely light, fast and beautiful."
+msgstr "Pengontrol monitor DDC/CI yang ditulis dengan Rust dan Slint — sangat ringan, cepat, dan indah."
+
+msgid "Privacy policy"
+msgstr "Kebijakan privasi"
+
+msgid "Soluna does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Soluna tidak mengumpulkan, menyimpan, atau mengirim data pribadi apa pun. Tidak ada akun, tidak ada analitik, dan tidak ada koneksi jaringan. Pengaturan Anda tersimpan di file lokal di komputer ini, dan satu-satunya komunikasi terjadi antara aplikasi dan monitor Anda melalui protokol standar DDC/CI."
+
+msgid "Open source licenses"
+msgstr "Lisensi sumber terbuka"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "All monitors"
+msgstr "Semua monitor"
+
+msgid "No profiles yet."
+msgstr "Belum ada profil."
+
+msgid "New profile name"
+msgstr "Nama profil baru"
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "Profil tersimpan sedang aktif. Beralih ke “Bebas” untuk mengubah pengaturan."
+
+msgid "Allow modifying saved profiles"
+msgstr "Izinkan mengubah profil tersimpan"
+
+msgid "Animation direction"
+msgstr "Arah animasi"
+
+msgid "BACKUP"
+msgstr "CADANGAN"
+
+msgid "Backup saved"
+msgstr "Cadangan disimpan"
+
+msgid "Black"
+msgstr "Hitam"
+
+msgid "Bottom"
+msgstr "Bawah"
+
+msgid "Bottom left"
+msgstr "Kiri bawah"
+
+msgid "Bottom right"
+msgstr "Kanan bawah"
+
+msgid "Center"
+msgstr "Tengah"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "Atur semuanya dengan bebas. Profil tersimpan mengunci pengaturan."
+
+msgid "Could not save the backup: %1"
+msgstr "Tidak dapat menyimpan cadangan: %1"
+
+msgid "Default shortcuts restored"
+msgstr "Pintasan default dipulihkan"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "Didistribusikan di bawah lisensi GPL-3.0 atau yang lebih baru"
+
+msgid "Down"
+msgstr "Ke bawah"
+
+msgid "Export all settings"
+msgstr "Ekspor semua pengaturan"
+
+msgid "Free"
+msgstr "Bebas"
+
+msgid "Gray"
+msgstr "Abu-abu"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "INDIKATOR DAN PANEL MINI"
+
+msgid "Import settings"
+msgstr "Impor pengaturan"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "Diimpor: %1 profil, %2 perubahan terjadwal"
+
+msgid "Indicator position"
+msgstr "Posisi indikator"
+
+msgid "Indicator size"
+msgstr "Ukuran indikator"
+
+msgid "Indicator transparency"
+msgstr "Transparansi indikator"
+
+msgid "Left"
+msgstr "Kiri"
+
+msgid "Move R, G and B together"
+msgstr "Gerakkan R, G, dan B bersamaan"
+
+msgid "No scheduled changes."
+msgstr "Tidak ada perubahan terjadwal."
+
+msgid "Restore defaults"
+msgstr "Pulihkan default"
+
+msgid "Right"
+msgstr "Kanan"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "SLIDER DAN PINTASAN"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "Simpan semua pengaturan, profil, jadwal, dan pintasan ke file, atau muat dari file."
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "Slider bergerak dalam langkah tetap, ditandai dengan titik. Berlaku untuk jendela dan panel mini."
+
+msgid "Software filter applied to the whole system. Unlike “Configure RGB”, it really cancels the colors."
+msgstr "Filter perangkat lunak yang diterapkan ke seluruh sistem. Berbeda dengan “Atur RGB”, filter ini benar-benar menghilangkan warna."
+
+msgid "Step (sliders and shortcuts)"
+msgstr "Langkah (slider dan pintasan)"
+
+msgid "Stepped sliders"
+msgstr "Slider bertahap"
+
+msgid "The indicator and the mini panel enter from the chosen side and leave through the opposite one."
+msgstr "Indikator dan panel mini masuk dari sisi yang dipilih dan keluar melalui sisi yang berlawanan."
+
+msgid "Top"
+msgstr "Atas"
+
+msgid "Top left"
+msgstr "Kiri atas"
+
+msgid "Top right"
+msgstr "Kanan atas"
+
+msgid "Up"
+msgstr "Ke atas"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "Selama profil aktif, setiap perubahan yang Anda buat disimpan otomatis ke dalamnya."
+
+msgid "Yellow"
+msgstr "Kuning"
+
+msgid "Yellowscale"
+msgstr "Skala kuning"
+
+msgid "INDICATOR"
+msgstr "INDIKATOR"
+
+msgid "Temperature down"
+msgstr "Turunkan suhu"
+
+msgid "Temperature up"
+msgstr "Naikkan suhu"
+
+msgid "Black level (blacks)"
+msgstr "Level hitam (bayangan)"
+
+msgid "Display controller"
+msgstr "Pengontrol layar"
+
+msgid "Firmware version"
+msgstr "Versi firmware"
+
+msgid "Gain (whites)"
+msgstr "Gain (putih)"
+
+msgid "Horizontal frequency"
+msgstr "Frekuensi horizontal"
+
+msgid "IMAGE"
+msgstr "GAMBAR"
+
+msgid "MONITOR AUDIO"
+msgstr "AUDIO MONITOR"
+
+msgid "MONITOR INFORMATION"
+msgstr "INFORMASI MONITOR"
+
+msgid "Mini panel transparency"
+msgstr "Transparansi panel mini"
+
+msgid "Monitor volume"
+msgstr "Volume monitor"
+
+msgid "Mute the monitor audio"
+msgstr "Bisukan audio monitor"
+
+msgid "Not available through DDC/CI"
+msgstr "Tidak tersedia melalui DDC/CI"
+
+msgid "Not reported"
+msgstr "Tidak dilaporkan"
+
+msgid "Panel technology"
+msgstr "Teknologi panel"
+
+msgid "Response time"
+msgstr "Waktu respons"
+
+msgid "Restore factory defaults"
+msgstr "Pulihkan default pabrik"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "Mengatur skala setiap kanal warna. Terutama memengaruhi area terang pada gambar."
+
+msgid "Screen size"
+msgstr "Ukuran layar"
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "Mengatur level area tergelap pada setiap kanal warna. Terutama memengaruhi bayangan, bukan warna putih."
+
+msgid "Show in the mini panel"
+msgstr "Tampilkan di panel mini"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "Ini adalah audio monitor itu sendiri (speaker atau jack headphone-nya), untuk monitor yang memilikinya. Bukan volume sistem."
+
+msgid "VCP version"
+msgstr "Versi VCP"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "Frekuensi vertikal (refresh rate)"
+
+msgid "Glass effect (blur) on the indicator and mini panel"
+msgstr "Efek kaca (blur) pada indikator dan panel mini"
+
+msgid "Color filter"
+msgstr "Filter warna"
+
+msgid "Software filter applied to the whole system."
+msgstr "Filter perangkat lunak yang diterapkan ke seluruh sistem."
+
+msgid "Monitor volume up"
+msgstr "Naikkan volume monitor"
+
+msgid "Monitor volume down"
+msgstr "Turunkan volume monitor"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "Bisukan/aktifkan audio monitor"

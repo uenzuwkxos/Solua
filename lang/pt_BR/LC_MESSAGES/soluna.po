@@ -1,0 +1,782 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+
+msgid "Open Soluna"
+msgstr "Abrir o Soluna"
+
+msgid "Quit"
+msgstr "Sair"
+
+msgid "Profiles"
+msgstr "Perfis"
+
+msgid "Brightness"
+msgstr "Brilho"
+
+msgid "Soluna — monitor control"
+msgstr "Soluna — controle de monitores"
+
+msgid "Ready"
+msgstr "Pronto"
+
+msgid "No DDC/CI monitors found"
+msgstr "Nenhum monitor DDC/CI encontrado"
+
+msgid "Monitors found: %1"
+msgstr "Monitores encontrados: %1"
+
+msgid "Profile “%1” applied"
+msgstr "Perfil “%1” aplicado"
+
+msgid "Profile “%1” saved"
+msgstr "Perfil “%1” salvo"
+
+msgid "Profile “%1” was updated"
+msgstr "Perfil “%1” atualizado"
+
+msgid "Reset command sent"
+msgstr "Comando de redefinição enviado"
+
+msgid "Could not change: %1"
+msgstr "Não foi possível alterar: %1"
+
+msgid "Could not read: %1"
+msgstr "Não foi possível ler: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "Agenda: perfil “%1” aplicado"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "Atalho indisponível (já está em uso?): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "Horário inválido. Use HH:MM (ex.: 22:30)"
+
+msgid "Create a profile first"
+msgstr "Crie um perfil primeiro"
+
+msgid "Give the profile a name"
+msgstr "Dê um nome ao perfil"
+
+msgid "This monitor did not report its capabilities"
+msgstr "Este monitor não informou suas capacidades"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "Modo demonstração: monitores simulados, nada é enviado ao hardware"
+
+msgid "Power command sent"
+msgstr "Comando de energia enviado"
+
+msgid "Value written"
+msgstr "Valor gravado"
+
+msgid "Invalid code or value"
+msgstr "Código ou valor inválido"
+
+msgid "Reading monitor…"
+msgstr "Lendo o monitor…"
+
+msgid "Usage time: %1 h"
+msgstr "Tempo de uso: %1 h"
+
+msgid "unknown"
+msgstr "desconhecido"
+
+msgid "Press the keys…"
+msgstr "Pressione as teclas…"
+
+msgid "Not set"
+msgstr "Não definido"
+
+msgid "Brightness up"
+msgstr "Aumentar brilho"
+
+msgid "Brightness down"
+msgstr "Diminuir brilho"
+
+msgid "Contrast up"
+msgstr "Aumentar contraste"
+
+msgid "Contrast down"
+msgstr "Diminuir contraste"
+
+msgid "Volume up"
+msgstr "Aumentar volume"
+
+msgid "Volume down"
+msgstr "Diminuir volume"
+
+msgid "Mute / unmute"
+msgstr "Silenciar / ativar som"
+
+msgid "Show / hide Soluna"
+msgstr "Mostrar / ocultar o Soluna"
+
+msgid "Profile: %1"
+msgstr "Perfil: %1"
+
+msgid "Contrast"
+msgstr "Contraste"
+
+msgid "Volume"
+msgstr "Volume"
+
+msgid "Muted"
+msgstr "Sem som"
+
+msgid "System default"
+msgstr "Padrão do sistema"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Light"
+msgstr "Claro"
+
+msgid "Dark"
+msgstr "Escuro"
+
+msgid "Built-in display"
+msgstr "Tela integrada"
+
+msgid "External display"
+msgstr "Tela externa"
+
+msgid "%1 monitor(s)"
+msgstr "%1 monitor(es)"
+
+msgid "Red"
+msgstr "Vermelho"
+
+msgid "Green"
+msgstr "Verde"
+
+msgid "Blue"
+msgstr "Azul"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "Nenhum monitor com suporte a DDC/CI foi encontrado"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "Ative o DDC/CI no menu do monitor, use um cabo direto (evite docks e adaptadores) e tente novamente."
+
+msgid "Search again"
+msgstr "Procurar novamente"
+
+msgid "Monitor control"
+msgstr "Controle de monitores"
+
+msgid "MONITORS"
+msgstr "MONITORES"
+
+msgid "DEMO MODE"
+msgstr "MODO DEMO"
+
+msgid "Settings"
+msgstr "Configurações"
+
+msgid "Controls"
+msgstr "Controles"
+
+msgid "Color"
+msgstr "Cor"
+
+msgid "Input & power"
+msgstr "Entrada e energia"
+
+msgid "Schedule"
+msgstr "Agenda"
+
+msgid "Advanced"
+msgstr "Avançado"
+
+msgid "Not supported"
+msgstr "Não suportado"
+
+msgid "Speaker volume"
+msgstr "Volume dos alto-falantes"
+
+msgid "QUICK BRIGHTNESS"
+msgstr "BRILHO RÁPIDO"
+
+msgid "Control all monitors together"
+msgstr "Controlar todos os monitores juntos"
+
+msgid "Brightness, contrast and volume changes are applied to every monitor."
+msgstr "Alterações de brilho, contraste e volume são aplicadas a todos os monitores."
+
+msgid "RGB GAIN (WHITE POINT)"
+msgstr "GANHO RGB (PONTO BRANCO)"
+
+msgid "COLOR TEMPERATURE"
+msgstr "TEMPERATURA DE COR"
+
+msgid "This monitor does not expose color presets over DDC/CI."
+msgstr "Este monitor não oferece predefinições de cor via DDC/CI."
+
+msgid "Restore factory colors"
+msgstr "Restaurar cores de fábrica"
+
+msgid "Click again to confirm"
+msgstr "Clique novamente para confirmar"
+
+msgid "INPUT SOURCE"
+msgstr "FONTE DE ENTRADA"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "Se você trocar para uma entrada sem sinal, a tela ficará preta. Use os botões do próprio monitor para voltar."
+
+msgid "POWER"
+msgstr "ENERGIA"
+
+msgid "Wake up"
+msgstr "Despertar"
+
+msgid "Standby"
+msgstr "Em espera"
+
+msgid "Turn off"
+msgstr "Desligar"
+
+msgid "RESET"
+msgstr "REDEFINIR"
+
+msgid "Luminance and contrast"
+msgstr "Luminância e contraste"
+
+msgid "Factory defaults"
+msgstr "Padrões de fábrica"
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "SALVAR CONFIGURAÇÕES ATUAIS COMO PERFIL"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "Nome do perfil (ex.: Noite, Cinema, Trabalho)"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "Include input source"
+msgstr "Incluir fonte de entrada"
+
+msgid "Applying the profile will also switch the input of each monitor."
+msgstr "Ao aplicar o perfil, a entrada de cada monitor também será trocada."
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "Nenhum perfil ainda. Ajuste seus monitores e salve o primeiro acima."
+
+msgid "Apply"
+msgstr "Aplicar"
+
+msgid "NEW SCHEDULED CHANGE"
+msgstr "NOVA ALTERAÇÃO AGENDADA"
+
+msgid "Automatically apply a profile at a given time every day — for example, dim the screen at night."
+msgstr "Aplica um perfil automaticamente em um horário todos os dias — por exemplo, reduzir o brilho à noite."
+
+msgid "Add"
+msgstr "Adicionar"
+
+msgid "Apply the most recent entry at startup"
+msgstr "Aplicar a entrada mais recente ao iniciar"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "Útil se o computador estava desligado no horário agendado."
+
+msgid "WRITE A VCP CODE"
+msgstr "GRAVAR UM CÓDIGO VCP"
+
+msgid "Code (hex)"
+msgstr "Código (hex)"
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "Write"
+msgstr "Gravar"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "CAPACIDADES (VCP)"
+
+msgid "Read all values"
+msgstr "Ler todos os valores"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "Sem dados de capacidades. Pressione “Ler todos os valores”."
+
+msgid "Code"
+msgstr "Código"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Current"
+msgstr "Atual"
+
+msgid "Max"
+msgstr "Máx."
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "STRING BRUTA DE CAPACIDADES"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "IDIOMA E APARÊNCIA"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "BEHAVIOR"
+msgstr "COMPORTAMENTO"
+
+msgid "Start with Windows"
+msgstr "Iniciar com o Windows"
+
+msgid "Start minimized to the tray"
+msgstr "Iniciar minimizado na bandeja"
+
+msgid "Keep running in the tray when closed"
+msgstr "Continuar na bandeja ao fechar"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "Mostrar indicador na tela para os atalhos"
+
+msgid "Shortcut step"
+msgstr "Passo dos atalhos"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "ATALHOS GLOBAIS"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "Clique em um campo e pressione as teclas. Backspace limpa, Esc cancela."
+
+msgid "ABOUT"
+msgstr "SOBRE"
+
+msgid "A modern DDC/CI monitor controller, rewritten in Rust and Slint. Inspired by ClickMonitorDDC."
+msgstr "Um controlador de monitores DDC/CI moderno, reescrito em Rust e Slint. Inspirado no ClickMonitorDDC."
+
+msgid "Open settings folder"
+msgstr "Abrir pasta de configurações"
+
+msgid "Usage time: %1"
+msgstr "Tempo de uso: %1"
+
+msgid "%1 year"
+msgstr "%1 ano"
+
+msgid "%1 years"
+msgstr "%1 anos"
+
+msgid "%1 day"
+msgstr "%1 dia"
+
+msgid "%1 days"
+msgstr "%1 dias"
+
+msgid "%1 hour"
+msgstr "%1 hora"
+
+msgid "%1 hours"
+msgstr "%1 horas"
+
+msgid "The monitor ignored this change: %1"
+msgstr "O monitor ignorou esta alteração: %1"
+
+msgid "Imported: %1 settings, %2 scheduled changes"
+msgstr "Importado: %1 ajustes, %2 alterações agendadas"
+
+msgid "Could not import: %1"
+msgstr "Não foi possível importar: %1"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Grayscale"
+msgstr "Escala de cinza"
+
+msgid "Redscale"
+msgstr "Escala de vermelho"
+
+msgid "Greenscale"
+msgstr "Escala de verde"
+
+msgid "Bluescale"
+msgstr "Escala de azul"
+
+msgid "Sepia"
+msgstr "Sépia"
+
+msgid "Inverted"
+msgstr "Invertido"
+
+msgid "Saturation"
+msgstr "Saturação"
+
+msgid "The color filter is not available on this system"
+msgstr "O filtro de cor não está disponível neste sistema"
+
+msgid "Saturation up"
+msgstr "Aumentar saturação"
+
+msgid "Saturation down"
+msgstr "Diminuir saturação"
+
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Saturation is applied by software to the whole desktop and works with any graphics card. 50% is normal."
+msgstr "A saturação é aplicada por software em toda a área de trabalho e funciona com qualquer placa de vídeo. 50% é o normal."
+
+msgid "Brightness and contrast changes are applied to every monitor."
+msgstr "Alterações de brilho e contraste são aplicadas a todos os monitores."
+
+msgid "COLOR FILTER (WHOLE SCREEN)"
+msgstr "FILTRO DE COR (TELA INTEIRA)"
+
+msgid "Software filter applied to the entire desktop. Unlike the monitor's RGB gain, it really removes colors: set Green and Blue to 0 and only red remains."
+msgstr "Filtro por software aplicado a toda a área de trabalho. Diferente do ganho RGB do monitor, ele realmente remove cores: deixe Verde e Azul em 0 e só o vermelho permanece."
+
+msgid "Temperature (warm ↔ cool)"
+msgstr "Temperatura (quente ↔ fria)"
+
+msgid "Reset filter"
+msgstr "Redefinir filtro"
+
+msgid "MONITOR RGB GAIN (HARDWARE)"
+msgstr "GANHO RGB DO MONITOR (HARDWARE)"
+
+msgid "Adjusts the white balance inside the monitor. Most monitors never let a channel reach zero, so this tints the image instead of removing colors."
+msgstr "Ajusta o balanço de branco dentro do monitor. A maioria dos monitores nunca deixa um canal chegar a zero, então isto tinge a imagem em vez de remover cores."
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "Predefinições do monitor. As esmaecidas não foram informadas pelo monitor; se nada mudar, seu monitor ignora este comando."
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "As entradas esmaecidas não foram informadas pelo monitor, mas muitos monitores as aceitam mesmo assim (HDMI e DisplayPort costumam faltar na lista)."
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number (10 = brightness, 12 = contrast, 60 = input, D6 = power). Wrong values on unknown codes may misbehave, so use with care."
+msgstr "Envia qualquer comando MCCS direto ao monitor. Código é o número VCP em hexadecimal (10 = brilho, 12 = contraste, 60 = entrada, D6 = energia). Valores errados em códigos desconhecidos podem causar comportamento estranho; use com cuidado."
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "O que o monitor diz que suporta. “Ler todos os valores” pede ao monitor o valor atual e máximo de cada código listado; leva alguns segundos."
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "O texto bruto informado pelo monitor. Útil ao pedir suporte ou relatar um problema."
+
+msgid "IMPORT FROM CLICKMONITORDDC"
+msgstr "IMPORTAR DO CLICKMONITORDDC"
+
+msgid "Imports startup, step and timed commands from the original app's ClickMonitorDDC.xml."
+msgstr "Importa inicialização, passo e comandos agendados do ClickMonitorDDC.xml do app original."
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "Open the mini panel"
+msgstr "Abrir o mini painel"
+
+msgid "Restore"
+msgstr "Restaurar"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "FILTRO DE COR (SOFTWARE)"
+
+msgid "Software filter applied to the entire desktop. Unlike the monitor's RGB gain, it really removes colors."
+msgstr "Filtro por software aplicado a toda a área de trabalho. Diferente do ganho RGB do monitor, ele realmente remove cores."
+
+msgid "Temperature"
+msgstr "Temperatura"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "CONFIGURAR RGB (HARDWARE)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "ALTERAÇÃO AGENDADA"
+
+msgid "Mon"
+msgstr "Seg"
+
+msgid "Tue"
+msgstr "Ter"
+
+msgid "Wed"
+msgstr "Qua"
+
+msgid "Thu"
+msgstr "Qui"
+
+msgid "Fri"
+msgstr "Sex"
+
+msgid "Sat"
+msgstr "Sáb"
+
+msgid "Sun"
+msgstr "Dom"
+
+msgid "Adjust brightness on startup"
+msgstr "Ajustar o brilho ao iniciar"
+
+msgid "Restores the last brightness of each monitor when Soluna starts."
+msgstr "Restaura o último ajuste de brilho de cada monitor quando o Soluna iniciar."
+
+msgid "About"
+msgstr "Sobre"
+
+msgid "A DDC/CI monitor controller written in Rust and Slint — extremely light, fast and beautiful."
+msgstr "Um controlador de monitores DDC/CI escrito em Rust e Slint — extremamente leve, rápido e bonito."
+
+msgid "Privacy policy"
+msgstr "Política de privacidade"
+
+msgid "Soluna does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "O Soluna não coleta, armazena nem envia nenhum dado pessoal. Não há contas, nem análises de uso, e o app não faz conexões de rede. Suas configurações ficam em um arquivo local neste computador, e a única comunicação é entre o app e seus monitores pelo protocolo padrão DDC/CI."
+
+msgid "Open source licenses"
+msgstr "Licenças de código aberto"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "All monitors"
+msgstr "Todos os monitores"
+
+msgid "No profiles yet."
+msgstr "Nenhum perfil ainda."
+
+msgid "New profile name"
+msgstr "Nome do novo perfil"
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "Um perfil salvo está ativo. Volte para “Livre” para ajustar as configurações."
+
+msgid "Allow modifying saved profiles"
+msgstr "Permitir modificar perfis salvos"
+
+msgid "Animation direction"
+msgstr "Direção da animação"
+
+msgid "BACKUP"
+msgstr "CÓPIA DE SEGURANÇA"
+
+msgid "Backup saved"
+msgstr "Backup salvo"
+
+msgid "Black"
+msgstr "Preto"
+
+msgid "Bottom"
+msgstr "Embaixo"
+
+msgid "Bottom left"
+msgstr "Inferior esquerdo"
+
+msgid "Bottom right"
+msgstr "Inferior direito"
+
+msgid "Center"
+msgstr "Centro"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "Configure tudo livremente. Perfis salvos travam as configurações."
+
+msgid "Could not save the backup: %1"
+msgstr "Não foi possível salvar o backup: %1"
+
+msgid "Default shortcuts restored"
+msgstr "Atalhos padrão restaurados"
+
+msgid "Delete"
+msgstr "Deletar"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "Distribuído sob a licença GPL-3.0 ou posterior"
+
+msgid "Down"
+msgstr "Baixo"
+
+msgid "Export all settings"
+msgstr "Exportar todas as configurações"
+
+msgid "Free"
+msgstr "Livre"
+
+msgid "Gray"
+msgstr "Cinza"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "INDICADOR E MINI PAINEL"
+
+msgid "Import settings"
+msgstr "Importar configurações"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "Importado: %1 perfis, %2 mudanças agendadas"
+
+msgid "Indicator position"
+msgstr "Posição do indicador"
+
+msgid "Indicator size"
+msgstr "Tamanho do indicador"
+
+msgid "Indicator transparency"
+msgstr "Transparência do indicador"
+
+msgid "Left"
+msgstr "Esquerda"
+
+msgid "Move R, G and B together"
+msgstr "Mover R, G e B juntos"
+
+msgid "No scheduled changes."
+msgstr "Nenhuma mudança agendada."
+
+msgid "Restore defaults"
+msgstr "Restaurar padrões"
+
+msgid "Right"
+msgstr "Direita"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "CONTROLES DESLIZANTES E ATALHOS"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "Salve todas as suas configurações, perfis, agenda e atalhos em um arquivo, ou carregue-os de um."
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "Os controles deslizantes se movem em passos fixos, marcados com pontos. Vale para a janela e o mini painel."
+
+msgid "Software filter applied to the whole system. Unlike “Configure RGB”, it really cancels the colors."
+msgstr "Filtro por software aplicado a todo o sistema. Diferente de “Configurar RGB”, ele realmente anula as cores."
+
+msgid "Step (sliders and shortcuts)"
+msgstr "Passo (controles e atalhos)"
+
+msgid "Stepped sliders"
+msgstr "Controles com passos"
+
+msgid "The indicator and the mini panel enter from the chosen side and leave through the opposite one."
+msgstr "O indicador e o mini painel entram pelo lado escolhido e saem pelo lado oposto."
+
+msgid "Top"
+msgstr "Em cima"
+
+msgid "Top left"
+msgstr "Superior esquerdo"
+
+msgid "Top right"
+msgstr "Superior direito"
+
+msgid "Up"
+msgstr "Cima"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "Com um perfil ativo, cada alteração que você fizer é salva nele automaticamente."
+
+msgid "Yellow"
+msgstr "Amarelo"
+
+msgid "Yellowscale"
+msgstr "Escala de amarelo"
+
+msgid "INDICATOR"
+msgstr "INDICADOR"
+
+msgid "Temperature down"
+msgstr "Diminuir temperatura"
+
+msgid "Temperature up"
+msgstr "Aumentar temperatura"
+
+msgid "Black level (blacks)"
+msgstr "Nível de preto (pretos)"
+
+msgid "Display controller"
+msgstr "Controlador do monitor"
+
+msgid "Firmware version"
+msgstr "Versão do firmware"
+
+msgid "Gain (whites)"
+msgstr "Ganho (brancos)"
+
+msgid "Horizontal frequency"
+msgstr "Frequência horizontal"
+
+msgid "IMAGE"
+msgstr "IMAGEM"
+
+msgid "MONITOR AUDIO"
+msgstr "ÁUDIO DO MONITOR"
+
+msgid "MONITOR INFORMATION"
+msgstr "INFORMAÇÕES DO MONITOR"
+
+msgid "Mini panel transparency"
+msgstr "Transparência do mini painel"
+
+msgid "Monitor volume"
+msgstr "Volume do monitor"
+
+msgid "Mute the monitor audio"
+msgstr "Silenciar o áudio do monitor"
+
+msgid "Not available through DDC/CI"
+msgstr "Indisponível via DDC/CI"
+
+msgid "Not reported"
+msgstr "Não informado"
+
+msgid "Panel technology"
+msgstr "Tecnologia do painel"
+
+msgid "Response time"
+msgstr "Tempo de resposta"
+
+msgid "Restore factory defaults"
+msgstr "Restaurar padrões de fábrica"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "Ajusta a escala de cada canal de cor. Afeta principalmente as áreas claras da imagem."
+
+msgid "Screen size"
+msgstr "Tamanho da tela"
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "Define o nível das áreas mais escuras de cada canal de cor. Afeta principalmente as sombras, não os brancos."
+
+msgid "Show in the mini panel"
+msgstr "Mostrar no mini painel"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "Este é o áudio do próprio monitor (alto-falantes ou saída de fones), para os monitores que têm. Não é o volume do sistema."
+
+msgid "VCP version"
+msgstr "Versão do VCP"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "Frequência vertical (taxa de atualização)"
+
+msgid "Glass effect (blur) on the indicator and mini panel"
+msgstr "Efeito de vidro (desfoque) no indicador e no mini painel"
+
+msgid "Color filter"
+msgstr "Filtro de cor"
+
+msgid "Software filter applied to the whole system."
+msgstr "Filtro por software aplicado a todo o sistema."
+
+msgid "Monitor volume up"
+msgstr "Aumentar volume do monitor"
+
+msgid "Monitor volume down"
+msgstr "Diminuir volume do monitor"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "Silenciar/reativar áudio do monitor"

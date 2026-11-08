@@ -1,0 +1,674 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+
+msgid "Open Solua"
+msgstr "Solua खोलें"
+
+msgid "Quit"
+msgstr "बाहर निकलें"
+
+msgid "Profiles"
+msgstr "प्रोफ़ाइल"
+
+msgid "Brightness"
+msgstr "चमक"
+
+msgid "Solua — monitor control"
+msgstr "Solua — मॉनिटर नियंत्रण"
+
+msgid "Ready"
+msgstr "तैयार"
+
+msgid "No DDC/CI monitors found"
+msgstr "कोई DDC/CI मॉनिटर नहीं मिला"
+
+msgid "Monitors found: %1"
+msgstr "मिले मॉनिटर: %1"
+
+msgid "Profile “%1” applied"
+msgstr "प्रोफ़ाइल “%1” लागू की गई"
+
+msgid "Profile “%1” saved"
+msgstr "प्रोफ़ाइल “%1” सहेजी गई"
+
+msgid "Profile “%1” was updated"
+msgstr "प्रोफ़ाइल “%1” अपडेट की गई"
+
+msgid "Reset command sent"
+msgstr "रीसेट कमांड भेजा गया"
+
+msgid "Could not change: %1"
+msgstr "बदला नहीं जा सका: %1"
+
+msgid "Could not read: %1"
+msgstr "पढ़ा नहीं जा सका: %1"
+
+msgid "Schedule: profile “%1” applied"
+msgstr "शेड्यूल: प्रोफ़ाइल “%1” लागू की गई"
+
+msgid "Shortcut unavailable (already in use?): %1"
+msgstr "शॉर्टकट उपलब्ध नहीं (पहले से उपयोग में है?): %1"
+
+msgid "Invalid time. Use HH:MM (e.g. 22:30)"
+msgstr "अमान्य समय। HH:MM का उपयोग करें (जैसे 22:30)"
+
+msgid "Create a profile first"
+msgstr "पहले एक प्रोफ़ाइल बनाएँ"
+
+msgid "Give the profile a name"
+msgstr "प्रोफ़ाइल को एक नाम दें"
+
+msgid "This monitor did not report its capabilities"
+msgstr "इस मॉनिटर ने अपनी क्षमताएँ नहीं बताईं"
+
+msgid "Demo mode: simulated monitors, nothing is sent to hardware"
+msgstr "डेमो मोड: नकली मॉनिटर, हार्डवेयर को कुछ नहीं भेजा जाता"
+
+msgid "Power command sent"
+msgstr "पावर कमांड भेजा गया"
+
+msgid "Value written"
+msgstr "मान लिखा गया"
+
+msgid "Invalid code or value"
+msgstr "अमान्य कोड या मान"
+
+msgid "Reading monitor…"
+msgstr "मॉनिटर पढ़ा जा रहा है…"
+
+msgid "unknown"
+msgstr "अज्ञात"
+
+msgid "Press the keys…"
+msgstr "कुंजियाँ दबाएँ…"
+
+msgid "Not set"
+msgstr "सेट नहीं"
+
+msgid "Brightness up"
+msgstr "चमक बढ़ाएँ"
+
+msgid "Brightness down"
+msgstr "चमक घटाएँ"
+
+msgid "Contrast up"
+msgstr "कंट्रास्ट बढ़ाएँ"
+
+msgid "Contrast down"
+msgstr "कंट्रास्ट घटाएँ"
+
+msgid "Show / hide Solua"
+msgstr "Solua दिखाएँ / छिपाएँ"
+
+msgid "Profile: %1"
+msgstr "प्रोफ़ाइल: %1"
+
+msgid "Contrast"
+msgstr "कंट्रास्ट"
+
+msgid "Volume"
+msgstr "वॉल्यूम"
+
+msgid "Muted"
+msgstr "म्यूट"
+
+msgid "System default"
+msgstr "सिस्टम डिफ़ॉल्ट"
+
+msgid "System"
+msgstr "सिस्टम"
+
+msgid "Light"
+msgstr "लाइट"
+
+msgid "Dark"
+msgstr "डार्क"
+
+msgid "Built-in display"
+msgstr "बिल्ट-इन डिस्प्ले"
+
+msgid "External display"
+msgstr "बाहरी डिस्प्ले"
+
+msgid "%1 monitor(s)"
+msgstr "%1 मॉनिटर"
+
+msgid "Red"
+msgstr "लाल"
+
+msgid "Green"
+msgstr "हरा"
+
+msgid "Blue"
+msgstr "नीला"
+
+msgid "No monitors with DDC/CI support were found"
+msgstr "DDC/CI समर्थन वाला कोई मॉनिटर नहीं मिला"
+
+msgid "Enable DDC/CI in the monitor's on-screen menu, use a direct cable (avoid docks and adapters) and try again."
+msgstr "मॉनिटर के ऑन-स्क्रीन मेनू में DDC/CI चालू करें, सीधी केबल का उपयोग करें (डॉक और एडेप्टर से बचें) और फिर कोशिश करें।"
+
+msgid "Search again"
+msgstr "फिर से खोजें"
+
+msgid "MONITORS"
+msgstr "मॉनिटर"
+
+msgid "DEMO MODE"
+msgstr "डेमो मोड"
+
+msgid "Settings"
+msgstr "सेटिंग"
+
+msgid "Controls"
+msgstr "नियंत्रण"
+
+msgid "Color"
+msgstr "रंग"
+
+msgid "Schedule"
+msgstr "शेड्यूल"
+
+msgid "Advanced"
+msgstr "उन्नत"
+
+msgid "Not supported"
+msgstr "समर्थित नहीं"
+
+msgid "Control all monitors together"
+msgstr "सभी मॉनिटर एक साथ नियंत्रित करें"
+
+msgid "COLOR TEMPERATURE"
+msgstr "रंग तापमान"
+
+msgid "Click again to confirm"
+msgstr "पुष्टि के लिए फिर क्लिक करें"
+
+msgid "INPUT SOURCE"
+msgstr "इनपुट स्रोत"
+
+msgid "If you switch to an input without signal, the screen will go blank. Use the monitor's own buttons to return."
+msgstr "यदि आप बिना सिग्नल वाले इनपुट पर जाते हैं, तो स्क्रीन खाली हो जाएगी। वापस आने के लिए मॉनिटर के अपने बटन इस्तेमाल करें।"
+
+msgid "SAVE CURRENT SETTINGS AS A PROFILE"
+msgstr "वर्तमान सेटिंग को प्रोफ़ाइल के रूप में सहेजें"
+
+msgid "Profile name (e.g. Night, Cinema, Work)"
+msgstr "प्रोफ़ाइल का नाम (जैसे रात, सिनेमा, काम)"
+
+msgid "Save"
+msgstr "सहेजें"
+
+msgid "No profiles yet. Adjust your monitors and save the first one above."
+msgstr "अभी कोई प्रोफ़ाइल नहीं। अपने मॉनिटर समायोजित करें और ऊपर पहली प्रोफ़ाइल सहेजें।"
+
+msgid "Add"
+msgstr "जोड़ें"
+
+msgid "Apply the most recent entry at startup"
+msgstr "शुरू होने पर सबसे हाल की प्रविष्टि लागू करें"
+
+msgid "Useful if the computer was off at the scheduled time."
+msgstr "उपयोगी जब निर्धारित समय पर कंप्यूटर बंद था।"
+
+msgid "WRITE A VCP CODE"
+msgstr "VCP कोड लिखें"
+
+msgid "Code (hex)"
+msgstr "कोड (हेक्स)"
+
+msgid "Value"
+msgstr "मान"
+
+msgid "Write"
+msgstr "लिखें"
+
+msgid "CAPABILITIES (VCP)"
+msgstr "क्षमताएँ (VCP)"
+
+msgid "Read all values"
+msgstr "सभी मान पढ़ें"
+
+msgid "No capability data. Press “Read all values”."
+msgstr "कोई क्षमता डेटा नहीं। “सभी मान पढ़ें” दबाएँ।"
+
+msgid "Code"
+msgstr "कोड"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Current"
+msgstr "वर्तमान"
+
+msgid "Max"
+msgstr "अधिकतम"
+
+msgid "RAW CAPABILITIES STRING"
+msgstr "कच्ची क्षमता स्ट्रिंग"
+
+msgid "LANGUAGE AND APPEARANCE"
+msgstr "भाषा और रूप"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Theme"
+msgstr "थीम"
+
+msgid "BEHAVIOR"
+msgstr "व्यवहार"
+
+msgid "Start minimized to the tray"
+msgstr "ट्रे में छोटा करके शुरू करें"
+
+msgid "Keep running in the tray when closed"
+msgstr "बंद करने पर ट्रे में चलता रहे"
+
+msgid "Show on-screen indicator for shortcuts"
+msgstr "शॉर्टकट के लिए ऑन-स्क्रीन संकेतक दिखाएँ"
+
+msgid "GLOBAL SHORTCUTS"
+msgstr "ग्लोबल शॉर्टकट"
+
+msgid "Click a field and press the keys. Backspace clears it, Esc cancels."
+msgstr "किसी फ़ील्ड पर क्लिक करें और कुंजियाँ दबाएँ। Backspace उसे साफ़ करता है, Esc रद्द करता है।"
+
+msgid "Usage time: %1"
+msgstr "उपयोग समय: %1"
+
+msgid "%1 year"
+msgstr "%1 वर्ष"
+
+msgid "%1 years"
+msgstr "%1 वर्ष"
+
+msgid "%1 day"
+msgstr "%1 दिन"
+
+msgid "%1 days"
+msgstr "%1 दिन"
+
+msgid "%1 hour"
+msgstr "%1 घंटा"
+
+msgid "%1 hours"
+msgstr "%1 घंटे"
+
+msgid "The monitor ignored this change: %1"
+msgstr "मॉनिटर ने इस बदलाव को अनदेखा किया: %1"
+
+msgid "Could not import: %1"
+msgstr "आयात नहीं हो सका: %1"
+
+msgid "Normal"
+msgstr "सामान्य"
+
+msgid "Grayscale"
+msgstr "ग्रेस्केल"
+
+msgid "Redscale"
+msgstr "रेडस्केल"
+
+msgid "Greenscale"
+msgstr "ग्रीनस्केल"
+
+msgid "Bluescale"
+msgstr "ब्लूस्केल"
+
+msgid "Sepia"
+msgstr "सेपिया"
+
+msgid "Inverted"
+msgstr "उलटा"
+
+msgid "Saturation"
+msgstr "संतृप्ति"
+
+msgid "The color filter is not available on this system"
+msgstr "इस सिस्टम पर रंग फ़िल्टर उपलब्ध नहीं है"
+
+msgid "Saturation up"
+msgstr "संतृप्ति बढ़ाएँ"
+
+msgid "Saturation down"
+msgstr "संतृप्ति घटाएँ"
+
+msgid "Monitor presets. Dimmed ones were not reported by the monitor; if nothing changes, your monitor ignores this command."
+msgstr "मॉनिटर प्रीसेट। धुँधले वाले मॉनिटर ने नहीं बताए; यदि कुछ नहीं बदलता, तो आपका मॉनिटर इस कमांड को अनदेखा करता है।"
+
+msgid "Dimmed inputs were not reported by the monitor, but many monitors accept them anyway (HDMI and DisplayPort are often missing from the list)."
+msgstr "धुँधले इनपुट मॉनिटर ने नहीं बताए, लेकिन कई मॉनिटर उन्हें फिर भी स्वीकार करते हैं (HDMI और DisplayPort अक्सर सूची में नहीं होते)।"
+
+msgid "Sends any MCCS command straight to the monitor. Code is the hexadecimal VCP number. Wrong values on unknown codes may misbehave, so use with care."
+msgstr "किसी भी MCCS कमांड को सीधे मॉनिटर को भेजता है। कोड हेक्साडेसिमल VCP संख्या है। अज्ञात कोड पर गलत मान गड़बड़ी कर सकते हैं, इसलिए सावधानी से उपयोग करें।"
+
+msgid "What the monitor says it supports. “Read all values” asks the monitor for the current and maximum value of every listed code; it takes a few seconds."
+msgstr "मॉनिटर जिन चीज़ों के समर्थित होने का दावा करता है। “सभी मान पढ़ें” सूचीबद्ध हर कोड का वर्तमान और अधिकतम मान मॉनिटर से पूछता है; इसमें कुछ सेकंड लगते हैं।"
+
+msgid "The unprocessed text reported by the monitor. Useful when asking for support or reporting a problem."
+msgstr "मॉनिटर द्वारा बताया गया असंसाधित पाठ। सहायता माँगने या समस्या बताने के लिए उपयोगी।"
+
+msgid "Open the mini panel"
+msgstr "मिनी पैनल खोलें"
+
+msgid "Restore"
+msgstr "बहाल करें"
+
+msgid "COLOR FILTER (SOFTWARE)"
+msgstr "रंग फ़िल्टर (सॉफ़्टवेयर)"
+
+msgid "Temperature"
+msgstr "तापमान"
+
+msgid "CONFIGURE RGB (HARDWARE)"
+msgstr "RGB कॉन्फ़िगर करें (हार्डवेयर)"
+
+msgid "SCHEDULED CHANGE"
+msgstr "निर्धारित बदलाव"
+
+msgid "Mon"
+msgstr "सोम"
+
+msgid "Tue"
+msgstr "मंगल"
+
+msgid "Wed"
+msgstr "बुध"
+
+msgid "Thu"
+msgstr "गुरु"
+
+msgid "Fri"
+msgstr "शुक्र"
+
+msgid "Sat"
+msgstr "शनि"
+
+msgid "Sun"
+msgstr "रवि"
+
+msgid "About"
+msgstr "परिचय"
+
+msgid "Privacy policy"
+msgstr "गोपनीयता नीति"
+
+msgid "Solua does not collect, store or send any personal data. It has no accounts, no analytics and makes no network connections. Your settings stay in a local file on this computer, and the only communication is between the app and your monitors through the standard DDC/CI protocol."
+msgstr "Solua कोई व्यक्तिगत डेटा एकत्र, संग्रहीत या भेजता नहीं है। इसमें कोई खाता नहीं, कोई एनालिटिक्स नहीं और कोई नेटवर्क कनेक्शन नहीं है। आपकी सेटिंग इस कंप्यूटर की एक स्थानीय फ़ाइल में रहती हैं, और एकमात्र संचार मानक DDC/CI प्रोटोकॉल के ज़रिए ऐप और आपके मॉनिटरों के बीच होता है।"
+
+msgid "Open source licenses"
+msgstr "ओपन सोर्स लाइसेंस"
+
+msgid "Close"
+msgstr "बंद करें"
+
+msgid "All monitors"
+msgstr "सभी मॉनिटर"
+
+msgid "No profiles yet."
+msgstr "अभी कोई प्रोफ़ाइल नहीं।"
+
+msgid "A saved profile is active. Switch to “Free” to adjust settings."
+msgstr "एक सहेजी हुई प्रोफ़ाइल सक्रिय है। सेटिंग बदलने के लिए “मुक्त” पर जाएँ।"
+
+msgid "Allow modifying saved profiles"
+msgstr "सहेजी गई प्रोफ़ाइलों में बदलाव की अनुमति दें"
+
+msgid "BACKUP"
+msgstr "बैकअप"
+
+msgid "Backup saved"
+msgstr "बैकअप सहेजा गया"
+
+msgid "Black"
+msgstr "काला"
+
+msgid "Bottom"
+msgstr "नीचे"
+
+msgid "Bottom left"
+msgstr "नीचे बाएँ"
+
+msgid "Bottom right"
+msgstr "नीचे दाएँ"
+
+msgid "Center"
+msgstr "केंद्र"
+
+msgid "Configure everything freely. Saved profiles lock the settings."
+msgstr "सब कुछ स्वतंत्र रूप से कॉन्फ़िगर करें। सहेजी गई प्रोफ़ाइलें सेटिंग को लॉक कर देती हैं।"
+
+msgid "Could not save the backup: %1"
+msgstr "बैकअप सहेजा नहीं जा सका: %1"
+
+msgid "Default shortcuts restored"
+msgstr "डिफ़ॉल्ट शॉर्टकट बहाल किए गए"
+
+msgid "Delete"
+msgstr "हटाएँ"
+
+msgid "Distributed under the GPL-3.0 license or later"
+msgstr "GPL-3.0 या बाद के लाइसेंस के तहत वितरित"
+
+msgid "Down"
+msgstr "नीचे"
+
+msgid "Export all settings"
+msgstr "सभी सेटिंग निर्यात करें"
+
+msgid "Free"
+msgstr "मुक्त"
+
+msgid "Gray"
+msgstr "धूसर"
+
+msgid "INDICATOR AND MINI PANEL"
+msgstr "संकेतक और मिनी पैनल"
+
+msgid "Import settings"
+msgstr "सेटिंग आयात करें"
+
+msgid "Imported: %1 profiles, %2 scheduled changes"
+msgstr "आयात किया गया: %1 प्रोफ़ाइल, %2 निर्धारित बदलाव"
+
+msgid "Indicator position"
+msgstr "संकेतक की स्थिति"
+
+msgid "Indicator size"
+msgstr "संकेतक का आकार"
+
+msgid "Left"
+msgstr "बाएँ"
+
+msgid "No scheduled changes."
+msgstr "कोई निर्धारित बदलाव नहीं।"
+
+msgid "Restore defaults"
+msgstr "डिफ़ॉल्ट बहाल करें"
+
+msgid "Right"
+msgstr "दाएँ"
+
+msgid "SLIDERS AND SHORTCUTS"
+msgstr "स्लाइडर और शॉर्टकट"
+
+msgid "Save all your settings, profiles, schedule and shortcuts to a file, or load them from one."
+msgstr "अपनी सभी सेटिंग, प्रोफ़ाइल, शेड्यूल और शॉर्टकट एक फ़ाइल में सहेजें, या किसी फ़ाइल से लोड करें।"
+
+msgid "Sliders move in fixed steps, marked with dots. Applies to the window and the mini panel."
+msgstr "स्लाइडर बिंदुओं से चिह्नित निश्चित चरणों में चलते हैं। विंडो और मिनी पैनल दोनों पर लागू।"
+
+msgid "Step (sliders and shortcuts)"
+msgstr "चरण (स्लाइडर और शॉर्टकट)"
+
+msgid "Stepped sliders"
+msgstr "चरणबद्ध स्लाइडर"
+
+msgid "Top"
+msgstr "ऊपर"
+
+msgid "Top left"
+msgstr "ऊपर बाएँ"
+
+msgid "Top right"
+msgstr "ऊपर दाएँ"
+
+msgid "Up"
+msgstr "ऊपर"
+
+msgid "While a profile is active, every change you make is saved into it automatically."
+msgstr "प्रोफ़ाइल सक्रिय रहने तक, आपके हर बदलाव अपने आप उसमें सहेज लिए जाते हैं।"
+
+msgid "Yellow"
+msgstr "पीला"
+
+msgid "Yellowscale"
+msgstr "येलोस्केल"
+
+msgid "Temperature down"
+msgstr "तापमान घटाएँ"
+
+msgid "Temperature up"
+msgstr "तापमान बढ़ाएँ"
+
+msgid "Black level (blacks)"
+msgstr "ब्लैक लेवल (काले)"
+
+msgid "Display controller"
+msgstr "डिस्प्ले कंट्रोलर"
+
+msgid "Firmware version"
+msgstr "फ़र्मवेयर संस्करण"
+
+msgid "Gain (whites)"
+msgstr "गेन (सफ़ेद)"
+
+msgid "Horizontal frequency"
+msgstr "क्षैतिज आवृत्ति"
+
+msgid "IMAGE"
+msgstr "छवि"
+
+msgid "MONITOR AUDIO"
+msgstr "मॉनिटर ऑडियो"
+
+msgid "MONITOR INFORMATION"
+msgstr "मॉनिटर की जानकारी"
+
+msgid "Monitor volume"
+msgstr "मॉनिटर वॉल्यूम"
+
+msgid "Mute the monitor audio"
+msgstr "मॉनिटर ऑडियो म्यूट करें"
+
+msgid "Not reported"
+msgstr "सूचित नहीं"
+
+msgid "Panel technology"
+msgstr "पैनल तकनीक"
+
+msgid "Restore factory defaults"
+msgstr "फ़ैक्टरी डिफ़ॉल्ट बहाल करें"
+
+msgid "Scales each color channel. It mostly affects the bright areas of the image."
+msgstr "हर रंग चैनल को स्केल करता है। यह मुख्यतः छवि के उजले हिस्सों को प्रभावित करता है।"
+
+msgid "Sets the level of the darkest areas of each color channel. It mostly affects the shadows, not the whites."
+msgstr "हर रंग चैनल के सबसे गहरे हिस्सों का स्तर तय करता है। यह मुख्यतः छायाओं को प्रभावित करता है, सफ़ेद को नहीं।"
+
+msgid "Show in the mini panel"
+msgstr "मिनी पैनल में दिखाएँ"
+
+msgid "This is the audio of the monitor itself (its speakers or headphone jack), for monitors that have it. It is not the system volume."
+msgstr "यह मॉनिटर का अपना ऑडियो है (उसके स्पीकर या हेडफ़ोन जैक), उन मॉनिटरों के लिए जिनमें यह है। यह सिस्टम वॉल्यूम नहीं है।"
+
+msgid "VCP version"
+msgstr "VCP संस्करण"
+
+msgid "Vertical frequency (refresh rate)"
+msgstr "ऊर्ध्वाधर आवृत्ति (रिफ़्रेश रेट)"
+
+msgid "Color filter"
+msgstr "रंग फ़िल्टर"
+
+msgid "Software filter applied to the whole system."
+msgstr "पूरे सिस्टम पर लागू होने वाला सॉफ़्टवेयर फ़िल्टर।"
+
+msgid "Monitor volume up"
+msgstr "मॉनिटर वॉल्यूम बढ़ाएँ"
+
+msgid "Monitor volume down"
+msgstr "मॉनिटर वॉल्यूम घटाएँ"
+
+msgid "Mute/unmute the monitor audio"
+msgstr "मॉनिटर ऑडियो म्यूट/अनम्यूट करें"
+
+msgid "Input"
+msgstr "इनपुट"
+
+msgid "Shortcuts are assigned by your desktop. You can change them in System Settings → Shortcuts."
+msgstr "शॉर्टकट आपके डेस्कटॉप द्वारा सौंपे जाते हैं। आप इन्हें सिस्टम सेटिंग → शॉर्टकट में बदल सकते हैं।"
+
+msgid "Sliders move in fixed steps, marked with dots."
+msgstr "स्लाइडर बिंदुओं से चिह्नित निश्चित चरणों में चलते हैं।"
+
+msgid "Adjust all together"
+msgstr "सभी को साथ में समायोजित करें"
+
+msgid "Changes in Controls and Color are applied to every monitor."
+msgstr "नियंत्रण और रंग में किए गए बदलाव सभी मॉनिटरों पर लागू होते हैं।"
+
+msgid "Violet"
+msgstr "बैंगनी"
+
+msgid "Set an end time"
+msgstr "समाप्ति समय सेट करें"
+
+msgid "When it ends, the previous profile is restored."
+msgstr "समाप्त होने पर पिछली प्रोफ़ाइल बहाल हो जाती है।"
+
+msgid "Transparency"
+msgstr "पारदर्शिता"
+
+msgid "Run in the background"
+msgstr "बैकग्राउंड में चलाएँ"
+
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+msgid "A DDC/CI monitor controller written in pure Rust (Slint GUI). Extremely light and fast."
+msgstr "शुद्ध Rust में लिखा गया DDC/CI मॉनिटर कंट्रोलर (Slint GUI)। बेहद हल्का और तेज़।"
+
+msgid "Add to the applications menu"
+msgstr "एप्लिकेशन मेनू में जोड़ें"
+
+msgid "Could not enable monitor access."
+msgstr "मॉनिटर एक्सेस चालू नहीं किया जा सका।"
+
+msgid "Creates a launcher for this AppImage."
+msgstr "इस AppImage के लिए लॉन्चर बनाता है।"
+
+msgid "Enable monitor access"
+msgstr "मॉनिटर एक्सेस चालू करें"
+
+msgid "Keeps Solua running when the window is closed, so shortcuts keep working."
+msgstr "विंडो बंद होने पर Solua को चालू रखता है, ताकि शॉर्टकट काम करते रहें।"
+
+msgid "Monitor access enabled."
+msgstr "मॉनिटर एक्सेस चालू हो गया।"
+
+msgid "Solua cannot reach your monitors yet. Enabling access sets up a small system rule and asks for your password."
+msgstr "Solua अभी आपके मॉनिटर तक नहीं पहुँच पा रहा है। एक्सेस चालू करने पर एक छोटा सिस्टम नियम सेट होता है और आपका पासवर्ड पूछा जाता है।"
+
+msgid "Start with the system"
+msgstr "सिस्टम के साथ शुरू करें"
+
+msgid "Starts Solua hidden when you log in."
+msgstr "लॉग इन करने पर Solua को छिपा हुआ शुरू करता है।"
+
+msgid "12-hour clock (AM/PM)"
+msgstr "12 घंटे की घड़ी (AM/PM)"
