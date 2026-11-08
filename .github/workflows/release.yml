@@ -53,7 +53,7 @@ jobs:
       - name: Packaging tools
         run: cargo install cargo-deb --locked
       - name: Build .deb and .AppImage
-        run: packaging/linux/build.sh
+        run: bash packaging/linux/build.sh
       - uses: actions/upload-artifact@v4
         with:
           name: linux-packages
