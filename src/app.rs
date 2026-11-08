@@ -173,23 +173,6 @@ fn fx_to_values(f: &ColorFx) -> FxValues {
     FxValues { saturation: f.saturation, mode: f.mode.name().into(), r: f.r, g: f.g, b: f.b, temp: f.temp }
 }
 
-/// "Hardware" temperature (Linux): left is cool, right is warm. Instead of code 0x0C
-/// (which almost no monitor accepts), it adjusts the monitor's RGB gain: warm lowers blue and green,
-/// cool lowers red and green. Returns (red, green, blue) in %.
-fn temp_to_gains(t: i32) -> (u8, u8, u8) {
-    let k = (t.clamp(0, 100) as f32 - 50.0) / 50.0; // -1 cool .. +1 warm
-    let a = k.abs();
-    let (r, g, b) = if k >= 0.0 { (100.0, 100.0 - 18.0 * a, 100.0 - 45.0 * a) } else { (100.0 - 40.0 * a, 100.0 - 12.0 * a, 100.0) };
-    (r.round() as u8, g.round() as u8, b.round() as u8)
-}
-
-/// Estimated position of the temperature control from the current red and blue gains.
-fn hw_temp_from_gains(r: u8, b: u8) -> i32 {
-    let d = b as f32 - r as f32; // < 0: warm, > 0: cool
-    let t = if d <= 0.0 { 50.0 + (-d) / 45.0 * 50.0 } else { 50.0 - d / 40.0 * 50.0 };
-    t.round().clamp(0.0, 100.0) as i32
-}
-
 fn fx_from_cfg(c: &Config) -> ColorFx {
     ColorFx {
         saturation: c.fx_saturation.min(100),
@@ -714,10 +697,10 @@ impl App {
     }
 
     fn hotkey_ids(&self) -> Vec<String> {
-        // on Linux there is no software saturation and no mini panel
+        // on Linux there is no software saturation, no color temperature and no mini panel
         let mut ids: Vec<String> = HOTKEY_ACTIONS
             .iter()
-            .filter(|id| cfg!(windows) || !matches!(**id, "saturation_up" | "saturation_down" | "mini"))
+            .filter(|id| cfg!(windows) || !matches!(**id, "saturation_up" | "saturation_down" | "temperature_up" | "temperature_down" | "mini"))
             .map(|s| s.to_string())
             .collect();
         ids.extend(self.cfg.borrow().profiles.iter().map(|p| format!("profile:{}", p.name)));
@@ -1047,8 +1030,6 @@ impl App {
         ui.set_has_brightness(v.has_brightness);
         ui.set_has_contrast(v.has_contrast);
         ui.set_has_rgb(v.has_rgb);
-        ui.set_has_temp(!cfg!(windows) && v.has_rgb);
-        ui.set_hw_temp(hw_temp_from_gains(v.red, v.blue));
         ui.set_has_volume(v.has_volume);
         ui.set_has_black(v.has_black);
         ui.set_volume(v.volume as i32);
@@ -1593,24 +1574,6 @@ impl App {
         self.touch_profile();
     }
 
-    /// Linux: color temperature through the monitor's RGB gain.
-    fn set_hw_temp(&self, v: i32) {
-        if self.locked() {
-            return;
-        }
-        let v = v.clamp(0, 100);
-        let (r, g, b) = temp_to_gains(v);
-        self.ui.set_hw_temp(v);
-        self.ui.set_red(r as i32);
-        self.ui.set_green(g as i32);
-        self.ui.set_blue(b as i32);
-        self.last_user.set(Instant::now());
-        let _ = self.tx.send(Cmd::Level { code: vcp::GAIN_RED, pct: r });
-        let _ = self.tx.send(Cmd::Level { code: vcp::GAIN_GREEN, pct: g });
-        let _ = self.tx.send(Cmd::Level { code: vcp::GAIN_BLUE, pct: b });
-        self.touch_profile();
-    }
-
     fn set_mute(&self, on: bool) {
         self.ui.set_muted(on);
         if let Some(p) = self.popup.borrow().as_ref() {
@@ -1908,16 +1871,6 @@ impl App {
                     self.set_fx_value("saturation", v);
                     self.show_osd(OsdKind::Saturation, v as u8, "", false);
                 }
-                "temperature_up" | "temperature_down" if !cfg!(windows) => {
-                    if self.locked() {
-                        self.say(self.s().get_st_locked());
-                        return;
-                    }
-                    let d = if id == "temperature_up" { step } else { -step };
-                    let v = (self.ui.get_hw_temp() + d).clamp(0, 100);
-                    self.set_hw_temp(v);
-                    self.show_osd(OsdKind::Temperature, v as u8, "", false);
-                }
                 "temperature_up" | "temperature_down" => {
                     if self.locked() {
                         self.say(self.s().get_st_locked());
@@ -2163,13 +2116,6 @@ impl App {
         ui.on_set_level(move |what, v| {
             if let Some(app) = a() {
                 app.set_level(&what, v);
-            }
-        });
-
-        let a = app!();
-        ui.on_set_hw_temp(move |v| {
-            if let Some(app) = a() {
-                app.set_hw_temp(v);
             }
         });
 
