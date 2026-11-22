@@ -4,11 +4,9 @@
 
 # Solua
 
-**OSD software that controls monitor settings via DDC/CI.**
+**OSD software that controls monitor settings via DDC/CI, for Windows and Linux (Wayland)**
 
 ---
-
-Windows · Linux (Wayland)
 
 </div>
 
