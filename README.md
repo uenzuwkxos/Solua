@@ -11,15 +11,15 @@ Windows · Linux (Wayland)
 </div>
 
 <p align="center">
-  <img src="screenshots/dark.png" alt="Dark theme" width="32%">
-  <img src="screenshots/black.png" alt="Black theme" width="32%">
-  <img src="screenshots/light.png" alt="Light theme" width="32%">
-</p>
-
-<p align="center">
   <img src="screenshots/mini-blue.png" alt="Mini panel, dark blue" width="24%">
   <img src="screenshots/mini-dark.png" alt="Mini panel, dark" width="24%">
   <img src="screenshots/mini-light.png" alt="Mini panel, light" width="24%">
+</p>
+
+<p align="center">
+  <img src="screenshots/dark.png" alt="Dark theme" width="32%">
+  <img src="screenshots/black.png" alt="Black theme" width="32%">
+  <img src="screenshots/light.png" alt="Light theme" width="32%">
 </p>
 
 ## Download
