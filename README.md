@@ -22,18 +22,6 @@ Windows · Linux (Wayland)
   <img src="screenshots/light.png" alt="Light theme" width="32%">
 </p>
 
-## Download
-
-Get the latest build from the [Releases](https://github.com/uenzuwkxos/Solua/releases) page:
-
-| System | File |
-|---|---|
-| Windows | `Solua-x64.exe` |
-| Linux | `Solua-<version>-x86_64.AppImage` |
-
-On Linux, monitors are reached through `/dev/i2c-*`. Solua shows an **Enable monitor access** button the first time
-it cannot reach your monitors.
-
 ## Features
 
 - Brightness, contrast, saturation, color temperature, RGB gains and monitor audio, per monitor or for all at once.
@@ -46,6 +34,18 @@ it cannot reach your monitors.
 
 Languages: English, Português (Brasil), Español, Deutsch, Français, Italiano, Nederlands, Polski,
 Русский, 简体中文, 日本語, 한국어, हिन्दी, العربية, Bahasa Indonesia.
+
+## Download
+
+Get the latest build from the [Releases](https://github.com/uenzuwkxos/Solua/releases) page:
+
+| System | File |
+|---|---|
+| Windows | `Solua-x64.exe` |
+| Linux | `Solua-<version>-x86_64.AppImage` |
+
+On Linux, monitors are reached through `/dev/i2c-*`. Solua shows an **Enable monitor access** button the first time
+it cannot reach your monitors.
 
 ## Building
 
