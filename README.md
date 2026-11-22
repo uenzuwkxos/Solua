@@ -35,7 +35,7 @@ Windows · Linux (Wayland)
 Languages: English, Português (Brasil), Español, Deutsch, Français, Italiano, Nederlands, Polski,
 Русский, 简体中文, 日本語, 한국어, हिन्दी, العربية, Bahasa Indonesia.
 
-## Download
+## Installation
 
 Get the latest build from the [Releases](https://github.com/uenzuwkxos/Solua/releases) page:
 
