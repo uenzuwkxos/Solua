@@ -6,6 +6,8 @@
 
 **OSD software that controls monitor settings via DDC/CI.**
 
+---
+
 Windows · Linux (Wayland)
 
 </div>
