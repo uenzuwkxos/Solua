@@ -28,19 +28,18 @@ Get the latest build from the [Releases](https://github.com/uenzuwkxos/Solua/rel
 
 | System | File |
 |---|---|
-| Windows | `Solua-x64.exe` (or `Solua-x86.exe` for 32-bit); no installation needed |
-| Debian, Ubuntu, Mint… | `solua_<version>_amd64.deb` |
-| Fedora, openSUSE, Arch… and any other Linux | `Solua-<version>-x86_64.AppImage` (make it executable and run it) |
+| Windows | `Solua-x64.exe` |
+| Linux | `Solua-<version>-x86_64.AppImage` |
 
-On Linux, monitors are reached through `/dev/i2c-*`. The `.deb` sets that up. With the
-AppImage, Solua shows an **Enable monitor access** button the first time it cannot reach your monitors.
+On Linux, monitors are reached through `/dev/i2c-*`. Solua shows an **Enable monitor access** button the first time
+it cannot reach your monitors.
 
 ## Features
 
 - Brightness, contrast, saturation, color temperature, RGB gains and monitor audio, per monitor or for all at once.
 - Input source switching (HDMI, DisplayPort, USB-C…), color presets and power control.
 - **Profiles** that store a full set of settings, and a **schedule** that applies them at a given time and day.
-- **Global shortcuts** for brightness, contrast, temperature, volume and profiles.
+- **Global shortcuts** for brightness, contrast, Saturation, temperature, volume, profiles and plus.
 - Light, Dark (blue, violet or default) and Black themes; settings backup and restore.
 - Windows extras: tray icon and mini panel, on-screen indicator, software color filter.
 - Private by design: no accounts, no analytics, no network connections.
@@ -50,8 +49,7 @@ Languages: English, Português (Brasil), Español, Deutsch, Français, Italiano,
 
 ## Building
 
-Requires the stable [Rust toolchain](https://rustup.rs). Pushing a `v*` tag makes GitHub Actions build
-every file above and attach it to a release (`.github/workflows/release.yml`).
+Requires the stable [Rust toolchain](https://rustup.rs).
 
 **Windows**
 
@@ -59,10 +57,9 @@ every file above and attach it to a release (`.github/workflows/release.yml`).
 cargo build --release
 ```
 
-Produces `target\release\Solua.exe`, with no extra runtime requirements. The included GitHub Actions
-workflow builds 64-bit and 32-bit executables.
+Produces `target\release\Solua.exe`, with no extra runtime requirements.
 
-**Linux** (Debian/Ubuntu example)
+**Linux**
 
 ```
 sudo apt install build-essential pkg-config libfontconfig1-dev libxkbcommon-dev libwayland-dev
@@ -76,13 +73,13 @@ custom keybindings on XFCE and older GNOME.
 
 ## Contributing
 
+Issues and PRs are welcome.
 Translations live in `lang/<locale>/LC_MESSAGES/Solua.po`; improvements and new languages are welcome.
 
 ## Disclaimer
 
 This application was developed using AI and was guided, tested, designed, and also built by me, the maintainer.
-Translations are AI-generated and may contain mistakes; corrections are welcome.
 
 ## License
 
-Free software under the **GNU GPL v3.0 or later**. See [LICENSE](LICENSE).
+[**GNU GPL v3.0**](LICENSE).
