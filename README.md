@@ -32,7 +32,7 @@
 - Windows extras: tray icon and mini panel, on-screen indicator, software color filter.
 - Private by design: no accounts, no analytics, no network connections.
 
-Languages: English, Português (Brasil), Español, Deutsch, Français, Italiano, Nederlands, Polski,
+**Languages**: English, Português (Brasil), Español, Deutsch, Français, Italiano, Nederlands, Polski,
 Русский, 简体中文, 日本語, 한국어, हिन्दी, العربية, Bahasa Indonesia.
 
 ## Installation
